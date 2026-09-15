@@ -32,6 +32,8 @@ scripts/check.py --mode publication why-batch-inference-wins
 ```text
 README.md                     this file
 WORKFLOW.md                   editorial workflow and approval gates
+AGENTS.md                     rules for AI agents working in this repository
+CLAUDE.md                     symlink to AGENTS.md (Claude Code's conventional filename)
 brand/                        positioning, voice, visual standards (author-owned, fill in)
 background/                   reusable context shared across articles
 templates/article/            the article scaffold copied per article

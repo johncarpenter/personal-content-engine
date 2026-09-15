@@ -1,0 +1,39 @@
+name: checks
+
+# Mechanical article checks only. Nothing here publishes content.
+on:
+  pull_request:
+    types: [opened, synchronize, reopened, labeled, unlabeled]
+  push:
+    branches: [main]
+
+permissions:
+  contents: read
+
+jobs:
+  articles:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - run: pip install pyyaml
+
+      # Publication PRs are labeled `publication`; everything else runs the lenient checks so
+      # incomplete scaffolds and brief PRs stay valid.
+      - name: Select mode
+        id: mode
+        env:
+          LABELS: ${{ join(github.event.pull_request.labels.*.name, ' ') }}
+        run: |
+          if [ "${LABELS#*publication}" != "$LABELS" ]; then
+            echo "mode=publication" >> "$GITHUB_OUTPUT"
+          else
+            echo "mode=brief" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Check articles
+        run: scripts/check.py --mode ${{ steps.mode.outputs.mode }}

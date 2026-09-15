@@ -1,0 +1,14 @@
+# Rendered previews (scripts/preview.py)
+.preview.html
+articles/*/.preview.html
+
+# OS and editor noise
+.DS_Store
+Thumbs.db
+*.swp
+.idea/
+.vscode/
+
+# Python
+__pycache__/
+*.pyc

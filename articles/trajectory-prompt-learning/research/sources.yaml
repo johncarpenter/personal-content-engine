@@ -1,0 +1,165 @@
+# Sources backing the article's claims. Reference them in article.md as [src:source-001].
+# Non-web evidence (interview, observation, internal analysis) is allowed: describe the
+# reference in `url` or `locator` instead of forcing a link.
+sources:
+  - id: source-001
+    title: Agent Lightning (Microsoft Research)
+    author_or_organization: Microsoft Research
+    url: https://www.microsoft.com/en-us/research/blog/agent-lightning-adding-reinforcement-learning-to-ai-agents-without-code-rewrites/
+    published_at: null
+    accessed_at: null
+    supports:
+      - RL for agents without code rewrites; the key competitive reference
+      - Contrast for the local-first argument - RL-based training of LLMs for agents
+    locator: null
+    limitations: Requires training infrastructure
+
+  - id: source-002
+    title: GEPA (ICLR 2026 Oral)
+    author_or_organization: null
+    url: https://arxiv.org/abs/2507.19457
+    published_at: null
+    accessed_at: null
+    supports:
+      - '"Reflective Prompt Evolution Can Outperform Reinforcement Learning" - validates prompt evolution as a competitive approach'
+      - Genetic-Pareto prompt evolution as prior art for the comparison
+    locator: null
+    limitations: Research-focused rather than practitioner tooling
+
+  - id: source-003
+    title: SCOPE
+    author_or_organization: null
+    url: https://arxiv.org/html/2512.15374v1
+    published_at: null
+    accessed_at: null
+    supports:
+      - '"Prompt Evolution for Enhancing Agent Effectiveness" - treats execution traces as learning signals'
+      - Per-agent prompt evolution as prior art for the comparison
+    locator: null
+    limitations: Academic work, not open-source shipping tooling
+
+  - id: source-004
+    title: DSPy
+    author_or_organization: null
+    url: https://dspy.ai/
+    published_at: null
+    accessed_at: null
+    supports:
+      - Framework for programming LMs with algorithmic prompt optimization
+      - Contrast for the no-framework-lock-in argument
+    locator: null
+    limitations: Framework-specific; assumes cloud model access for optimization
+
+  - id: source-005
+    title: PAK-UCB
+    author_or_organization: null
+    url: https://arxiv.org/html/2410.13287v5
+    published_at: null
+    accessed_at: null
+    supports:
+      - UCB contextual bandit for prompt-aware model selection - shows UCB applied to prompt/model decisions
+    locator: null
+    limitations: null
+
+  - id: source-006
+    title: RLPrompt (CMU)
+    author_or_organization: CMU
+    url: https://blog.ml.cmu.edu/2023/02/24/rlprompt-optimizing-discrete-text-prompts-with-reinforcement-learning/
+    published_at: null
+    accessed_at: null
+    supports:
+      - 'Academic validation for prompt-as-policy: "discrete prompt optimization amounting to learning policy parameters... All language models are frozen"'
+    locator: null
+    limitations: null
+
+  - id: source-007
+    title: Mem0
+    author_or_organization: null
+    url: https://github.com/mem0ai/mem0
+    published_at: null
+    accessed_at: null
+    supports:
+      - '"Universal memory layer for AI Agents" - shows practitioners actively seeking solutions to statelessness'
+    locator: null
+    limitations: Memory, not learning - no policy improvement loop
+
+  - id: source-008
+    title: Letta
+    author_or_organization: null
+    url: https://www.letta.com/
+    published_at: null
+    accessed_at: null
+    supports:
+      - '"AI with advanced memory that can learn and self-improve over time" - validates the market need for stateful agents'
+    locator: null
+    limitations: null
+
+  - id: source-009
+    title: Claude Code MCP Docs
+    author_or_organization: null
+    url: https://code.claude.com/docs/en/mcp
+    published_at: null
+    accessed_at: null
+    supports:
+      - Official documentation for MCP server integration, behind the hooks-and-MCP architecture claim
+    locator: null
+    limitations: null
+
+  - id: source-010
+    title: Writing a Good CLAUDE.md (HumanLayer)
+    author_or_organization: HumanLayer
+    url: https://www.humanlayer.dev/blog/writing-a-good-claude-md
+    published_at: null
+    accessed_at: null
+    supports:
+      - Best practices for CLAUDE.md; contrast with automated evolution of the same file
+    locator: null
+    limitations: Static guidance rather than an evolution loop
+
+  - id: source-011
+    title: Context Engineering Guide
+    author_or_organization: null
+    url: https://www.promptingguide.ai/guides/context-engineering-guide
+    published_at: null
+    accessed_at: null
+    supports:
+      - Industry recognition of the shift from prompt engineering to context engineering
+    locator: null
+    limitations: null
+
+  - id: source-012
+    title: Agentic Context Engineering
+    author_or_organization: null
+    url: https://shashikantjagtap.net/agentic-context-engineering-prompting-strikes-back/
+    published_at: null
+    accessed_at: null
+    supports:
+      - 'ACE framework for evolving context: "ACE allows the model to continuously evolve its context"'
+    locator: null
+    limitations: null
+
+  - id: source-013
+    title: AI Tinkerers Calgary
+    author_or_organization: null
+    url: https://calgary.aitinkerers.org/
+    published_at: null
+    accessed_at: null
+    supports:
+      - Venue details and format expectations for the talk referenced in the article's close
+    locator: null
+    limitations: null
+
+# Entry shape — copy, uncomment, and replace. Only `id`, `title`, and `supports` are
+# expected at publication; the rest are recorded when they apply.
+#
+# sources:
+#   - id: source-001
+#     title: Source title
+#     author_or_organization: null
+#     url: null
+#     published_at: null
+#     accessed_at: null
+#     supports:
+#       - Specific claim supported by this source
+#     locator: null # Page, section, timestamp, interview date, or other precise location
+#     limitations: null # Sample size, vendor funding, age, scope mismatch, second-hand reporting

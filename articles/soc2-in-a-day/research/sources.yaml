@@ -1,0 +1,130 @@
+# Sources backing the article's claims. Reference them in article.md as [src:source-001].
+# Non-web evidence (interview, observation, internal analysis) is allowed: describe the
+# reference in `url` or `locator` instead of forcing a link.
+sources:
+  - id: source-001
+    title: "How Much Does SOC 2 Compliance Cost in 2026?"
+    author_or_organization: Sprinto
+    url: null
+    published_at: null
+    accessed_at: null
+    supports:
+      - SOC 2 costs $20K-$60K for startups, Type 2 up to $150K
+    locator: null
+    limitations: "Cost data published by a compliance platform vendor; the idea file lists Sprinto among the compliance SaaS platforms charging $5K-$15K/year"
+
+  - id: source-002
+    title: "How Much Does a SOC 2 Audit Cost in 2025?"
+    author_or_organization: Secureframe
+    url: null
+    published_at: null
+    accessed_at: null
+    supports:
+      - 100-200 hours of internal team time
+      - 4-6 month timeline with a dedicated project owner
+    locator: null
+    limitations: "Cost and timeline data published by a compliance platform vendor; the idea file lists Secureframe among the compliance SaaS platforms charging $5K-$15K/year"
+
+  - id: source-003
+    title: "The True Cost of SOC 2 Compliance"
+    author_or_organization: Trava Security
+    url: null
+    published_at: null
+    accessed_at: null
+    supports:
+      - "DIY risks: may cost more long-term if expertise is lacking"
+    locator: null
+    limitations: null
+
+  - id: source-004
+    title: "SOC 2 Automation in 2026: How AI Cuts Compliance Work by 50%"
+    author_or_organization: DSALTA
+    url: null
+    published_at: null
+    accessed_at: null
+    supports:
+      - Industry trend toward AI-assisted compliance
+    locator: null
+    limitations: "Vendor pitch selling their own platform; no practitioner story and no open-source component"
+
+  - id: source-005
+    title: "Comp AI secures $2.6M pre-seed"
+    author_or_organization: Security Ledger
+    url: null
+    published_at: 2025-08
+    accessed_at: null
+    supports:
+      - Open-source compliance market validation
+    locator: null
+    limitations: null
+
+  - id: source-006
+    title: Probo (GitHub)
+    author_or_organization: Probo
+    url: https://github.com/getprobo/probo
+    published_at: null
+    accessed_at: null
+    supports:
+      - Open-source SOC 2 compliance platform for startups
+    locator: null
+    limitations: "It is a product, not a field note — no practitioner or build narrative"
+
+  - id: source-007
+    title: Comp AI (GitHub)
+    author_or_organization: Comp AI
+    url: https://github.com/trycompai/comp
+    published_at: null
+    accessed_at: null
+    supports:
+      - AGPLv3 compliance platform, 99% open source
+    locator: null
+    limitations: "It is a product requiring their platform, not a field note — no \"built in a day\" narrative"
+
+  - id: source-008
+    title: GraphGRC
+    author_or_organization: GraphGRC
+    url: null
+    published_at: null
+    accessed_at: null
+    supports:
+      - SOC 2 compliance documentation in GitHub with Actions validation
+    locator: null
+    limitations: "Tooling-focused; no audience beyond developers and no business case for founders"
+
+  - id: source-009
+    title: SOC 2 compliance guide
+    author_or_organization: Hyperproof
+    url: null
+    published_at: null
+    accessed_at: null
+    supports:
+      - Standard SOC 2 frameworks assume large teams with dedicated security staff
+    locator: null
+    limitations: null
+
+  - id: source-010
+    title: soc2-compliance-for-solo-owners
+    author_or_organization: 2Lines Software (the author's own open-source repository)
+    url: https://github.com/2Lines-Software/soc2-compliance-for-solo-owners
+    published_at: null
+    accessed_at: null
+    supports:
+      - The kit ships a TypeScript MCP server with 54 tools, a markdown knowledge base, and 5 Claude Code skill workflows
+      - Covers Security and Confidentiality trust criteria with 41 sub-control mappings, plus compensating controls for solo founders
+    locator: "First-hand evidence: the author's own MIT-licensed repository, built and shipped in a day"
+    limitations: "Component counts (41 sub-control mappings, 12 policy templates, 54 MCP tools) were flagged in the draft as needing verification against the current repo state"
+
+# Entry shape — copy, uncomment, and replace. Only `id`, `title`, and `supports` are
+# expected at publication; the rest are recorded when they apply.
+#
+# sources:
+#   - id: source-001
+#     title: Source title
+#     author_or_organization: null
+#     url: null
+#     published_at: null
+#     accessed_at: null
+#     supports:
+#       - Specific claim supported by this source
+#     locator: null # Page, section, timestamp, interview date, or other precise location
+#     limitations: null # Sample size, vendor funding, age, scope mismatch, second-hand reporting

@@ -1,0 +1,8 @@
+flowchart TD
+    A[Session Start] --> B[UCB1 Selection]
+    H[(Historical Data)] --> B
+    B --> C[Strategy Profile<br/>'test-first']
+    C --> D[Claude Code Session]
+    D --> E[Tool calls recorded]
+    D --> F[User Scoring<br/>'0.8']
+    F --> G[(BBolt DB)]

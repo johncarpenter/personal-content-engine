@@ -1,0 +1,13 @@
+# Canonical article metadata. `id` must match the folder name and never changes.
+id: terminal-literacy-trap
+title: I Live in the Terminal. I Stopped Telling Others to Join Me.
+author: null
+tracker_url: null
+slug: i-live-in-the-terminal-i-stopped
+summary: Why 'just learn CLI' is the wrong answer for AI-powered knowledge work
+
+# Populated after publication. `published_revision` is the Git revision of the released
+# content, not the later commit that records this metadata.
+published_url: https://discontinuityai.substack.com/p/i-live-in-the-terminal-i-stopped
+published_at: 2026-03-04
+published_revision: null

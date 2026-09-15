@@ -1,0 +1,216 @@
+# Sources backing the article's claims. Reference them in article.md as [src:source-001].
+# Non-web evidence (interview, observation, internal analysis) is allowed: describe the
+# reference in `url` or `locator` instead of forcing a link.
+sources:
+  - id: source-001
+    title: Karpathy LLM Wiki gist
+    author_or_organization: Karpathy
+    url: https://gist.github.com/karpathy/442a6bf555914893e9891c11519de94f
+    published_at: null
+    accessed_at: null
+    supports:
+      - Architecture for an LLM-maintained markdown knowledge base, 16M+ views
+      - Independent validation that knowledge compounds instead of scattering when sources update
+        interconnected pages
+    locator: null
+    limitations: Conceptual architecture, not a tool. No graph structure. Cloud LLM dependent.
+      Carries a "small-to-medium, slow-moving" caveat.
+
+  - id: source-002
+    title: LLM-empowered KG Construction Survey (arxiv)
+    author_or_organization: null
+    url: https://arxiv.org/html/2510.20345v1
+    published_at: "2025-10"
+    accessed_at: null
+    supports:
+      - Comprehensive survey of LLM-based knowledge graph construction pipelines
+      - LLMs enable richer, more accurate extraction from unstructured text and transfer readily
+        across domains
+    locator: null
+    limitations: null
+
+  - id: source-003
+    title: Knowledge Graph Construction Using LLMs (Nature, 2026)
+    author_or_organization: Nature
+    url: https://www.nature.com/articles/s41598-026-38066-w
+    published_at: "2026"
+    accessed_at: null
+    supports:
+      - Peer-reviewed extraction techniques; the field has matured to top-tier journal level
+    locator: null
+    limitations: null
+
+  - id: source-004
+    title: Microsoft GraphRAG
+    author_or_organization: Microsoft
+    url: https://microsoft.github.io/graphrag/
+    published_at: null
+    accessed_at: null
+    supports:
+      - Reference implementation of LLM extraction with community detection and hierarchical
+        summaries
+      - The contrast case for "you don't need infrastructure" — a heavyweight alternative
+    locator: null
+    limitations: Expensive ($20-50 per 1M tokens), requires significant infrastructure, not
+      personal-scale.
+
+  - id: source-005
+    title: GraphRAG-Bench (ICLR 2026)
+    author_or_organization: null
+    url: https://github.com/GraphRAG-Bench/GraphRAG-Benchmark
+    published_at: "2026"
+    accessed_at: null
+    supports:
+      - GraphRAG outperforms on multi-hop reasoning but underperforms on simple retrieval
+      - 13.4% lower accuracy on simple queries — the disconfirming evidence for "graphs are always
+        better"
+    locator: null
+    limitations: null
+
+  - id: source-006
+    title: Graphiti (Zep)
+    author_or_organization: Zep
+    url: https://github.com/getzep/graphiti
+    published_at: null
+    accessed_at: null
+    supports:
+      - Temporal knowledge graphs for AI agents with real-time incremental updates
+    locator: null
+    limitations: Requires Neo4j. Focused on agent memory, not personal knowledge management.
+
+  - id: source-007
+    title: obra/knowledge-graph
+    author_or_organization: obra
+    url: https://github.com/obra/knowledge-graph
+    published_at: null
+    accessed_at: null
+    supports:
+      - The closest existing tool — Obsidian vault to sqlite-vec + FTS5 + graphology, all local
+      - Demonstrates that the full stack runs locally without a graph database
+    locator: null
+    limitations: Relies on explicit wiki-links rather than LLM extraction. No entity resolution. No
+      schema induction.
+
+  - id: source-008
+    title: Neo4j LLM Graph Builder
+    author_or_organization: Neo4j
+    url: https://neo4j.com/labs/genai-ecosystem/llm-graph-builder/
+    published_at: null
+    accessed_at: null
+    supports:
+      - Enterprise LLM-to-graph pipeline — the incumbent approach the article argues against
+    locator: null
+    limitations: Requires Neo4j. Not local-only. Enterprise-oriented.
+
+  - id: source-009
+    title: sqlite-vec
+    author_or_organization: asg017
+    url: https://github.com/asg017/sqlite-vec
+    published_at: null
+    accessed_at: null
+    supports:
+      - Stable, pure-C, zero-dependency vector search extension for SQLite
+      - Supports the claim that no graph database or cloud service is required
+    locator: null
+    limitations: null
+
+  - id: source-010
+    title: MCP Adoption Statistics 2026
+    author_or_organization: Digital Applied
+    url: https://www.digitalapplied.com/blog/mcp-adoption-statistics-2026-model-context-protocol
+    published_at: "2026"
+    accessed_at: null
+    supports:
+      - 78% of enterprise AI teams have at least one MCP-backed agent in production
+      - 9,400+ MCP servers in the public registry
+    locator: null
+    limitations: null
+
+  - id: source-011
+    title: OntoMetric (Dec 2025)
+    author_or_organization: null
+    url: https://arxiv.org/
+    published_at: "2025-12"
+    accessed_at: null
+    supports:
+      - Unconstrained LLM extraction achieves only 3-10% semantic accuracy versus 65-90% with
+        ontology-guided methods
+      - Constraining extraction with a schema dramatically improves quality
+    locator: null
+    limitations: The old bibliography records only a bare arxiv.org link; the specific paper is not
+      identified.
+
+  - id: source-012
+    title: GDELT Project LLM KG evaluation
+    author_or_organization: The GDELT Project
+    url: https://gdeltproject.org/
+    published_at: null
+    accessed_at: null
+    supports:
+      - LLM entity fabrication and normalization hallucination are documented
+      - LLMs generate inconsistent output across identical prompts, so an entity resolution pass is
+        essential rather than optional
+    locator: null
+    limitations: The old bibliography records only the project homepage, not the specific
+      evaluation.
+
+  - id: source-013
+    title: LLM API Pricing 2026
+    author_or_organization: TLDL
+    url: https://www.tldl.io/resources/llm-api-pricing-2026
+    published_at: "2026"
+    accessed_at: null
+    supports:
+      - 12x price reduction in 36 months, making per-document extraction affordable
+    locator: null
+    limitations: null
+
+  - id: source-014
+    title: From Note-Taking to Knowledge Infrastructure (Substack)
+    author_or_organization: null
+    url: https://pjordan.substack.com/p/from-note-taking-to-knowledge-infrastructure
+    published_at: null
+    accessed_at: null
+    supports:
+      - The Karpathy approach implemented in practice with Claude plus Obsidian
+    locator: null
+    limitations: null
+
+  - id: source-015
+    title: Sam Gallagher - Knowledge Graph Kit
+    author_or_organization: Sam Gallagher
+    url: https://medium.com/@gallaghersam95/using-llms-as-a-second-brain-from-notes-to-knowledge-graphs-e7912f3a1428
+    published_at: null
+    accessed_at: null
+    supports:
+      - A lightweight MCP server over SQLite + ChromaDB — evidence that MCP is becoming the standard
+        interface pattern
+    locator: null
+    limitations: Fixed schema (Task, Note, Person, Project). No LLM extraction — manual creation
+      only.
+
+  - id: source-016
+    title: FalkorDB GraphRAG benchmark
+    author_or_organization: FalkorDB
+    url: https://www.falkordb.com/blog/graphrag-accuracy-diffbot-falkordb/
+    published_at: null
+    accessed_at: null
+    supports:
+      - 3.4x accuracy improvement on multi-hop reasoning
+    locator: null
+    limitations: null
+
+# Entry shape — copy, uncomment, and replace. Only `id`, `title`, and `supports` are
+# expected at publication; the rest are recorded when they apply.
+#
+# sources:
+#   - id: source-001
+#     title: Source title
+#     author_or_organization: null
+#     url: null
+#     published_at: null
+#     accessed_at: null
+#     supports:
+#       - Specific claim supported by this source
+#     locator: null # Page, section, timestamp, interview date, or other precise location
+#     limitations: null # Sample size, vendor funding, age, scope mismatch, second-hand reporting

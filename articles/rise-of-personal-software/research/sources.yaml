@@ -1,0 +1,205 @@
+# Sources backing the article's claims. Reference them in article.md as [src:source-001].
+# Non-web evidence (interview, observation, internal analysis) is allowed: describe the
+# reference in `url` or `locator` instead of forcing a link.
+sources:
+  - id: source-001
+    title: The rise of micro apps
+    author_or_organization: Roger Wong
+    url: https://rogerwong.me/2026/01/rise-of-micro-apps
+    published_at: "2026-01"
+    accessed_at: null
+    supports:
+      - Non-developers building micro apps instead of buying SaaS; coined the "micro apps" framing
+      - Micro apps are "intended to be used only by the creator and only for as long as the creator wants"
+      - Howard University professor Legand Burge III: software now "appears and fades like trending content"
+    locator: null
+    limitations: null
+
+  - id: source-002
+    title: Disposable AI Apps
+    author_or_organization: CodeConductor
+    url: https://codeconductor.ai/blog/disposable-apps-ai-changing-software-development/
+    published_at: "2026"
+    accessed_at: null
+    supports:
+      - Disposable apps as a formal category — quick, single-use applications built in hours
+      - Over 50% of installed apps are uninstalled within 30 days; Day 30 retention is ~2-3%
+    locator: null
+    limitations: null
+
+  - id: source-003
+    title: Low-Code Is Dead
+    author_or_organization: Synapx
+    url: https://www.synapx.com/how-ai-is-changing-low-code-development-in-2026/
+    published_at: "2026"
+    accessed_at: null
+    supports:
+      - Microsoft CVP Charles Lamanna declared "low code as we know it is dead" at Power Platform Conference 2025
+      - Manufacturing supply chain project: 12 months traditionally, 6 weeks with an AI-enhanced approach
+    locator: null
+    limitations: Second-hand report of the conference quote; the primary record is the Power Platform Conference 2025 session itself
+
+  - id: source-004
+    title: tools.simonwillison.net colophon
+    author_or_organization: Simon Willison
+    url: https://tools.simonwillison.net/colophon
+    published_at: null
+    accessed_at: null
+    supports:
+      - Roughly 200 single-page browser tools built mostly with LLMs — exemplar of personal software at scale
+    locator: null
+    limitations: null
+
+  - id: source-005
+    title: Vibe coding may offer insight into our AI future
+    author_or_organization: Harvard Gazette
+    url: https://news.harvard.edu/gazette/story/2026/04/vibe-coding-may-offer-insight-into-our-ai-future/
+    published_at: "2026-04"
+    accessed_at: null
+    supports:
+      - Harvard GSE's Karen Brennan on democratization and limits — vibe coding optimizes for "how much wow can I get in the next hour" rather than reliability or safety
+    locator: null
+    limitations: null
+
+  - id: source-006
+    title: Original vibe coding tweet
+    author_or_organization: Andrej Karpathy
+    url: https://x.com/karpathy/status/1886192184808149383
+    published_at: "2025-02"
+    accessed_at: null
+    supports:
+      - Excitement about "the barrier to app drop to ~zero, where anyone could build and publish an app just as easily as they can make a TikTok"
+    locator: null
+    limitations: Karpathy has since moved away from the term, preferring "agentic engineering"
+
+  - id: source-007
+    title: My LLM coding workflow going into 2026
+    author_or_organization: Addy Osmani
+    url: https://addyosmani.com/blog/ai-coding-workflow/
+    published_at: null
+    accessed_at: null
+    supports:
+      - Treats AI as an "over-confident junior developer" requiring verification
+      - Specs, tests, reviews and version control become more critical with AI involved
+    locator: null
+    limitations: null
+
+  - id: source-008
+    title: The Real Risk of Vibecoding
+    author_or_organization: Trend Micro
+    url: https://www.trendmicro.com/en_us/research/26/c/the-real-risk-of-vibecoding.html
+    published_at: "2026-03"
+    accessed_at: null
+    supports:
+      - 40-62% of AI-generated code contains security flaws
+      - AI fails to secure against XSS 86% of the time
+    locator: null
+    limitations: null
+
+  - id: source-009
+    title: "2026 Predictions: It's the Year of Technical Debt Thanks to Vibe Coding"
+    author_or_organization: Salesforce Ben
+    url: https://www.salesforceben.com/2026-predictions-its-the-year-of-technical-debt-thanks-to-vibe-coding/
+    published_at: null
+    accessed_at: null
+    supports:
+      - Vibe coding is creating an unsustainable maintenance burden
+    locator: null
+    limitations: null
+
+  - id: source-010
+    title: 2026 Low-Code/No-Code Predictions
+    author_or_organization: DEVOPSdigest
+    url: https://www.devopsdigest.com/2026-low-code-no-code-predictions
+    published_at: null
+    accessed_at: null
+    supports:
+      - Gartner forecasts the low-code market above $30B in 2026 while the visual drag-and-drop paradigm declines
+    locator: null
+    limitations: null
+
+  - id: source-011
+    title: Enterprises Are Replacing SaaS Faster Than You Think
+    author_or_organization: Newsweek (reporting a Retool survey)
+    url: https://www.newsweek.com/nw-ai/enterprises-are-replacing-saas-faster-than-you-think-11521483
+    published_at: null
+    accessed_at: null
+    supports:
+      - 35% of surveyed customers have already replaced at least one SaaS tool
+      - 78% plan to build more in 2026
+    locator: null
+    limitations: Vendor-run survey of 817 Retool customers, reported second-hand via Newsweek
+
+  - id: source-012
+    title: How I Replaced Jira with a 600-Line Claude Code Prompt
+    author_or_organization: Thomas Landgraf
+    url: https://thomaslandgraf.substack.com/p/how-i-replaced-jira-with-a-600-line
+    published_at: null
+    accessed_at: null
+    supports:
+      - Worked example of personal software replacing a SaaS tool (also referenced in Part 1)
+    locator: null
+    limitations: null
+
+  - id: source-013
+    title: Claude Code with MCP is all you need
+    author_or_organization: Composio
+    url: https://composio.dev/content/cluade-code-with-mcp-is-all-you-need
+    published_at: null
+    accessed_at: null
+    supports:
+      - Invoice management MVP built in one day — 5.8M tokens, $3.65 in API costs
+    locator: null
+    limitations: Vendor-published claim; the research brief lists hands-on validation of this Tier 1 experience as an open question
+
+  - id: source-014
+    title: Composio platform
+    author_or_organization: Composio
+    url: https://composio.dev/
+    published_at: null
+    accessed_at: null
+    supports:
+      - 500+ app integrations via a universal MCP server (Rube), managed OAuth, agent-ready toolkits
+    locator: null
+    limitations: Vendor's own product description; the research brief lists hands-on validation as an open question
+
+  - id: source-015
+    title: MCP Gateways Guide
+    author_or_organization: Composio
+    url: https://composio.dev/content/mcp-gateways-guide
+    published_at: null
+    accessed_at: null
+    supports:
+      - MCP Gateway architecture for AI agent integration
+    locator: null
+    limitations: Vendor-published documentation
+
+  - id: source-016
+    title: The author's knowledge worker framework (first-hand)
+    author_or_organization: The author
+    url: null
+    published_at: null
+    accessed_at: null
+    supports:
+      - The five recurring patterns of personal software, each with a concrete daily-use example
+      - A personal automation system in daily use, not a product — an audience of one
+    locator: >-
+      The author's own system: 10 MCP servers (Gmail, Exchange, Garmin, Harvest, Zoho, Granola,
+      Apple Calendar, feeds, images, memory), ETL pipelines, and 10+ skill plugin categories
+      (briefings, content, documents, planning, tasks, timesheets)
+    limitations: First-hand, single-practitioner evidence; build times were never recorded (an open question in the research brief)
+
+# Entry shape — copy, uncomment, and replace. Only `id`, `title`, and `supports` are
+# expected at publication; the rest are recorded when they apply.
+#
+# sources:
+#   - id: source-001
+#     title: Source title
+#     author_or_organization: null
+#     url: null
+#     published_at: null
+#     accessed_at: null
+#     supports:
+#       - Specific claim supported by this source
+#     locator: null # Page, section, timestamp, interview date, or other precise location
+#     limitations: null # Sample size, vendor funding, age, scope mismatch, second-hand reporting

@@ -1,0 +1,13 @@
+# Canonical article metadata. `id` must match the folder name and never changes.
+id: brand-in-a-day
+title: "Brand in a Day: How I Rebuilt My Company's Identity with AI — As an Engineer"
+author: null
+tracker_url: null
+slug: null
+summary: "Everyone says developers are obsolete. Nobody's talking about what developers can do now."
+
+# Populated after publication. `published_revision` is the Git revision of the released
+# content, not the later commit that records this metadata.
+published_url: null
+published_at: null
+published_revision: null

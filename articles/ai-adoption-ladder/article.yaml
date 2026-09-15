@@ -1,0 +1,13 @@
+# Canonical article metadata. `id` must match the folder name and never changes.
+id: ai-adoption-ladder
+title: "Stop Planning Your AI Strategy. Your Team Already Has One."
+author: null
+tracker_url: null
+slug: null
+summary: "Why the best approach to AI adoption is a bias toward action — and what guardrails you owe your team before they figure it out without you"
+
+# Populated after publication. `published_revision` is the Git revision of the released
+# content, not the later commit that records this metadata.
+published_url: null
+published_at: null
+published_revision: null

@@ -1,0 +1,119 @@
+# Sources backing the article's claims. Reference them in article.md as [src:source-001].
+# Non-web evidence (interview, observation, internal analysis) is allowed: describe the
+# reference in `url` or `locator` instead of forcing a link.
+sources:
+  - id: source-001
+    title: The end of dashboards? GenAI and agentic workflows
+    author_or_organization: CIO
+    url: https://www.cio.com/article/4046967/the-end-of-dashboards-genai-and-agentic-workflows-transform-business-intelligence.html
+    published_at: null
+    accessed_at: null
+    supports:
+      - "Forrester: GenAI levels the BI playing field, it does not replace BI — the basis for rejecting the \"death of BI\" headlines"
+    locator: null
+    limitations: Forrester's position is reported second-hand by CIO; the draft lists this paraphrase as a claim to verify before publishing.
+
+  - id: source-002
+    title: BI is not dead 2026
+    author_or_organization: ssp.sh
+    url: https://www.ssp.sh/blog/bi-is-not-dead-2026/
+    published_at: null
+    accessed_at: null
+    supports:
+      - '"Agents will reveal BI was never about dashboards" — modeling, metrics and governance matter more than charts'
+    locator: null
+    limitations: null
+
+  - id: source-003
+    title: Scaling Agentic AI with MCP
+    author_or_organization: OneReach
+    url: https://onereach.ai/blog/scaling-agentic-ai-with-mcp-use-cases-benefits/
+    published_at: null
+    accessed_at: null
+    supports:
+      - MCP as the de facto integration fabric, with servers sitting in the orchestration layer mediating between agent and system
+    locator: null
+    limitations: null
+
+  - id: source-004
+    title: Semantic Layer vs Text-to-SQL 2026
+    author_or_organization: dbt
+    url: https://docs.getdbt.com/blog/semantic-layer-vs-text-to-sql-2026
+    published_at: null
+    accessed_at: null
+    supports:
+      - Accuracy approaches ~100% on questions covered by a well-modeled semantic layer — the basis for "the semantic layer matters more, not less"
+    locator: null
+    limitations: The draft lists the 70–85% raw to ~100% with-semantic-layer figures as a claim to verify before publishing.
+
+  - id: source-005
+    title: Enterprise Text-to-SQL accuracy benchmarks
+    author_or_organization: Promethium
+    url: https://promethium.ai/guides/enterprise-text-to-sql-accuracy-benchmarks-2/
+    published_at: null
+    accessed_at: null
+    supports:
+      - Text-to-SQL accuracy of 70–85% raw, rising to 86–95% with a semantic layer
+    locator: null
+    limitations: The idea file characterises conversational-analytics content from this vendor as a vendor pitch; the draft also lists these accuracy figures as a claim to verify before publishing.
+
+  - id: source-006
+    title: Text-to-SQL LLM accuracy comparison
+    author_or_organization: aimultiple
+    url: https://research.aimultiple.com/text-to-sql/
+    published_at: null
+    accessed_at: null
+    supports:
+      - Hallucination modes — non-existent tables and columns, faulty joins, aggregation errors, missing filters
+      - "Tinybird: no LLM matched human query efficiency, reading 1.5–2x more rows than necessary"
+    locator: null
+    limitations: null
+
+  - id: source-007
+    title: Rise of AI Analytics Engineers
+    author_or_organization: TechnoEdge
+    url: https://technoedgels.com/the-rise-of-ai-analytics-engineers-the-new-career-role-redefining-data-analytics-in-2026
+    published_at: null
+    accessed_at: null
+    supports:
+      - The emerging "AI analytics engineer" role; routine SQL and dashboard building is automated
+    locator: null
+    limitations: null
+
+  - id: source-008
+    title: How AI changes the data analyst role
+    author_or_organization: InfoWorld
+    url: https://www.infoworld.com/article/4058946/how-ai-changes-the-data-analyst-role.html
+    published_at: null
+    accessed_at: null
+    supports:
+      - Analysts shift toward validating AI output and connecting data to business context
+    locator: null
+    limitations: null
+
+  - id: source-009
+    title: Circuit Signal — the author's retail intelligence platform (first-hand)
+    author_or_organization: null
+    url: null
+    published_at: null
+    accessed_at: null
+    supports:
+      - First-hand experience running deterministic tools behind agents in client environments — STL decomposition, pgvector and a containerized agent stack
+      - The seams of the multi-store, two-agent design (consistency, latency, orchestration logic) and the smallest-thing-first path that started from one Postgres instance and a single agent
+    locator: "Circuit Signal, listed under Internal Resources in the source idea file: retail intelligence platform built on STL decomposition, pgvector and a containerized agent stack."
+    limitations: Proprietary. The idea file's treatment decision (2026-05-27) requires anonymized, conceptual presentation — no client names or proprietary specifics.
+
+# Entry shape — copy, uncomment, and replace. Only `id`, `title`, and `supports` are
+# expected at publication; the rest are recorded when they apply.
+#
+# sources:
+#   - id: source-001
+#     title: Source title
+#     author_or_organization: null
+#     url: null
+#     published_at: null
+#     accessed_at: null
+#     supports:
+#       - Specific claim supported by this source
+#     locator: null # Page, section, timestamp, interview date, or other precise location
+#     limitations: null # Sample size, vendor funding, age, scope mismatch, second-hand reporting

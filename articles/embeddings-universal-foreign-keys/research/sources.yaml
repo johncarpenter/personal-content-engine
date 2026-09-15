@@ -1,0 +1,169 @@
+# Sources backing the article's claims. Reference them in article.md as [src:source-001].
+# Non-web evidence (interview, observation, internal analysis) is allowed: describe the
+# reference in `url` or `locator` instead of forcing a link.
+sources:
+  - id: source-001
+    title: "LOTUS: Semantic Operators"
+    author_or_organization: Stanford/Berkeley
+    url: https://arxiv.org/abs/2407.11418
+    published_at: "2025"
+    accessed_at: null
+    supports:
+      - Semantic join operators; `sem_sim_join` uses an embedding pre-filter plus LLM verification, and the adaptive join nearly doubles F1 versus pure tuple comparison
+      - 800x speedup on BioDEX while reproducing SOTA quality — the economics of a broad embedding sweep followed by narrow LLM verification
+    locator: "VLDB 2025"
+    limitations: Academic framing, not practitioner-accessible; no foreign-key analogy
+  - id: source-002
+    title: On the Theoretical Limitations of Embedding-Based Retrieval
+    author_or_organization: Google DeepMind
+    url: https://arxiv.org/abs/2508.21038
+    published_at: "2026"
+    accessed_at: null
+    supports:
+      - For a given embedding dimension *d*, the number of representable top-k document subsets is bounded — some top-k combinations cannot be returned regardless of query
+      - The limitation manifests with realistic queries, not only edge cases, so some structure is irreducibly necessary
+    locator: "ICLR 2026"
+    limitations: Pure theory; no practical architecture for working within the limits
+  - id: source-003
+    title: "Ditto: Deep Entity Matching with Pre-Trained Language Models"
+    author_or_organization: Megagon Labs
+    url: https://dl.acm.org/doi/10.14778/3421424.3421431
+    published_at: "2020"
+    accessed_at: null
+    supports:
+      - 90-98% F1 entity resolution across databases with no shared keys, up to 32% F1 improvement over previous SOTA, 96.5% F1 on company matching (789K x 412K records)
+      - Technique: concatenate record pairs into a single sequence for token-level interaction
+    locator: "VLDB 2020"
+    limitations: Narrow scope (entity resolution only); no broader architectural vision
+  - id: source-004
+    title: Pre-trained Embeddings for Entity Resolution
+    author_or_organization: null
+    url: https://link.springer.com/article/10.1007/s00778-024-00879-4
+    published_at: "2025"
+    accessed_at: null
+    supports:
+      - Comprehensive evaluation of 12 language models across 17 benchmarks for both the blocking and matching steps of entity resolution
+    locator: "VLDB Journal, 2025"
+    limitations: null
+  - id: source-005
+    title: Entity Resolution for Streaming Data with Embeddings
+    author_or_organization: null
+    url: https://hal.science/hal-05245956/document
+    published_at: "2025"
+    accessed_at: null
+    supports:
+      - Extends embedding-based entity resolution to incremental stream processing
+    locator: null
+    limitations: null
+  - id: source-006
+    title: "SemBench: Benchmark for Semantic Query Processing"
+    author_or_organization: null
+    url: https://arxiv.org/abs/2511.01716
+    published_at: "2025"
+    accessed_at: null
+    supports:
+      - First dedicated benchmark for semantic query engines; evaluates LOTUS, Palimpzest, ThalamusDB and BigQuery
+      - Key finding: cost optimization for semantic joins comes at the expense of quality
+    locator: null
+    limitations: null
+  - id: source-007
+    title: Implementing Semantic Join Operators Efficiently
+    author_or_organization: Trummer
+    url: https://arxiv.org/pdf/2510.08489
+    published_at: "2024"
+    accessed_at: null
+    supports:
+      - Formal treatment of join optimization in semantic query processing
+    locator: null
+    limitations: null
+  - id: source-008
+    title: LanceDB Multimodal Lakehouse
+    author_or_organization: LanceDB
+    url: https://www.lancedb.com/blog/multimodal-lakehouse
+    published_at: null
+    accessed_at: null
+    supports:
+      - One table for raw data, embeddings and features, with vector, full-text and SQL querying unified; petabyte-scale multimodal storage with co-located embeddings
+      - Feature engineering adds new columns and embeddings while transforming data at scale — schema evolving as relationships are discovered
+    locator: null
+    limitations: Vendor product pitch rather than an architectural pattern; no acknowledgment of limits
+  - id: source-009
+    title: "Lance x DuckDB: SQL for Retrieval"
+    author_or_organization: LanceDB
+    url: https://www.lancedb.com/blog/lance-x-duckdb-sql-retrieval-on-the-multimodal-lakehouse-format
+    published_at: null
+    accessed_at: null
+    supports:
+      - SQL querying over vector-indexed data — a "schema on read" model enhanced with embeddings
+    locator: null
+    limitations: Vendor product pitch rather than an architectural pattern; no acknowledgment of limits
+  - id: source-010
+    title: Weaviate Cross-References
+    author_or_organization: Weaviate
+    url: https://docs.weaviate.io/weaviate/tutorials/cross-references
+    published_at: null
+    accessed_at: null
+    supports:
+      - Graph-based data model in which objects are linked through semantic relationships, navigable alongside vector search
+    locator: null
+    limitations: null
+  - id: source-011
+    title: RERP for SQL Server
+    author_or_organization: null
+    url: https://www.sqlservercentral.com/articles/introducing-the-relational-embedding-retrieval-pattern-storing-and-querying-vector-embeddings-in-sql-server
+    published_at: null
+    accessed_at: null
+    supports:
+      - Enterprise pattern separating content from embeddings, with metadata-scoped filtering before similarity — relational structure for hard constraints, embeddings for fuzzy matching
+    locator: null
+    limitations: null
+  - id: source-012
+    title: Is Cosine-Similarity Really About Similarity?
+    author_or_organization: null
+    url: https://arxiv.org/html/2403.05440v1
+    published_at: "2024"
+    accessed_at: null
+    supports:
+      - Cosine similarity captures directional alignment, not semantic equivalence; learned embeddings can produce arbitrary cosine values even when dot-products are meaningful
+    locator: null
+    limitations: null
+  - id: source-013
+    title: Don't Use Cosine Similarity Carelessly
+    author_or_organization: Piotr Migdal
+    url: https://p.migdal.pl/blog/2025/01/dont-use-cosine-similarity/
+    published_at: "2025"
+    accessed_at: null
+    supports:
+      - Practical guide to cosine-similarity failure modes
+    locator: null
+    limitations: null
+  - id: source-014
+    title: The Limitations of Text Embeddings in RAG
+    author_or_organization: Neo4j
+    url: https://neo4j.com/blog/developer/rag-text-embeddings-limitations/
+    published_at: null
+    accessed_at: null
+    supports:
+      - Embeddings fail on structured operations, negation, multi-hop traversal, factual precision, and temporal/causal relationships
+    locator: null
+    limitations: null
+  - id: source-015
+    title: Knowledge Graph vs Vector RAG
+    author_or_organization: Neo4j
+    url: https://neo4j.com/blog/developer/knowledge-graph-vs-vector-rag/
+    published_at: null
+    accessed_at: null
+    supports:
+      - Knowledge graphs and vector retrieval are complementary approaches, not competitors
+    locator: null
+    limitations: Positions knowledge graphs as the solution; does not explore embedding-as-discovery
+  - id: source-016
+    title: The Rise of Semantic Entity Resolution
+    author_or_organization: Towards Data Science
+    url: https://towardsdatascience.com/the-rise-of-semantic-entity-resolution/
+    published_at: null
+    accessed_at: null
+    supports:
+      - Accessible overview connecting entity resolution to knowledge-graph construction
+    locator: null
+    limitations: Overview rather than primary research

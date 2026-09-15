@@ -1,0 +1,350 @@
+# Sources backing the article's claims. Reference them in article.md as [src:source-001].
+# Non-web evidence (interview, observation, internal analysis) is allowed: describe the
+# reference in `url` or `locator` instead of forcing a link.
+sources:
+  - id: source-001
+    title: Zylo 2025 SaaS Management Index
+    author_or_organization: Zylo
+    url: https://zylo.com/reports/2025-saas-management-index/
+    published_at: null
+    accessed_at: null
+    supports:
+      - $4,830 per employee per year in SaaS spend
+      - 21.9% year-over-year increase
+    locator: null
+    limitations: null
+  - id: source-002
+    title: Zylo 2026 SaaS Management Index
+    author_or_organization: Zylo
+    url: https://zylo.com/reports/2026-saas-management-index/
+    published_at: null
+    accessed_at: null
+    supports:
+      - $55.7M average organization SaaS spend, up 8% year over year
+    locator: null
+    limitations: null
+  - id: source-003
+    title: SaaS Prices Rising 4x Faster Than Inflation
+    author_or_organization: SoftwareSeni
+    url: https://www.softwareseni.com/why-saas-prices-are-rising-4x-faster-than-inflation/
+    published_at: null
+    accessed_at: null
+    supports:
+      - SaaS prices rose 12.2% versus CPI at 2.7%
+    locator: null
+    limitations: null
+  - id: source-004
+    title: The Great SaaS Price Surge of 2025
+    author_or_organization: SaaStr
+    url: https://www.saastr.com/the-great-price-surge-of-2025/
+    published_at: null
+    accessed_at: null
+    supports:
+      - 72% of Salesforce's revenue growth came from price increases
+    locator: null
+    limitations: null
+  - id: source-005
+    title: "SaaS TCO: What Buyers Miss"
+    author_or_organization: CloudNuro
+    url: https://www.cloudnuro.ai/blog/saas-tco
+    published_at: null
+    accessed_at: null
+    supports:
+      - True SaaS TCO runs 3-5x the subscription price
+      - Buyers miss 60-75% of total costs at the point of purchase
+    locator: null
+    limitations: null
+  - id: source-006
+    title: Why 80% of SaaS Features Are Underused
+    author_or_organization: SaaS Factor
+    url: https://www.saasfactor.co/blogs/why-80-of-your-saas-features-are-underused/
+    published_at: null
+    accessed_at: null
+    supports:
+      - 80% of SaaS features go unused
+    locator: null
+    limitations: null
+  - id: source-007
+    title: Cognitive Load Reduction in SaaS UX
+    author_or_organization: 2Point Agency
+    url: https://www.2pointagency.com/glossary/why-cognitive-load-reduction-is-a-competitive-edge-for-saas-ux/
+    published_at: null
+    accessed_at: null
+    supports:
+      - Productivity drops 20-40% in the first three months after adopting new enterprise software
+      - Features that fit existing workflows see 4.7x higher sustained usage
+    locator: null
+    limitations: null
+  - id: source-008
+    title: "SaaSpocalypse 2026: $285B Software Stock Crash"
+    author_or_organization: NxCode
+    url: https://www.nxcode.io/resources/news/saaspocalypse-2026-software-stock-crash
+    published_at: null
+    accessed_at: null
+    supports:
+      - $285B evaporated from software stocks in the first week of February 2026
+      - IGV ETF dropped 23%
+    locator: null
+    limitations: null
+  - id: source-009
+    title: "The SaaSpocalypse: AI Agents, Vibe Coding, and SaaS Economics"
+    author_or_organization: The SaaS CFO
+    url: https://www.thesaascfo.com/the-saaspocalypse-ai-agents-vibe-coding-and-the-changing-economics-of-saas/
+    published_at: null
+    accessed_at: null
+    supports:
+      - Defensibility spectrum — SaaS with data, regulatory or deep-domain moats survives; SaaS built on workflow convenience and seat expansion does not
+    locator: null
+    limitations: null
+  - id: source-010
+    title: Software-As-A-Prompt
+    author_or_organization: Sid Bharath
+    url: https://sidbharath.com/blog/software-as-a-prompt-ai-saas/
+    published_at: null
+    accessed_at: null
+    supports:
+      - Commercial vehicle document tracker built in under two weeks for $75 total
+    locator: null
+    limitations: null
+  - id: source-011
+    title: How I Replaced Jira with a 600-Line Claude Code Prompt
+    author_or_organization: Thomas Landgraf
+    url: https://thomaslandgraf.substack.com/p/how-i-replaced-jira-with-a-600-line
+    published_at: null
+    accessed_at: null
+    supports:
+      - A team's Jira instance replaced by a 600-line Claude Code prompt
+    locator: null
+    limitations: null
+  - id: source-012
+    title: Enterprises Are Replacing SaaS Faster Than You Think
+    author_or_organization: Newsweek / Retool
+    url: https://www.newsweek.com/nw-ai/enterprises-are-replacing-saas-faster-than-you-think-11521483
+    published_at: null
+    accessed_at: null
+    supports:
+      - 35% have already replaced at least one SaaS tool with something they built
+      - Retool CEO David Hsu — what used to take weeks and six-figure budgets can now be prototyped in days
+    locator: null
+    limitations: Retool customer survey, 817 respondents.
+  - id: source-013
+    title: Newsweek/Retool
+    author_or_organization: Newsweek / Retool
+    url: https://www.newsweek.com/nw-ai/ai-impact-are-your-teams-quietly-replacing-saas-11620488
+    published_at: null
+    accessed_at: null
+    supports:
+      - 78% expect to build more in 2026
+      - 60% are building outside IT oversight
+    locator: null
+    limitations: null
+  - id: source-014
+    title: Vibe Coding Won't Kill SaaS
+    author_or_organization: Arvid Kahl, The Bootstrapped Founder
+    url: https://thebootstrappedfounder.com/vibe-coding-wont-kill-saas/
+    published_at: null
+    accessed_at: null
+    supports:
+      - Counterargument — SaaS is the service, not the software
+      - A vibe-coded clone cannot reproduce the years of customer conversations behind the product
+    locator: null
+    limitations: null
+  - id: source-015
+    title: Will Vibe Coding Kill SaaS?
+    author_or_organization: Taskade
+    url: https://www.taskade.com/blog/will-vibe-coding-kill-saas
+    published_at: null
+    accessed_at: null
+    supports:
+      - Garry Tan — 25% of the current YC batch has 95% AI-written code
+      - Sridhar Vembu's challenge — show me the vibe-coded payroll that handles 50-state tax compliance
+    locator: null
+    limitations: null
+  - id: source-016
+    title: Software can now adapt to you
+    author_or_organization: Lee Robinson
+    url: https://leerob.com/personal-software
+    published_at: null
+    accessed_at: null
+    supports:
+      - Framing that software can now adapt to the person using it
+    locator: null
+    limitations: null
+  - id: source-017
+    title: Home-cooked software / "barefoot developers"
+    author_or_organization: Maggie Appleton
+    url: https://maggieappleton.com/home-cooked-software
+    published_at: null
+    accessed_at: null
+    supports:
+      - "\"Barefoot developers\" and home-cooked software as a category"
+    locator: null
+    limitations: null
+  - id: source-018
+    title: An app can be a home-cooked meal
+    author_or_organization: Robin Sloan
+    url: https://www.robinsloan.com/notes/home-cooked-app/
+    published_at: null
+    accessed_at: null
+    supports:
+      - Foundational essay behind the home-cooked software idea
+    locator: null
+    limitations: null
+  - id: source-019
+    title: Veracode 2025
+    author_or_organization: Veracode
+    url: null
+    published_at: null
+    accessed_at: null
+    supports:
+      - Counterargument — nearly half of AI-generated code contains security flaws
+    locator: Referenced via Cyber Unit
+    limitations: Second-hand — cited through Cyber Unit, not the primary Veracode report.
+  - id: source-020
+    title: CodeRabbit 2025
+    author_or_organization: CodeRabbit
+    url: null
+    published_at: null
+    accessed_at: null
+    supports:
+      - Counterargument — 1.7x more major issues and 2.74x higher security vulnerabilities in AI-generated code
+    locator: Referenced via Cyber Unit
+    limitations: Second-hand — cited through Cyber Unit, not the primary CodeRabbit report.
+  - id: source-021
+    title: Deloitte
+    author_or_organization: Deloitte
+    url: https://www.deloitte.com/us/en/insights/industry/technology/technology-media-and-telecom-predictions/2026/saas-ai-agents.html
+    published_at: null
+    accessed_at: null
+    supports:
+      - Autonomous AI agent market projected at $8.5B by 2026 and $35B by 2030
+    locator: null
+    limitations: null
+  - id: source-022
+    title: Adaptavist
+    author_or_organization: Adaptavist
+    url: https://www.adaptavist.com/blog/atlassian-price-updates-effective-october-2025
+    published_at: null
+    accessed_at: null
+    supports:
+      - Atlassian price hikes
+    locator: null
+    limitations: null
+  - id: source-023
+    title: "SaaS Integration Sprawl: Hidden Costs"
+    author_or_organization: Binadox
+    url: https://www.binadox.com/blog/saas-integration-sprawl-managing-the-hidden-costs-of-app-to-app-connections/
+    published_at: null
+    accessed_at: null
+    supports:
+      - Average enterprise manages 897 apps with only 29% integrated
+      - IT teams spend 39% of their time on integration work; fragmented stacks carry 36% higher TCO
+    locator: null
+    limitations: null
+  - id: source-024
+    title: The Cost of Data Silos
+    author_or_organization: Appian
+    url: https://appian.com/blog/acp/data-fabric/data-silo-costs-statistics
+    published_at: null
+    accessed_at: null
+    supports:
+      - Data silos cost $7.8M per year in lost productivity (Salesforce)
+      - Gartner $12.9M per year bad-data cost; IDC 20-30% annual revenue impact
+    locator: null
+    limitations: Aggregator post; the $7.8M figure is Salesforce's own statistic (the draft's verification list flags the potential bias) and the Gartner/IDC figures are reported second-hand.
+  - id: source-025
+    title: How Data Silos Impact Your Organization
+    author_or_organization: Sinequa
+    url: https://www.sinequa.com/resources/blog/how-do-data-silos-impact-your-organization/
+    published_at: null
+    accessed_at: null
+    supports:
+      - 5.3 hours per week wasted on disconnected data
+    locator: null
+    limitations: null
+  - id: source-026
+    title: ProcessMaker
+    author_or_organization: ProcessMaker
+    url: https://www.processmaker.com/blog/what-is-a-swivel-chair-process/
+    published_at: null
+    accessed_at: null
+    supports:
+      - 10% of business operations time goes to swivel-chair integration
+    locator: null
+    limitations: null
+  - id: source-027
+    title: MuleSoft Total Cost of Ownership
+    author_or_organization: Integrate.io
+    url: https://www.integrate.io/blog/mulesoft-cost/
+    published_at: null
+    accessed_at: null
+    supports:
+      - MuleSoft first-year TCO of $350K-$600K
+    locator: null
+    limitations: null
+  - id: source-028
+    title: ScaleUpAlly
+    author_or_organization: ScaleUpAlly
+    url: https://scaleupally.io/blog/cost-of-integration/
+    published_at: null
+    accessed_at: null
+    supports:
+      - Budget 20-30% of development cost for integration work on projects needing 5+ integrations
+    locator: null
+    limitations: null
+  - id: source-029
+    title: Theneo
+    author_or_organization: Theneo
+    url: https://www.theneo.io/blog/managing-api-changes-strategies
+    published_at: null
+    accessed_at: null
+    supports:
+      - API breaking changes cause 40% of integration failures, costing 15-20 hours per incident
+    locator: null
+    limitations: null
+  - id: source-030
+    title: DATAVERSITY 2024
+    author_or_organization: DATAVERSITY
+    url: null
+    published_at: null
+    accessed_at: null
+    supports:
+      - 68% cite data silos as a top concern, up 7% year over year
+    locator: Referenced via Integrate.io
+    limitations: Second-hand — cited through Integrate.io, not the primary DATAVERSITY survey.
+  - id: source-031
+    title: Salesforce Pricing
+    author_or_organization: Salesforce
+    url: https://www.salesforce.com/sales/pricing/
+    published_at: null
+    accessed_at: null
+    supports:
+      - Salesforce Enterprise at $175 per seat per month
+    locator: null
+    limitations: null
+  - id: source-032
+    title: Zylo SaaS Statistics
+    author_or_organization: Zylo
+    url: https://zylo.com/blog/saas-statistics/
+    published_at: null
+    accessed_at: null
+    supports:
+      - 106 SaaS applications on average and 53% of licenses unused
+      - $21M per year wasted on unused licenses at large enterprises
+    locator: null
+    limitations: null
+
+# Entry shape — copy, uncomment, and replace. Only `id`, `title`, and `supports` are
+# expected at publication; the rest are recorded when they apply.
+#
+# sources:
+#   - id: source-001
+#     title: Source title
+#     author_or_organization: null
+#     url: null
+#     published_at: null
+#     accessed_at: null
+#     supports:
+#       - Specific claim supported by this source
+#     locator: null # Page, section, timestamp, interview date, or other precise location
+#     limitations: null # Sample size, vendor funding, age, scope mismatch, second-hand reporting

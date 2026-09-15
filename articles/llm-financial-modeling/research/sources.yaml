@@ -1,0 +1,161 @@
+# Sources backing the article's claims. Reference them in article.md as [src:source-001].
+# Non-web evidence (interview, observation, internal analysis) is allowed: describe the
+# reference in `url` or `locator` instead of forcing a link.
+sources:
+  - id: source-001
+    title: Anthropic Finance Agents announcement (May 5, 2026)
+    author_or_organization: Anthropic
+    url: https://www.anthropic.com/news/finance-agents
+    published_at: 2026-05-05
+    accessed_at: null
+    supports:
+      - 10 finance agent templates and Claude for Excel general availability
+      - Institutional endorsements from Citadel, BNY Mellon, Carlyle, Mizuho, Walleye Capital, FIS and Travelers
+    locator: null
+    limitations: "Vendor announcement: product launch framing, no practitioner verification"
+
+  - id: source-002
+    title: Vals AI Finance Agent Benchmark
+    author_or_organization: Vals AI
+    url: https://www.vals.ai/
+    published_at: null
+    accessed_at: null
+    supports:
+      - Claude Opus 4.7 leads the Finance Agent benchmark at 64.37%
+    locator: null
+    limitations: null
+
+  - id: source-003
+    title: FinanceBench (Patronus AI, 2023)
+    author_or_organization: Patronus AI
+    url: https://arxiv.org/abs/2311.11944
+    published_at: "2023"
+    accessed_at: null
+    supports:
+      - GPT-4-Turbo with retrieval had an 81% error/refusal rate on financial questions
+      - All tested models exhibited hallucinations
+    locator: null
+    limitations: 2023 models — included for historical context, not current assessment
+
+  - id: source-004
+    title: FinBen benchmark (2024)
+    author_or_organization: null
+    url: https://arxiv.org/abs/2402.12659
+    published_at: "2024"
+    accessed_at: null
+    supports:
+      - 36 datasets across 24 financial tasks
+      - LLMs excel at extraction and text analysis but struggle with advanced reasoning and forecasting
+    locator: null
+    limitations: null
+
+  - id: source-005
+    title: Deloitte 2026 AI Report
+    author_or_organization: Deloitte
+    url: https://www.deloitte.com/
+    published_at: null
+    accessed_at: null
+    supports:
+      - Worker AI access up 50% in 2025
+      - 66% report productivity improvements
+    locator: null
+    limitations: null
+
+  - id: source-006
+    title: Accenture banking research
+    author_or_organization: Accenture
+    url: https://www.accenture.com/
+    published_at: null
+    accessed_at: null
+    supports:
+      - 73% of US bank employee time has high potential to be affected by generative AI
+    locator: null
+    limitations: null
+
+  - id: source-007
+    title: OffDeal case study
+    author_or_organization: Anthropic
+    url: https://www.anthropic.com/customers/offdeal
+    published_at: null
+    accessed_at: null
+    supports:
+      - M&A advisory buyer lists for ~$200 vs $12,000 traditionally
+      - Presentations in 1 hour vs 30-40 hours
+    locator: null
+    limitations: Narrow use case (buyer sourcing); not applicable to general financial modeling
+
+  - id: source-008
+    title: Rogo case study
+    author_or_organization: Anthropic
+    url: https://www.anthropic.com/customers/rogo
+    published_at: null
+    accessed_at: null
+    supports:
+      - 35,000+ finance professionals and 50,000+ queries/day
+      - Rogo is powered by Claude Opus 4.7 and Sonnet 4.6
+    locator: null
+    limitations: Purpose-built platform story, not transferable to individual analyst workflow
+
+  - id: source-009
+    title: "Large Language Models in Finance: A Survey (Li et al., ICAIF-23)"
+    author_or_organization: Li et al.
+    url: https://arxiv.org/abs/2311.10723
+    published_at: null
+    accessed_at: null
+    supports:
+      - Decision framework for financial LLM adoption
+    locator: null
+    limitations: null
+
+  - id: source-010
+    title: Microsoft Copilot for Finance
+    author_or_organization: Microsoft
+    url: https://www.microsoft.com/en-us/microsoft-365/blog/2024/02/29/introducing-microsoft-copilot-for-finance/
+    published_at: "2024-02"
+    accessed_at: null
+    supports:
+      - Copilot for Finance requires an M365 Copilot license and integrates with Dynamics 365 and SAP
+      - Its focus is accounting and operations, not investment analysis
+    locator: null
+    limitations: More back-office than investment analysis; characterization may be out of date for current product versions
+
+  - id: source-011
+    title: Anthropic enterprise JV (May 4, 2026)
+    author_or_organization: Anthropic
+    url: https://www.anthropic.com/news/
+    published_at: 2026-05-04
+    accessed_at: null
+    supports:
+      - Blackstone, Goldman Sachs and Hellman & Friedman joint venture ($1.5B) for mid-size firm deployment
+    locator: null
+    limitations: null
+
+  - id: source-012
+    title: Claude for Excel product page
+    author_or_organization: Anthropic
+    url: null
+    published_at: null
+    accessed_at: null
+    supports:
+      - Ctrl+Option+C (Mac) / Ctrl+Alt+C (Windows) in-context activation
+      - Cell-level citations when explaining formula logic
+      - Cross-app context across Excel, PowerPoint and Word in one conversation
+      - Skills creation — saving multi-step workflows as repeatable one-click actions
+      - Supports .xlsx and .xlsm; included with Claude Pro, Max, Team and Enterprise with no separate plugin fee
+    locator: Anthropic's Claude for Excel product page; no URL recorded in the source material
+    limitations: Vendor product documentation
+
+# Entry shape — copy, uncomment, and replace. Only `id`, `title`, and `supports` are
+# expected at publication; the rest are recorded when they apply.
+#
+# sources:
+#   - id: source-001
+#     title: Source title
+#     author_or_organization: null
+#     url: null
+#     published_at: null
+#     accessed_at: null
+#     supports:
+#       - Specific claim supported by this source
+#     locator: null # Page, section, timestamp, interview date, or other precise location
+#     limitations: null # Sample size, vendor funding, age, scope mismatch, second-hand reporting

@@ -1,0 +1,13 @@
+# Canonical article metadata. `id` must match the folder name and never changes.
+id: economics-of-dying-saas-market
+title: The Economics of a Dying SaaS Market
+author: null
+tracker_url: null
+slug: the-economics-of-a-dying-saas-market
+summary: The real cost of software you didn't build — and why the math just changed
+
+# Populated after publication. `published_revision` is the Git revision of the released
+# content, not the later commit that records this metadata.
+published_url: https://discontinuityai.substack.com/p/the-economics-of-a-dying-saas-market
+published_at: 2026-04-03
+published_revision: null

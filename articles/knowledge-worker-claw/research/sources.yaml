@@ -1,0 +1,227 @@
+# Sources backing the article's claims. Reference them in article.md as [src:source-001].
+# Non-web evidence (interview, observation, internal analysis) is allowed: describe the
+# reference in `url` or `locator` instead of forcing a link.
+sources:
+  - id: source-001
+    title: Andrej Karpathy tweet on Claws
+    author_or_organization: Andrej Karpathy
+    url: https://x.com/karpathy/status/2024987174077432126
+    published_at: null
+    accessed_at: null
+    supports:
+      - Original definition and taxonomy of Claws as a new layer
+    locator: null
+    limitations: null
+  - id: source-002
+    title: 'Simon Willison — Andrej Karpathy talks about "Claws"'
+    author_or_organization: Simon Willison
+    url: https://simonwillison.net/2026/Feb/21/claws/
+    published_at: null
+    accessed_at: null
+    supports:
+      - Endorsement and definition of "Claw" as term of art
+    locator: null
+    limitations: null
+  - id: source-003
+    title: Simon Willison Mastodon post
+    author_or_organization: Simon Willison
+    url: https://fedi.simonwillison.net/@simon/116105834928128255
+    published_at: null
+    accessed_at: null
+    supports:
+      - '"Claw" terminology definition'
+    locator: null
+    limitations: null
+  - id: source-004
+    title: OpenClaw.ai
+    author_or_organization: null
+    url: https://openclaw.ai/
+    published_at: null
+    accessed_at: null
+    supports:
+      - Product description, features, community
+    locator: null
+    limitations: null
+  - id: source-005
+    title: Kaspersky — OpenClaw vulnerabilities exposed
+    author_or_organization: Kaspersky
+    url: https://www.kaspersky.com/blog/openclaw-vulnerabilities-exposed/55263/
+    published_at: null
+    accessed_at: null
+    supports:
+      - Authentication bypass, prompt injection, malicious skills analysis
+    locator: null
+    limitations: null
+  - id: source-006
+    title: Fortune — OpenClaw AI agents security risks
+    author_or_organization: Fortune
+    url: https://fortune.com/2026/02/12/openclaw-ai-agents-security-risks-beware/
+    published_at: null
+    accessed_at: null
+    supports:
+      - Expert security assessment, "no rules" quote
+      - 'Source of the Ben Seri (Zafran Security) quote used in the article'
+    locator: null
+    limitations: null
+  - id: source-007
+    title: VentureBeat — OpenClaw agentic AI security risk CISO guide
+    author_or_organization: VentureBeat
+    url: https://venturebeat.com/security/openclaw-agentic-ai-security-risk-ciso-guide
+    published_at: null
+    accessed_at: null
+    supports:
+      - Enterprise risk framing
+    locator: null
+    limitations: null
+  - id: source-008
+    title: Security Boulevard — OpenClaw attack surface analysis
+    author_or_organization: Security Boulevard
+    url: https://securityboulevard.com/2026/02/openclaw-open-source-ai-agent-application-attack-surface-and-security-risk-system-analysis/
+    published_at: null
+    accessed_at: null
+    supports:
+      - Four-layer threat model
+    locator: null
+    limitations: null
+  - id: source-009
+    title: Microsoft Security Blog — Running OpenClaw safely
+    author_or_organization: Microsoft
+    url: https://www.microsoft.com/en-us/security/blog/2026/02/19/running-openclaw-safely-identity-isolation-runtime-risk/
+    published_at: null
+    accessed_at: null
+    supports:
+      - Identity, isolation, and runtime risk recommendations
+    locator: null
+    limitations: null
+  - id: source-010
+    title: Anthropic Research — Measuring AI Agent Autonomy in Practice
+    author_or_organization: Anthropic
+    url: https://www.anthropic.com/research/measuring-agent-autonomy
+    published_at: 2026-02-18
+    accessed_at: null
+    supports:
+      - Co-constructed autonomy framework, measurement data
+      - 73% of tool calls have human-in-the-loop involvement; only 0.8% are irreversible
+    locator: null
+    limitations: null
+  - id: source-011
+    title: Latent Space — Anthropic's Agent Autonomy study
+    author_or_organization: Latent Space
+    url: https://www.latent.space/p/ainews-anthropics-agent-autonomy
+    published_at: null
+    accessed_at: null
+    supports:
+      - Coverage and analysis of autonomy research
+    locator: null
+    limitations: Second-hand coverage of Anthropic's research; the research brief records it as coverage, not the primary source.
+  - id: source-012
+    title: Dark Reading — Supply chain attack installs OpenClaw via Cline
+    author_or_organization: Dark Reading
+    url: https://www.darkreading.com/application-security/supply-chain-attack-openclaw-cline-users
+    published_at: null
+    accessed_at: null
+    supports:
+      - Supply chain compromise
+    locator: null
+    limitations: null
+  - id: source-013
+    title: The Register — AI coding assistant Cline compromised
+    author_or_organization: The Register
+    url: https://www.theregister.com/2026/02/20/openclaw_snuck_into_cline_package/
+    published_at: null
+    accessed_at: null
+    supports:
+      - Supply chain attack coverage
+    locator: null
+    limitations: null
+  - id: source-014
+    title: Snyk — ToxicSkills study of ClawHub
+    author_or_organization: Snyk
+    url: https://snyk.io/blog/toxicskills-malicious-ai-agent-skills-clawhub/
+    published_at: null
+    accessed_at: null
+    supports:
+      - 36% prompt injection rate, 1,467 malicious payloads
+    locator: null
+    limitations: null
+  - id: source-015
+    title: SecurityWeek — SecureClaw tool debuts
+    author_or_organization: SecurityWeek
+    url: https://www.securityweek.com/openclaw-security-issues-continue-as-secureclaw-open-source-tool-debuts/
+    published_at: null
+    accessed_at: null
+    supports:
+      - Ongoing security response
+    locator: null
+    limitations: null
+  - id: source-016
+    title: Reco.ai — The AI Agent Security Crisis
+    author_or_organization: Reco.ai
+    url: https://www.reco.ai/blog/openclaw-the-ai-agent-security-crisis-unfolding-right-now
+    published_at: null
+    accessed_at: null
+    supports:
+      - Crisis framing
+    locator: null
+    limitations: null
+  - id: source-017
+    title: GitHub — tnm/zclaw
+    author_or_organization: tnm
+    url: https://github.com/tnm/zclaw
+    published_at: null
+    accessed_at: null
+    supports:
+      - Minimalist ESP32 Claw implementation
+    locator: null
+    limitations: null
+  - id: source-018
+    title: Boris Tane — How I Use Claude Code
+    author_or_organization: Boris Tane
+    url: https://boristane.com/blog/how-i-use-claude-code/
+    published_at: null
+    accessed_at: null
+    supports:
+      - Practitioner patterns for structured Claude Code usage
+    locator: null
+    limitations: null
+  - id: source-019
+    title: Glide — What is agentic engineering?
+    author_or_organization: Glide
+    url: https://www.glideapps.com/blog/what-is-agentic-engineering
+    published_at: null
+    accessed_at: null
+    supports:
+      - Karpathy's agentic engineering definition and vibe coding distinction
+    locator: null
+    limitations: null
+  - id: source-020
+    title: Techmeme — NanoClaw coverage
+    author_or_organization: Techmeme
+    url: https://www.techmeme.com/260220/p26
+    published_at: null
+    accessed_at: null
+    supports:
+      - Karpathy's endorsement of smaller Claws
+    locator: null
+    limitations: Aggregator coverage; the research brief records it as coverage of Karpathy rather than the primary post.
+  - id: source-021
+    title: GitHub — NanoClaw
+    author_or_organization: qwibitai
+    url: https://github.com/qwibitai/nanoclaw
+    published_at: null
+    accessed_at: null
+    supports:
+      - Lightweight Claw alternative with container security
+    locator: null
+    limitations: null
+  - id: source-022
+    title: The author's own Knowledge Worker Framework in daily production use
+    author_or_organization: null
+    url: null
+    published_at: null
+    accessed_at: null
+    supports:
+      - First-hand account of the architecture (ETL pipelines, MCP servers, SKILL.md skills, dispatcher, markdown-as-everything) and of running it daily
+      - The graduated-trust / autonomy-level pattern and the audit trail described in the article
+    locator: The author's own running system, described in backlog/idea-2026-02-21-knowledge-worker-framework.md in the knowledge-worker-framework repository
+    limitations: Single-operator, self-reported experience; not independently observed or measured.

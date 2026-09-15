@@ -1,0 +1,110 @@
+# Sources backing the article's claims. Reference them in article.md as [src:source-001].
+# Non-web evidence (interview, observation, internal analysis) is allowed: describe the
+# reference in `url` or `locator` instead of forcing a link.
+sources:
+  - id: source-001
+    title: The end of dashboards? GenAI and agentic workflows
+    author_or_organization: CIO
+    url: https://www.cio.com/article/4046967/the-end-of-dashboards-genai-and-agentic-workflows-transform-business-intelligence.html
+    published_at: null
+    accessed_at: null
+    supports:
+      - "Forrester: GenAI levels the BI playing field, it doesn't replace BI — the basis for arguing over-application rather than obsolescence"
+    locator: null
+    limitations: null
+
+  - id: source-002
+    title: "Business Intelligence Trends 2026: Why 90% Fail"
+    author_or_organization: SR Analytics
+    url: https://sranalytics.io/blog/business-intelligence-trends/
+    published_at: null
+    accessed_at: null
+    supports:
+      - A $400M retailer spent $2.1M on an AI-powered BI platform and reached 11% adoption after 18 months
+      - "The reversion to spreadsheets: \"Excel may be wrong, but at least it's their wrong\""
+    locator: null
+    limitations: null
+
+  - id: source-003
+    title: 10 Reasons Self-Service BI Fails
+    author_or_organization: Perceptive Analytics
+    url: https://www.perceptive-analytics.com/why-self-service-bi-fails-in-large-enterprises/
+    published_at: null
+    accessed_at: null
+    supports:
+      - One software firm had 5 of 100 intended users actively using the tool; interfaces described as overwhelming, overly generalized, inflexible
+    locator: null
+    limitations: null
+
+  - id: source-004
+    title: Conversational Analytics guide
+    author_or_organization: Atlan
+    url: https://atlan.com/know/conversational-analytics/
+    published_at: null
+    accessed_at: null
+    supports:
+      - Dashboards and conversational analytics are complementary rather than rivals; the semantic layer is foundational
+    locator: null
+    limitations: null
+
+  - id: source-005
+    title: What is Conversational Analytics 2026
+    author_or_organization: Improvado
+    url: https://improvado.io/blog/conversational-analytics
+    published_at: null
+    accessed_at: null
+    supports:
+      - Dashboards for standardized monitoring; conversational tools for ad-hoc exploration, explanation, and follow-up
+    locator: null
+    limitations: null
+
+  - id: source-006
+    title: "Gartner: self-service BI adoption has \"wallowed below 20%\""
+    author_or_organization: Gartner
+    url: null
+    published_at: null
+    accessed_at: null
+    supports:
+      - Self-service BI adoption has stayed below 20%, i.e. four in five intended users do not use the dashboards built for them
+    locator: "Cited without a link in the old repository's idea file: backlog/idea-2026-05-27-dashboards-answer-known-questions.md, Supporting Evidence for Argument 1"
+    limitations: "Second-hand: no Gartner publication, title, date, or URL is recorded in the old repository. The draft's own review lists \"Gartner self-service BI adoption <20%\" as a claim to verify."
+
+  - id: source-007
+    title: Non-Alcoholic Beer is on a Bender
+    author_or_organization: null
+    url: null
+    published_at: null
+    accessed_at: null
+    supports:
+      - Non-alcoholic beer is set to become the second most popular beer category, overtaking ale
+      - The NA category is set to grow by 9% while the overall beer category shrinks
+    locator: "Third-party PDF held in the old repository at inbox/Non-Alcoholic-Beer-is-on-a-Bender.pdf (knowledge-worker-framework, added 2026-05-29). Not copied into this repository."
+    limitations: "Publisher, author, and publication date are not recorded in the old repository, and the draft does not cite it inline — the link to the article's opening figures is inferred from the matching title and date. Author must confirm the publisher, the figures, and the permission basis for citing them."
+
+  - id: source-008
+    title: "Anonymized client engagement: a major beer brand and its alcohol-free 0.0 line, from US restaurant POS data (2019-2025)"
+    author_or_organization: The author's own first-hand client work, via a proprietary retail intelligence platform
+    url: null
+    published_at: null
+    accessed_at: null
+    supports:
+      - The 0.0 line grew roughly 5x while the flagship lager declined from its post-reopening peak, which a dashboard rendered as two trend lines implying cannibalization
+      - "The cannibalization read was wrong: the two products do not share a customer occasion — the 0.0 line displaces other drinks in weekday, early-evening, meal-accompanying contexts"
+      - Flagship anomalies lead 0.0-line anomalies by roughly 16 days, consistent with event-driven spikes rather than direct substitution
+    locator: "Worked example documented in the old repository: backlog/idea-2026-05-27-dashboards-answer-known-questions.md, section \"Worked Example — Lens Three (anonymized Circuit Signal)\""
+    limitations: "Proprietary: treatment decision of 2026-05-27 requires the brand anonymized and the numbers softened. Data-quality caveats recorded in the old file: differing store coverage between datasets may inflate the weekday skew, the 0.0 sample is ~15x smaller, and a late-period export artifact produced an implausible z~26 spike."
+
+# Entry shape — copy, uncomment, and replace. Only `id`, `title`, and `supports` are
+# expected at publication; the rest are recorded when they apply.
+#
+# sources:
+#   - id: source-001
+#     title: Source title
+#     author_or_organization: null
+#     url: null
+#     published_at: null
+#     accessed_at: null
+#     supports:
+#       - Specific claim supported by this source
+#     locator: null # Page, section, timestamp, interview date, or other precise location
+#     limitations: null # Sample size, vendor funding, age, scope mismatch, second-hand reporting

@@ -1,0 +1,13 @@
+# Canonical article metadata. `id` must match the folder name and never changes.
+id: llm-financial-modeling
+title: Your Spreadsheet Just Got a Co-Analyst
+author: null
+tracker_url: null
+slug: null
+summary: A financial modeler's honest guide to using Claude inside Excel — what works, what breaks, and where to start
+
+# Populated after publication. `published_revision` is the Git revision of the released
+# content, not the later commit that records this metadata.
+published_url: null
+published_at: null
+published_revision: null

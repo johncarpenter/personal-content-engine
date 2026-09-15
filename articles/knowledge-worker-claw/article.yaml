@@ -1,0 +1,13 @@
+# Canonical article metadata. `id` must match the folder name and never changes.
+id: knowledge-worker-claw
+title: How to Build a Claw That Won't Eat You
+author: null
+tracker_url: null
+slug: how-to-build-a-claw-that-wont-eat
+summary: Practical patterns for knowledge worker automation with Claude Code
+
+# Populated after publication. `published_revision` is the Git revision of the released
+# content, not the later commit that records this metadata.
+published_url: https://discontinuityai.substack.com/p/how-to-build-a-claw-that-wont-eat
+published_at: 2026-02-24
+published_revision: null

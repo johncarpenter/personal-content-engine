@@ -1,0 +1,13 @@
+# Canonical article metadata. `id` must match the folder name and never changes.
+id: knowledge-graphs-markdown
+title: Your Notes Already Know More Than You Do
+author: null
+tracker_url: null
+slug: null
+summary: "How knowledge graphs turn a directory of documents into connected intelligence — no terminal required"
+
+# Populated after publication. `published_revision` is the Git revision of the released
+# content, not the later commit that records this metadata.
+published_url: null
+published_at: null
+published_revision: null

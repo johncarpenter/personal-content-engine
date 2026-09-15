@@ -1,0 +1,13 @@
+# Canonical article metadata. `id` must match the folder name and never changes.
+id: surface-oracle-ratchet
+title: "Surface, Oracle, Ratchet: The Pattern Inside Karpathy's Autoresearch — Applied to Code"
+author: null
+tracker_url: null
+slug: surface-oracle-ratchet-the-pattern
+summary: Three primitives that make AI coding agents monotonically improve your codebase
+
+# Populated after publication. `published_revision` is the Git revision of the released
+# content, not the later commit that records this metadata.
+published_url: https://discontinuityai.substack.com/p/surface-oracle-ratchet-the-pattern
+published_at: 2026-03-26
+published_revision: null

@@ -1,0 +1,149 @@
+# Sources backing the article's claims. Reference them in article.md as [src:source-001].
+# Non-web evidence (interview, observation, internal analysis) is allowed: describe the
+# reference in `url` or `locator` instead of forcing a link.
+sources:
+  - id: source-001
+    title: The GUI Revolution
+    author_or_organization: Quantum Zeitgeist
+    url: https://quantumzeitgeist.com/the-gui-revolution-how-visual-interfaces-changed-computing-forever/
+    published_at: null
+    accessed_at: null
+    supports:
+      - GUIs won because humans understand visuals better than text
+    locator: null
+    limitations: null
+  - id: source-002
+    title: Why CLIs Suck
+    author_or_organization: Okta Developer
+    url: https://developer.okta.com/blog/2020/02/19/why-clis-suck-guis-are-better
+    published_at: null
+    accessed_at: null
+    supports:
+      - GUIs support accessibility features (screen readers, magnifiers, voice control) that CLI lacks by design
+    locator: null
+    limitations: null
+  - id: source-003
+    title: CLI Accessibility Research
+    author_or_organization: ACM
+    url: https://dl.acm.org/doi/fullHtml/10.1145/3411764.3445544
+    published_at: null
+    accessed_at: null
+    supports:
+      - Documentation challenges distract from the actual task — users "spend considerable time browsing the manual and web, which distracts them from their task"
+    locator: null
+    limitations: null
+  - id: source-004
+    title: STEM Education Journal
+    author_or_organization: null
+    url: https://stemeducationjournal.springeropen.com/articles/10.1186/s40594-020-00222-7
+    published_at: null
+    accessed_at: null
+    supports:
+      - "Dropout and failure rates in introductory programming courses are regularly as high as 50%"
+    locator: null
+    limitations: null
+  - id: source-005
+    title: Career Karma Bootcamp Statistics
+    author_or_organization: Career Karma
+    url: https://careerkarma.com/blog/causes-of-coding-bootcamp-failure/
+    published_at: null
+    accessed_at: null
+    supports:
+      - Bootcamp dropout causes and rates — intensive bootcamps see 10-15% dropout, with one cohort dropping from 42 to 16 students
+    locator: null
+    limitations: null
+  - id: source-006
+    title: "Copilot vs Cursor"
+    author_or_organization: DigitalOcean
+    url: https://www.digitalocean.com/resources/articles/github-copilot-vs-cursor
+    published_at: null
+    accessed_at: null
+    supports:
+      - Market share data — Copilot leads with 20M+ users and 1.3M paid subscribers
+    locator: null
+    limitations: null
+  - id: source-007
+    title: "Best Coding Agents 2026"
+    author_or_organization: Faros AI
+    url: https://www.faros.ai/blog/best-ai-coding-agents-2026
+    published_at: null
+    accessed_at: null
+    supports:
+      - Market positioning of GUI vs CLI tools — "Cursor carved out the premium segment with project-wide context awareness and AI-native IDE approach"
+    locator: null
+    limitations: null
+  - id: source-008
+    title: "Claude Code vs Cursor"
+    author_or_organization: Builder.io
+    url: https://www.builder.io/blog/cursor-vs-claude-code
+    published_at: null
+    accessed_at: null
+    supports:
+      - Accessibility comparison — "Cursor has a lower barrier to entry—it looks and works like VS Code, requires no terminal knowledge"
+    locator: null
+    limitations: null
+  - id: source-009
+    title: Codex-CLI
+    author_or_organization: Microsoft
+    url: https://github.com/microsoft/Codex-CLI
+    published_at: null
+    accessed_at: null
+    supports:
+      - Natural language to shell commands — enter "what's my IP address" and get shell-specific suggestions
+    locator: null
+    limitations: null
+  - id: source-010
+    title: CLAI
+    author_or_organization: IBM
+    url: https://www.ibm.com/blogs/research/2020/02/bringing-ai-to-the-command-line/
+    published_at: null
+    accessed_at: null
+    supports:
+      - AI transforming CLI user experience — "an inflection point to transform the CLI user experience and imbue the command line with the power of AI"
+    locator: null
+    limitations: null
+  - id: source-011
+    title: AI Command Revolution
+    author_or_organization: Guptadeepak
+    url: https://guptadeepak.com/the-command-line-revolution-how-ai-is-transforming-cli-for-everyone/
+    published_at: null
+    accessed_at: null
+    supports:
+      - AI enabling non-technical users in CLI contexts — "AI-powered CLIs enable non-technical users to accomplish complex tasks without years of training"
+    locator: null
+    limitations: null
+  - id: source-012
+    title: "GUI vs CLI"
+    author_or_organization: WalkMe
+    url: https://www.walkme.com/blog/graphical-user-interface-vs-command-line-interface/
+    published_at: null
+    accessed_at: null
+    supports:
+      - Accessibility of GUIs for non-technical users — "GUIs are easy for people with little technical knowledge because users don't need to know specific commands or syntax"
+    locator: null
+    limitations: null
+  - id: source-013
+    title: "CLI is Overrated"
+    author_or_organization: Medium
+    url: https://medium.com/nerd-for-tech/why-the-command-line-interface-is-overrated-497fd4ecd7a6
+    published_at: null
+    accessed_at: null
+    supports:
+      - Cognitive load of command translation — "converting your intent to the right command can be quite puzzling, even for experienced users"
+    locator: null
+    limitations: null
+
+# Entry shape — copy, uncomment, and replace. Only `id`, `title`, and `supports` are
+# expected at publication; the rest are recorded when they apply.
+#
+# sources:
+#   - id: source-001
+#     title: Source title
+#     author_or_organization: null
+#     url: null
+#     published_at: null
+#     accessed_at: null
+#     supports:
+#       - Specific claim supported by this source
+#     locator: null # Page, section, timestamp, interview date, or other precise location
+#     limitations: null # Sample size, vendor funding, age, scope mismatch, second-hand reporting

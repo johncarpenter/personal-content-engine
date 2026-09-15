@@ -1,0 +1,13 @@
+# Canonical article metadata. `id` must match the folder name and never changes.
+id: rise-of-personal-software
+title: The Rise of Personal Software
+author: null
+tracker_url: null
+slug: the-rise-of-personal-software
+summary: What happens when building is so cheap that software becomes disposable
+
+# Populated after publication. `published_revision` is the Git revision of the released
+# content, not the later commit that records this metadata.
+published_url: https://discontinuityai.substack.com/p/the-rise-of-personal-software
+published_at: 2026-04-10
+published_revision: null

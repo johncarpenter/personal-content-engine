@@ -1,0 +1,13 @@
+# Canonical article metadata. `id` must match the folder name and never changes.
+id: trajectory-prompt-learning
+title: "Trajectory: Teaching Claude Code to Learn Without Touching Model Weights"
+author: null
+tracker_url: null
+slug: trajectory-teaching-claude-code-to
+summary: Reinforcement learning for agentic workflows through prompt evolution
+
+# Populated after publication. `published_revision` is the Git revision of the released
+# content, not the later commit that records this metadata.
+published_url: https://discontinuityai.substack.com/p/trajectory-teaching-claude-code-to
+published_at: 2026-02-19
+published_revision: null

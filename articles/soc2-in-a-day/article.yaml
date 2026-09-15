@@ -1,0 +1,13 @@
+# Canonical article metadata. `id` must match the folder name and never changes.
+id: soc2-in-a-day
+title: "SOC2 Ready in a Day: How I Built a Complete Compliance Kit with Claude Code"
+author: null
+tracker_url: null
+slug: soc2-ready-in-a-day-how-i-built-a
+summary: "The compliance industry charges six figures for knowledge you can encode in an afternoon"
+
+# Populated after publication. `published_revision` is the Git revision of the released
+# content, not the later commit that records this metadata.
+published_url: https://discontinuityai.substack.com/p/soc2-ready-in-a-day-how-i-built-a
+published_at: 2026-03-13
+published_revision: null

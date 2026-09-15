@@ -1,0 +1,174 @@
+# Sources backing the article's claims. Reference them in article.md as [src:source-001].
+# Non-web evidence (interview, observation, internal analysis) is allowed: describe the
+# reference in `url` or `locator` instead of forcing a link.
+sources:
+  - id: source-001
+    title: Karpathy's autoresearch
+    author_or_organization: Andrej Karpathy
+    url: https://github.com/karpathy/autoresearch
+    published_at: 2026-03-08
+    accessed_at: null
+    supports:
+      - 630-line Python tool for autonomous ML experiments — the source pattern.
+      - Single file surface (`train.py`), immutable eval (`prepare.py` + `val_bpb`), keep-or-revert
+        loop, ~12 experiments/hour.
+      - ~700 experiments produced ~20 real improvements; the limiting factor was eval quality, not
+        generation speed.
+    locator: null
+    limitations: null
+
+  - id: source-002
+    title: VentureBeat — autoresearch coverage
+    author_or_organization: VentureBeat
+    url: https://venturebeat.com/technology/andrej-karpathys-new-open-source-autoresearch-lets-you-run-hundreds-of-ai
+    published_at: null
+    accessed_at: null
+    supports:
+      - 8.6M views on the autoresearch announcement.
+    locator: null
+    limitations: null
+
+  - id: source-003
+    title: Latent Space — Sparks of Recursive Self Improvement
+    author_or_organization: Latent Space
+    url: https://www.latent.space/p/ainews-autoresearch-sparks-of-recursive
+    published_at: null
+    accessed_at: null
+    supports:
+      - "\"Generation becomes cheap while judgment becomes scarce\" — the eval-is-the-bottleneck
+        insight."
+      - Static benchmarks saturate once experiments run 100x faster than human iteration.
+    locator: null
+    limitations: Stays in the research/ML frame.
+
+  - id: source-004
+    title: Phil Schmid — How Autoresearch will change SLM adoption
+    author_or_organization: Phil Schmid
+    url: https://www.philschmid.de/autoresearch
+    published_at: null
+    accessed_at: null
+    supports:
+      - Generalization of the autoresearch loop to fine-tuning workflows / SLM adoption.
+    locator: null
+    limitations: Still ML-focused, no dev workflow.
+
+  - id: source-005
+    title: Simon Willison — Red/Green TDD for agents
+    author_or_organization: Simon Willison
+    url: https://simonwillison.net/guides/agentic-engineering-patterns/red-green-tdd/
+    published_at: null
+    accessed_at: null
+    supports:
+      - "Red/green TDD is \"by far the most effective way\" to keep AI-generated code working."
+    locator: null
+    limitations: Does not connect to the autoresearch loop or name the pattern.
+
+  - id: source-006
+    title: Checkpoint Commit Patterns
+    author_or_organization: Understanding Data
+    url: https://understandingdata.com/posts/checkpoint-commit-patterns/
+    published_at: null
+    accessed_at: null
+    supports:
+      - Four documented patterns — Validation Gate, Incremental Checkpoint, Safety Bracket,
+        End-of-Session Commit — as existing practice the ratchet formalizes.
+    locator: null
+    limitations: A pattern catalog, not a unified framework with a name.
+
+  - id: source-007
+    title: incident.io — Shipping faster with Claude Code and Git Worktrees
+    author_or_organization: incident.io
+    url: https://incident.io/blog/shipping-faster-with-claude-code-and-git-worktrees
+    published_at: null
+    accessed_at: null
+    supports:
+      - 4-5 parallel Claude agents in worktree-isolated branches, with CI pipelines under 5 minutes
+        for fast feedback — the Surface primitive in practice.
+    locator: null
+    limitations: null
+
+  - id: source-008
+    title: ccswarm
+    author_or_organization: nwiizo
+    url: https://github.com/nwiizo/ccswarm
+    published_at: null
+    accessed_at: null
+    supports:
+      - Orchestrates multiple specialized agent pools (Frontend, Backend, DevOps, QA) in worktree
+        isolation.
+    locator: null
+    limitations: null
+
+  - id: source-009
+    title: autoexp generalization
+    author_or_organization: adhishthite (community gist)
+    url: https://gist.github.com/adhishthite/16d8fd9076e85c033b75e187e8a6b94e
+    published_at: null
+    accessed_at: null
+    supports:
+      - Community project applying the autoresearch pattern to any project with quantifiable
+        metrics — prompt engineering, RAG, compilers, API tuning.
+    locator: null
+    limitations: Focuses on config/parameter tuning, not layered software architecture.
+
+  - id: source-010
+    title: ATDD-Driven AI Development
+    author_or_organization: Paul M. Duvall
+    url: https://www.paulmduvall.com/atdd-driven-ai-development-how-prompting-and-tests-steer-the-code/
+    published_at: null
+    accessed_at: null
+    supports:
+      - Acceptance tests steering AI coding agents.
+    locator: null
+    limitations: null
+
+  - id: source-011
+    title: Nurture-First Agent Development
+    author_or_organization: null
+    url: https://arxiv.org/html/2603.10808
+    published_at: null
+    accessed_at: null
+    supports:
+      - Spiral development with crystallization checkpoints.
+    locator: null
+    limitations: null
+
+  - id: source-012
+    title: Martin Kleppmann — AI will make formal verification mainstream
+    author_or_organization: Martin Kleppmann
+    url: https://martin.kleppmann.com/2025/12/08/ai-formal-verification.html
+    published_at: null
+    accessed_at: null
+    supports:
+      - AI generates, then proves correct — stronger oracles for agent-written code.
+    locator: null
+    limitations: null
+
+  - id: source-013
+    title: GEPA (ICLR 2026 Oral)
+    author_or_organization: null
+    url: https://arxiv.org/abs/2507.19457
+    published_at: null
+    accessed_at: null
+    supports:
+      - Reflective prompt evolution can outperform RL — academic support for the meta-learning layer
+        that composes S/O/R with Trajectory.
+    locator: null
+    limitations: null
+
+  - id: source-014
+    title: sorkit sentiment-analyzer example run (author's own toolkit and experiment log)
+    author_or_organization: The author
+    url: https://github.com/johncarpenter/sorkit/tree/main/examples/sentiment
+    published_at: null
+    accessed_at: null
+    supports:
+      - First-hand demonstration cited in the article body — composite score 0.3864 to 0.9438 across
+        two classifier iterations plus one API-layer iteration against a 50-example golden set.
+      - The layered stacking claim — the classifier layer freezes before the API layer starts.
+    locator: "Experiment log reproduced as a table in the article body; hypothesis text comes from the
+      run's results.tsv."
+    limitations: "The draft's own self-assessment flags this for verification: confirm the iteration
+      descriptions match what the agent actually discovered, in particular whether the false-positive
+      words (\"quality\", \"surprised\", \"favorite\") are observed or inferred from the hypothesis
+      column."

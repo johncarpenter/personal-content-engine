@@ -1,0 +1,125 @@
+# Sources backing the article's claims. Reference them in article.md as [src:source-001].
+# Non-web evidence (interview, observation, internal analysis) is allowed: describe the
+# reference in `url` or `locator` instead of forcing a link.
+sources:
+  - id: source-001
+    title: Why unstructured data is the most valuable asset
+    author_or_organization: Analytics Insight
+    url: https://www.analyticsinsight.net/data-analytics/why-unstructured-data-could-become-the-most-valuable-digital-asset
+    published_at: null
+    accessed_at: null
+    supports:
+      - IDC estimate that ~90% of enterprise data is unstructured and largely inaccessible to AI systems
+      - Gartner figure that fewer than 15% of enterprises have cataloged more than half their data assets
+    locator: null
+    limitations: Reports the IDC and Gartner figures second-hand; the primary IDC estimate is not linked. The draft's own verification list still flags "IDC ~90% unstructured" as a claim to check.
+
+  - id: source-002
+    title: Dark data in retail / customer reviews
+    author_or_organization: Analytics Insight
+    url: https://www.analyticsinsight.net/amp/story/tech-news/dark-data-in-retail-how-analyzing-unstructured-customer-reviews-drives-enterprise-revenue
+    published_at: null
+    accessed_at: null
+    supports:
+      - Unstructured retail notes and reviews as a source of revenue insight — support for the store-manager-notes example
+    locator: null
+    limitations: null
+
+  - id: source-003
+    title: STL anomalize methods
+    author_or_organization: business-science
+    url: https://business-science.github.io/anomalize/articles/anomalize_methods.html
+    published_at: null
+    accessed_at: null
+    supports:
+      - Decompose first, then detect anomalies in the remainder — "the remainder is where anomalies are most likely to manifest"
+    locator: null
+    limitations: null
+
+  - id: source-004
+    title: Seasonal Decomposition by Loess
+    author_or_organization: GeeksforGeeks
+    url: https://www.geeksforgeeks.org/data-analysis/seasonal-decomposition-of-time-series-by-loess-stl/
+    published_at: null
+    accessed_at: null
+    supports:
+      - STL mechanics — splitting a series into trend, seasonal and residual components
+      - LOESS is robust to outliers
+    locator: null
+    limitations: null
+
+  - id: source-005
+    title: Evaluation of Statistical Models and LLMs on Time Series Forecasting
+    author_or_organization: arXiv 2408.04867
+    url: https://arxiv.org/pdf/2408.04867
+    published_at: null
+    accessed_at: null
+    supports:
+      - LLM forecasters significantly deteriorate on data containing both periodic and trend components
+      - ARIMA and exponential smoothing remain unbeatable for small, regular series (a few hundred observations)
+    locator: null
+    limitations: null
+
+  - id: source-006
+    title: 2026 Time Series Toolkit
+    author_or_organization: MachineLearningMastery
+    url: https://machinelearningmastery.com/the-2026-time-series-toolkit-5-foundation-models-for-autonomous-forecasting/
+    published_at: null
+    accessed_at: null
+    supports:
+      - Tiered model selection for time series
+      - Well-tuned deep learning beats LLMs on hierarchical and probabilistic forecasts
+    locator: null
+    limitations: null
+
+  - id: source-007
+    title: GraphRAG + MCP agentic data architecture
+    author_or_organization: Hyperight
+    url: https://hyperight.com/agentic-data-architecture-graphrag-mcp-2026/
+    published_at: null
+    accessed_at: null
+    supports:
+      - A graph beats a flat vector search on multi-hop questions — "a flat vector search would likely miss the middle link; a graph makes it a deterministic path"
+      - MCP as the integration fabric between stores and the orchestration layer
+    locator: null
+    limitations: null
+
+  - id: source-008
+    title: Circuit Signal retail intelligence platform — beer vs. alcohol-free 0.0 analysis
+    author_or_organization: The author (first-hand; proprietary platform)
+    url: null
+    published_at: null
+    accessed_at: null
+    supports:
+      - STL decomposition run without day-of-week or month labels independently identified Saturday/June as the flagship's weekly and annual peaks and Friday/October for the 0.0 line
+      - A recurring October residual anomaly in the 0.0 line (z ~ 3.3), growing annually — "Sober October" in point-of-sale data
+      - Lagged correlation showing flagship anomalies lead 0.0 anomalies by ~16 days, which is inconsistent with direct substitution
+      - The day-part and social-occasion split between the two products that reframed the marketing read
+    locator: 'Internal analysis on Circuit Signal (STL decomposition, pgvector, containerized agent stack) over US restaurant POS data, 2019–2025. Proprietary: presented anonymized and conceptually per the treatment decision of 2026-05-27 — brand anonymized, numbers softened, transaction counts, run IDs and store keys dropped.'
+    limitations: Differing store coverage between the two datasets may inflate the weekday skew; the 0.0 sample is ~15x smaller than the flagship's; a late-period export artifact produced an implausible z ~ 26 spike that a human had to adjudicate. Not independently verifiable by a reader.
+
+  - id: source-009
+    title: kgmd
+    author_or_organization: John Carpenter (open source)
+    url: https://github.com/johncarpenter/kgmd
+    published_at: null
+    accessed_at: null
+    supports:
+      - Open-source implementation of LLM entity/relationship extraction over a markdown corpus — the build end of the knowledge-graph lens
+    locator: null
+    limitations: null
+
+# Entry shape — copy, uncomment, and replace. Only `id`, `title`, and `supports` are
+# expected at publication; the rest are recorded when they apply.
+#
+# sources:
+#   - id: source-001
+#     title: Source title
+#     author_or_organization: null
+#     url: null
+#     published_at: null
+#     accessed_at: null
+#     supports:
+#       - Specific claim supported by this source
+#     locator: null # Page, section, timestamp, interview date, or other precise location
+#     limitations: null # Sample size, vendor funding, age, scope mismatch, second-hand reporting

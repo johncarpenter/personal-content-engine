@@ -1,0 +1,471 @@
+# Sources backing the article's claims. Reference them in article.md as [src:source-001].
+# Non-web evidence (interview, observation, internal analysis) is allowed: describe the
+# reference in `url` or `locator` instead of forcing a link.
+#
+# All entries accessed 2026-09-15. Where the primary page returned HTTP 403 to the research
+# agent, `limitations` says so and names the secondary coverage the figures were taken from;
+# the author should open the primary before citing.
+sources:
+  # --- Aggregate spend and budget forecasts -------------------------------------------------
+  - id: source-001
+    title: Gartner Forecasts Worldwide IT Spending to Grow 14.2% in 2026, Totaling $6.37 Trillion
+    author_or_organization: Gartner (John-David Lovelock)
+    url: https://www.gartner.com/en/newsroom/press-releases/2026-07-27-gartner-forecasts-worldwide-it-spending-to-grow-14-point-2-percent-in-2026-totaling-6-point-37-trillion
+    published_at: 2026-07-27
+    accessed_at: 2026-09-15
+    supports:
+      - Worldwide IT spending $6.37 trillion in 2026, up 14.2% from 2025 (revised up from $6.31T in April)
+      - Data centre systems the fastest-growing segment, driven by AI workloads
+    locator: null
+    limitations: Primary returned 403 at research time; figures confirmed via CFO Dive coverage (2026-07-28). Worldwide aggregate dominated by hyperscaler capex, not a per-employee enterprise figure.
+  - id: source-002
+    title: Gartner Forecasts Worldwide AI Spending to Grow 47% in 2026
+    author_or_organization: Gartner (John-David Lovelock)
+    url: https://www.gartner.com/en/newsroom/press-releases/2026-05-19-gartner-forecasts-worldwide-ai-spending-to-grow-47-percent-in-2026
+    published_at: 2026-05-19
+    accessed_at: 2026-09-15
+    supports:
+      - Worldwide AI spending $2.59 trillion in 2026, up 47%
+      - Spending on AI models >$32 billion in 2026, ~$60 billion in 2027
+      - Enterprise GenAI and AI agent spending increases $6 billion in 2026
+      - Quote — "Enterprises have yet to really flex their spending potential. That is coming and 2026 will be the inflection year."
+    locator: null
+    limitations: Primary returned 403; figures from CIO Dive coverage. More than 45% of the total is vendor-driven infrastructure, so the headline overstates enterprise operating spend.
+  - id: source-003
+    title: Gartner Predicts AI Inference Costs Per Agentic Workflow Will Increase More Than Fivefold Through 2028
+    author_or_organization: Gartner (Will Sommer, Sr. Director Analyst)
+    url: https://www.gartner.com/en/newsroom/press-releases/2026-08-17-gartner-predicts-ai-inference-costs-per-agentic-workflow-will-increase-more-than-fivefold-through-2028
+    published_at: 2026-08-17
+    accessed_at: 2026-09-15
+    supports:
+      - "AI inference costs per agentic workflow will increase more than fivefold through 2028"
+      - "Compared to a basic chatbot interaction, routing a task to an agentic reasoning model increases provider inference costs by at least five times, and often much more as task complexity grows"
+      - Three trends named — foundational model costs are rapidly improving; that efficiency unlocks deployment of more powerful, more expensive models; sophisticated workflows use far more tokens than chatbot interactions
+      - As written — "tokens are becoming more cost-efficient, but not as quickly as AI capabilities and the costs associated with those capabilities are increasing" — "The rate of innovation is outpacing the cost curve"
+      - The Inference Paradox, defined as "better unit economics escalating the overall cost of AI without providing a clear pathway to commensurate and predictable value"
+      - Sommer — "Product leaders cannot rely on more efficient token economics to rationalize AI costs. Each successive generation of AI capability will necessitate more, and often more expensive, tokens. There is no reliable, economical one-size-fits-all model on the horizon. Producing competitive AI products will require developing and maintaining complex multimodel ecosystems."
+      - Sommer — "Defaulting to generic autonomous intelligence will result in unbounded costs orders of magnitude higher than those of optimized product ecosystems."
+      - ROI from reasoning agents demands "exponentially higher returns relative to basic models, or highly optimized inference-tiering, routing and orchestration"
+    locator: Press release, Stamford, 2026-08-17; author holds a PDF print (research/, 2026-09-15). Figure 1 "AI Complexity Outpaces Falling Token Costs". Underlying Gartner document "The Inference Paradox — Inference Tiering Is Critical to Protect Margins" is client-only.
+    limitations: Prediction, no method shown in the release; aimed at product leaders building AI products, so "provider inference costs" is the vendor's cost, not the enterprise buyer's bill. The "token prices fall ~95% by 2030" figure repeated in secondary coverage is NOT in this release — do not attribute it to Gartner from here.
+  - id: source-004
+    title: AI Agents Forecast to Boost Tech Cash Flow as Usage Soars
+    author_or_organization: Goldman Sachs Research (interview with Jim Schneider, senior equity analyst, US semiconductors and IT services)
+    url: https://www.goldmansachs.com/insights/articles/ai-agents-forecast-to-boost-tech-cash-flow-as-usage-soars
+    published_at: 2026-05-20
+    accessed_at: 2026-09-15
+    supports:
+      - As written — "token consumption is expected to multiply 24 times, to 120 quadrillion tokens per month, between 2026 and 2030"; consumer agents alone 12x
+      - Schneider — agentic AI "is like taking a simple chatbot request and blowing it up 10-fold, 20-fold, 50-fold" because "many queries are repeated in sequence"
+      - "Semiconductor providers are delivering lower cost per token of 60%-70% per year for inference"
+      - Enterprise adoption lags and is uneven — "In 2030, we forecast that 12% of knowledge workers will be using agentic AI yet by 2040 that figure will be 37%"
+      - Coding agents are "very efficient"; one real-time voice agent case "where the human cost was actually less than the LLM cost today"
+      - Daily LLM queries modelled at 40% CAGR to 11 billion by 2030; "always-on" background agents
+    locator: Interview article, estimates as of May 2026; author holds a PDF print (research/, 2026-09-15). Chart "Token use by AI agents is expected to multiply 24 times by 2030".
+    limitations: Sell-side research framed around hyperscaler margins; use cases modelled by simulation (online travel, call centre), method not published. The ">70% of tokens from enterprise agents by 2040" figure in secondary coverage is NOT in this article. Article carries a no-advice disclaimer.
+  - id: source-005
+    title: "Agent Adoption: The IT Industry's Next Great Inflection Point (IDC FutureScape 2026, Worldwide IT Industry, Prediction 2)"
+    author_or_organization: IDC (Rick Villars)
+    url: https://www.idc.com/resource-center/blog/agent-adoption-the-it-industrys-next-great-inflection-point/
+    published_at: 2025-12-10
+    accessed_at: 2026-09-15
+    supports:
+      - By 2027, G2000 agent use increases tenfold and token and API call loads rise a thousandfold
+      - Token delivery cost worldwide for agent actions projected to surpass $68 billion annually
+    locator: FutureScape 2026, Worldwide IT Industry, Prediction 2
+    limitations: Analyst prediction aimed at technology providers, not enterprise budgets; "thousandfold" is load, not spend.
+  - id: source-006
+    title: "How Do AI Agents Spend Your Money? Analyzing and Predicting Token Consumption in Agentic Coding Tasks"
+    author_or_organization: Bai, Huang, Wang, Sun, Mihalcea, Brynjolfsson, Pentland, Pei (arXiv 2604.22750)
+    url: https://arxiv.org/abs/2604.22750
+    published_at: 2026-04-24
+    accessed_at: 2026-09-15
+    supports:
+      - Agentic coding tasks consume roughly 1000x the tokens of code reasoning or code chat, with input tokens dominating cost
+      - Runs on the same task can differ by up to 30x in total tokens; more tokens do not reliably mean higher accuracy
+      - Human-rated task difficulty only weakly predicts token cost; frontier models underestimate their own token usage
+    locator: Abstract; SWE-bench Verified trajectories from eight frontier models
+    limitations: Preprint, not peer-reviewed at access time. Coding tasks only; the multiplier does not transfer directly to other workloads.
+  - id: source-007
+    title: "Why AI's next phase will likely demand more computational power, not less (TMT Predictions 2026)"
+    author_or_organization: Deloitte
+    url: https://www.deloitte.com/us/en/insights/industry/technology/technology-media-and-telecom-predictions/2026/compute-power-ai.html
+    published_at: 2025-11-18
+    accessed_at: 2026-09-15
+    supports:
+      - Inference is roughly two-thirds of all AI compute in 2026, up from a third in 2023 and half in 2025
+      - Test-time scaling ("long thinking") uses more than 100 times the compute of a simple inference such as summarizing an email
+    locator: null
+    limitations: Industry-level prediction; the 100x figure is illustrative rather than measured on enterprise workloads.
+  # --- Token price trend (the counter-force) -----------------------------------------------
+  - id: source-008
+    title: LLM inference prices have fallen rapidly but unequally across tasks
+    author_or_organization: Epoch AI
+    url: https://epoch.ai/data-insights/llm-inference-price-trends
+    published_at: 2025-03-12
+    accessed_at: 2026-09-15
+    supports:
+      - Price to reach a fixed benchmark level fell between 9x and 900x per year depending on the task, median around 40x
+      - GPT-4-level MMLU performance fell from $37.50 to $0.18 per million tokens (March 2023 to February 2025)
+      - Authors caution that the fastest recent declines may not persist
+    locator: null
+    limitations: Eighteen months old; measures list price for a fixed capability, which is not what enterprises pay once they adopt each new frontier model.
+  - id: source-009
+    title: LLMflation — LLM inference cost is going down fast
+    author_or_organization: a16z (Guido Appenzeller)
+    url: https://x.com/a16z/status/1856760107004035270
+    published_at: 2024-11-13
+    accessed_at: 2026-09-15
+    supports:
+      - Per-token cost for constant capability fell roughly 10x per year over the preceding three years
+    locator: null
+    limitations: Nearly two years old; venture-capital source with a portfolio interest; a social post summarizing a blog essay.
+  # --- Per-employee and per-organization spend ---------------------------------------------
+  - id: source-010
+    title: How Much Are Firms Spending on AI (and What Will Happen to Headcounts)?
+    author_or_organization: Federal Reserve Bank of Atlanta (Barrero, Bloom, Davis, Foster, Meyer, Mihaylov, Navarrete)
+    url: https://www.atlantafed.org/research-and-data/publications/policy-hub-macroblog/2026/05/06/how-much-firms-spending-on-ai-and-what-will-happen-to-headcounts
+    published_at: 2026-05-06
+    accessed_at: 2026-09-15
+    supports:
+      - Employment-weighted AI spend per employee $1,358 in 2025 and $2,068 planned for 2026 (about +50%)
+      - More than half of firms plan $200 or less per employee in 2026; the top 10% plan $2,800 or more
+      - Professional and business services $3,470 per employee in 2026 (+74%); manufacturing $672 in 2025 rising to about $900
+      - Executives expect AI to reduce hiring by about 0.8% (degree) and 1.1% (non-degree) over 12 months
+    locator: "Survey question — 'For calendar year [2025/2026], how much [did/will] your firm spend on AI adoption and AI related technologies? Include software, subscription services, hardware, worker training, and IT staff support.'"
+    limitations: CFO Survey panel (Atlanta Fed, Richmond Fed, Duke); sample size not stated on the page (secondary coverage says 603 responses, Nov–Dec 2025). Self-reported plans, US firms, and the definition bundles training and IT staff with tokens.
+  - id: source-011
+    title: "2026 Global Technology Leadership Study: From Operators to Orchestrators"
+    author_or_organization: Deloitte
+    url: https://www.deloitte.com/us/en/insights/topics/technology-management/future-of-tech-leadership.html
+    published_at: 2026-04-30
+    accessed_at: 2026-09-15
+    supports:
+      - Technology investment is about 6% of revenue in 2026 and projected to reach about 8% over the next two years
+      - 89% of tech leaders allocate no more than 25% of their technology budget to AI initiatives
+      - 42% report low or no ROI on AI investments
+    locator: "Survey of 662 senior technology leaders, 2025-12-22 to 2026-02-23"
+    limitations: Self-reported projections; percent-of-revenue is not per-employee and mixes AI with everything else.
+  - id: source-012
+    title: "Enterprise AI Overruns Hit 46.9%: Is the Reckoning in FY2027?"
+    author_or_organization: Futurum Research (Mitch Ashley), 2H 2026 CIO & Technology Buyers Decision Maker Survey
+    url: https://futurumgroup.com/insights/enterprise-ai-overruns-hit-46-9-is-the-reckoning-in-fy2027/
+    published_at: 2026-09-14
+    accessed_at: 2026-09-15
+    supports:
+      - 46.9% of enterprises ran over their AI budget; 5.6% came in under
+      - Of those over budget, 47.6% sought supplemental funding, 43.3% absorbed it into the next cycle, 38.7% reallocated from the IT budget
+      - Overrun drivers named as prompt volume, inference demand, model changes, new services entering production, and broader deployment
+    locator: Document AINMA202609; 767 organizations reported running over budget
+    limitations: Analyst-firm survey; full sample size and method behind the 767 not shown on the page.
+  - id: source-013
+    title: State of FinOps 2026 Report
+    author_or_organization: FinOps Foundation
+    url: https://data.finops.org/
+    published_at: 2026-02-01
+    accessed_at: 2026-09-15
+    supports:
+      - 98% of FinOps teams now manage AI spend, up from 63% in 2025 and 31% in 2024
+      - FinOps for AI is the top forward-looking priority; AI cost management is the top skill teams want to add
+    locator: null
+    limitations: Respondents are FinOps practitioners (1,192; $83B+ cloud spend), so a self-selected, cloud-heavy sample. The "73% of AI projects blow through budget" figure repeated in secondary coverage was NOT found on this page — do not cite it to this source without locating it.
+  - id: source-014
+    title: "Managing AI costs in 2026: 101 tech leaders weigh in"
+    author_or_organization: Retool
+    url: https://retool.com/blog/how-tech-leaders-are-handling-ai-cost-management
+    published_at: 2026-07-01
+    accessed_at: 2026-09-15
+    supports:
+      - 43% of leaders are spending more on AI than budgeted for 2026; 34% on track; 24% under
+      - Only 5% are confident in their visibility into AI-generated tools running in production
+      - Practitioner description of per-team token allocations that are checked and adjusted
+    locator: null
+    limitations: Vendor survey, n=101, exact field dates not stated.
+  - id: source-015
+    title: Why 79% of Enterprises Overspent on AI in 2026
+    author_or_organization: DoiT (fieldwork by Sapio Research)
+    url: https://www.doit.com/blog/ai-spending-survey
+    published_at: 2026-06-09
+    accessed_at: 2026-09-15
+    supports:
+      - 79% of 500 finance leaders experienced AI cost overruns in the past 12 months
+      - Organizations with mature FinOps reported the highest overruns (89%; 30.9% mean overspend), attributed to larger programmes and better instrumentation
+    locator: Fieldwork February 2026
+    limitations: Vendor-commissioned; "finance leaders" definition and country mix not verified.
+  - id: source-016
+    title: "When AI budgets balloon: What enterprises are learning in 2026"
+    author_or_organization: Flexera
+    url: https://www.flexera.com/blog/ai/ai-budgets-balloon-enterprise-lessons-flexera-2026/
+    published_at: 2026-07-20
+    accessed_at: 2026-09-15
+    supports:
+      - Flexera 2026 State of ITAM (512 respondents) — 59% report increased wasted AI software spend; only 31% have accurate visibility into AI software
+      - KPMG Global AI Pulse (as cited) — 49% delayed or scaled back AI due to cost; only 24% have executive-level accountability for AI cost; organizations with defined accountability report 3x higher ROI
+    locator: null
+    limitations: Vendor blog; the KPMG figures are second-hand here and should be checked against the KPMG report before use.
+  - id: source-017
+    title: 2026 SaaS Management Index
+    author_or_organization: Zylo
+    url: https://zylo.com/reports/2026-saas-management-index/
+    published_at: 2026-01-01
+    accessed_at: 2026-09-15
+    supports:
+      - 78% of IT leaders reported unexpected charges tied to AI features or consumption-based pricing
+      - AI-native application spend up 108% year over year; large enterprises up 393%
+      - Average organization SaaS spend $55.7M, median $20.6M
+    locator: null
+    limitations: Vendor data drawn from Zylo's own customer base (40M+ licences); skews to large organizations. Exact publication date not shown.
+  - id: source-018
+    title: The AI Budget Reallocation Is Coming (reporting Redpoint Ventures' CIO survey)
+    author_or_organization: The SaaS CFO (Ben Murray); Redpoint Ventures survey of 141 CIOs, March 2026
+    url: https://www.thesaascfo.com/the-ai-budget-reallocation-is-coming/
+    published_at: 2026-04-01
+    accessed_at: 2026-09-15
+    supports:
+      - 45% of CIOs say AI budgets come straight out of existing software line items
+      - 54% run active vendor consolidation programmes; 3% expect AI to increase vendor count
+      - 58% say AI feature additions are the main reason software budgets are growing
+      - Bain (n=951, June 2026, as cited) — nearly 40% achieved under 10% cost savings against 11–20% targets; 90% increasing AI budgets regardless
+    locator: null
+    limitations: Second-hand reporting of a VC survey; Bain and Gartner figures inside it are third-hand. TODO verify against the Redpoint and Bain originals.
+  - id: source-019
+    title: "Where AI Money Comes From: The Quiet Shift Inside IT Budgets"
+    author_or_organization: ETR (Technology Spending Intentions Survey)
+    url: https://research.etr.ai/etr-data-drop/where-ai-money-comes-from-the-quiet-shift-inside-it-budgets
+    published_at: 2026-04-15
+    accessed_at: 2026-09-15
+    supports:
+      - IT budgets growing 3.6% in 2026 while AI spend grows about 13%
+      - AI's share of IT budgets rose from 12.1% to 14.2% year over year
+      - AI increasingly funded from the standard IT budget (56.7% to 61.7%), with pressure on services, contractors, RPA, enterprise apps, productivity and marketing software
+    locator: April 2026 data point; ~9,000 enterprise technology leaders
+    limitations: Subscription research; only the public data-drop was read. Percent of IT budget, not per employee.
+  - id: source-020
+    title: RBC Capital Markets CIO survey — AI budgets are net-new
+    author_or_organization: RBC Capital Markets (as reported by The SaaS CFO and others)
+    url: https://www.thesaascfo.com/the-ai-budget-reallocation-is-coming/
+    published_at: null
+    accessed_at: 2026-09-15
+    supports:
+      - 91% of surveyed CIOs say AI budgets are entirely new budgets rather than reallocated software spend; 100% are budgeting for AI
+    locator: null
+    limitations: Second-hand; sample size, date, and method not found. Conflicts with Redpoint's 45% reallocation finding. TODO verify with RBC before citing.
+  # --- Reported incidents --------------------------------------------------------------------
+  - id: source-021
+    title: Uber Burns Its 2026 AI Budget In Four Months On Claude Code
+    author_or_organization: Forbes (Janakiram MSV, senior contributor); overrun originally confirmed to The Information
+    url: https://www.forbes.com/sites/janakirammsv/2026/05/17/uber-burns-its-2026-ai-budget-in-four-months-on-claude-code/
+    published_at: 2026-05-17
+    accessed_at: 2026-09-15
+    supports:
+      - Uber "exhausted its entire 2026 artificial intelligence budget by April" after Claude Code spread across roughly 5,000 engineers; CTO Praveen Neppalli Naga confirmed the overrun to The Information, "saying the company was back to the drawing board on its assumptions"
+      - Rolled out December 2025; adoption "climbed from 32% of engineers in February to 84% classified as agentic coding users by March"; 95% used AI tools monthly; "roughly 70% of committed code originated from those tools"; "About 11% of live backend updates were written by agents with no human in the loop"
+      - As written — "Monthly cost per engineer ranged from $150 to $250 on average, with power users running between $500 and $2,000." Naga "reported spending $1,200 in a two-hour session"
+      - Internal leaderboards ranked engineers on Claude Code usage — "a cultural incentive to consume more tokens"; "The teams driving adoption were not the same teams managing the spend"
+      - Anthropic announced on May 13 that subscribers would face "a separate monthly credit meter for agent tools and third-party harnesses, billed at full application programming interface rates starting June 15"; GitHub moving Copilot to credits June 1
+      - "Five-to-twenty-fold increases in per-developer consumption are now documented in agentic mode, and no public benchmark shows a matching multiplier on output value"
+      - Survey data cited in coverage — 43% of organizations have formal AI governance policies, 21% mature agentic governance
+      - Microsoft 365 Copilot Enterprise at $30 per user per month as the per-seat contrast
+      - Uber R&D spend $3.4 billion in 2025, up 9%
+    locator: Forbes, published 2026-05-17, updated 2026-05-27; author holds a PDF print (research/, 2026-09-15). Sections "How A Coding Tool Outran A Budget", "Why Token Billing Breaks Traditional Budgeting", "The Limits Of The Productivity Defense".
+    limitations: Contributor piece built on The Information's reporting (paywalled) and Uber's own disclosures; the 43% / 21% governance figures are unattributed survey data. The average per-engineer cost is $150–250; the $500–2,000 range is power users only — earlier secondary coverage (and this repository's first notes) overstated it.
+  - id: source-022
+    title: Microsoft cut its engineers off from AI because the bill got too big
+    author_or_organization: Fortune (2026-05-22), syndicated via Yahoo Finance; earlier reporting by The Information
+    url: https://finance.yahoo.com/sectors/technology/articles/microsoft-cut-engineers-off-ai-093500532.html
+    published_at: 2026-05-22
+    accessed_at: 2026-09-15
+    supports:
+      - Microsoft's Experiences and Devices division discontinued Claude Code licences by 2026-06-30 and moved engineers to GitHub Copilot CLI
+      - The cost explanation is reported (Fortune, The Information), not confirmed by Microsoft in the piece
+    locator: null
+    limitations: The commonly repeated "$2,000 per engineer per month" for Microsoft comes from secondary coverage, not this article; only Uber's figure appears here. Microsoft has an obvious interest in favouring its own tool.
+  - id: source-023
+    title: AI Costs More Than The People It Replaced
+    author_or_organization: Forbes (Dr Jemma Green, contributor)
+    url: https://www.forbes.com/sites/jemmagreen/2026/07/02/ai-costs-more-than-the-people-it-replaced/
+    published_at: 2026-07-02
+    accessed_at: 2026-09-15
+    supports:
+      - As written — "Uber's COO and president, Andrew Macdonald, said publicly that token usage didn't correlate directly with useful features shipped to users" (venue of the statement not given)
+      - Microsoft "instructed engineers in a major division to stop using an AI coding assistant because the bills became untenable"
+      - Per Axios (as cited) — "One unnamed company ... ran up a $500 million Claude bill in a single month after management forgot to set a usage cap"
+      - Bryan Catanzaro (Nvidia VP applied deep learning) — compute cost for his team "now far exceeds what the company spends on the employees using it"; Jensen Huang — "a $500,000 engineer should consume at least $250,000 worth of AI tokens annually", Nvidia "working toward a $2 billion annual token budget"
+      - Amazon's KiroRank usage leaderboard "quietly taken down after employees began gaming it — burning tokens on meaningless tasks solely to climb the rankings"; Meta's "Claudeonomics"; "tokenmaxxing"
+      - As written — "Roughly 95% of enterprise AI usage still runs on the costliest frontier models, even for work that doesn't demand that sophistication" (unattributed)
+      - Gartner (as cited) — "running the largest models could be nearly 90% cheaper by 2030"; AI agent software spending "$207 billion in 2026, up 139%"
+      - GitHub shifted Copilot to usage-based billing "after years of quietly absorbing up to eight times the subscription value for heavy users"; unnamed analysts project enterprise AI bills "rise another 30% to 50% above current levels" when pricing normalizes; Anthropic moved enterprise customers to usage-based billing in April 2026
+      - Lisa Emme (Inversion AI) — "once you do, you stop paying frontier prices for work a specialised model does better and cheaper. That's not cost-cutting; it's architecture. The winners this decade won't run the biggest model. They'll have built systems where the right model runs the right task"
+      - MIT study (as cited) — AI automation economically viable in about 23% of roles
+    locator: Forbes, published 2026-07-02, updated 2026-07-24; author holds a PDF print (research/, 2026-09-15). Sections "When AI Adoption Outruns Its Payoff", "The Culture Of Tokenmaxxing", "The Subsidy Unwinds", "The Bills Get Real".
+    limitations: Opinion column by a crypto-industry cofounder; nearly every figure is second-hand (Axios, Gartner, MIT, unnamed analysts) and several are unattributed (the 95% frontier-model share, the 8x subsidy). Use it for the Macdonald statement, the leaderboard anecdotes and the Emme quote; trace anything numeric to its origin before citing. The Axios piece it cites for the $500M bill was unavailable to the author.
+  # --- Governance and cost-control practice -------------------------------------------------
+  - id: source-024
+    title: The inference bill nobody budgeted for
+    author_or_organization: CIO.com (Steve Oppenheim)
+    url: https://www.cio.com/article/4163877/the-inference-bill-nobody-budgeted-for.html
+    published_at: 2026-04-28
+    accessed_at: 2026-09-15
+    supports:
+      - FinOps Foundation (as cited) — AI workloads are 18% of cloud spend at AI-forward enterprises, up from 4% in 2023
+      - Deloitte State of AI in the Enterprise 2026 (as cited) — only 1 in 5 companies has a mature governance model for autonomous agents
+      - Argument that governance architecture, not model selection, determines financial outcomes
+    locator: null
+    limitations: Opinion piece by a CIO mentor; every statistic is second-hand and its recursive-loop cost examples are the author's own arithmetic.
+  - id: source-025
+    title: Gartner survey — only 44% have adopted financial guardrails or AI FinOps practices
+    author_or_organization: Gartner (survey of 353 D&A and AI leaders, Nov–Dec 2025), reported by MarketScale
+    url: https://www.marketscale.com/industries/healthcare/gartner-says-ai-budgets-are-growing-faster-than-the-rules-to-control-them
+    published_at: 2026-08-28
+    accessed_at: 2026-09-15
+    supports:
+      - Only 44% of organizations had adopted financial guardrails or AI FinOps practices
+    locator: Presented at Gartner Data & Analytics Summit, March 2026
+    limitations: Second-hand; the Gartner primary was not located. TODO find the Gartner release or session record.
+  - id: source-026
+    title: Gartner Predicts Over 40% of Agentic AI Projects Will Be Canceled by End of 2027
+    author_or_organization: Gartner
+    url: https://www.gartner.com/en/newsroom/press-releases/2025-06-25-gartner-predicts-over-40-percent-of-agentic-ai-projects-will-be-canceled-by-end-of-2027
+    published_at: 2025-06-25
+    accessed_at: 2026-09-15
+    supports:
+      - Over 40% of agentic AI projects will be cancelled by end of 2027 due to escalating costs, unclear value, or inadequate risk controls (disconfirming — agentic spend may not scale as assumed)
+    locator: null
+    limitations: Prediction; not fetched directly (Gartner blocks the agent), cited from the known release title and widely reported summary.
+  - id: source-027
+    title: Gartner Predicts 40% of Enterprise Apps Will Feature Task-Specific AI Agents by 2026, Up from Less Than 5% in 2025
+    author_or_organization: Gartner
+    url: https://www.gartner.com/en/newsroom/press-releases/2025-08-26-gartner-predicts-40-percent-of-enterprise-apps-will-feature-task-specific-ai-agents-by-2026-up-from-less-than-5-percent-in-2025
+    published_at: 2025-08-26
+    accessed_at: 2026-09-15
+    supports:
+      - 40% of enterprise applications will feature task-specific AI agents by end of 2026, from under 5% in 2025 (supports the file-to-compute shift)
+    locator: null
+    limitations: Prediction; not fetched directly.
+  # --- What AI is used for today ------------------------------------------------------------
+  - id: source-028
+    title: "Anthropic Economic Index report: Cadences"
+    author_or_organization: Anthropic
+    url: https://www.anthropic.com/research/economic-index-june-2026-report
+    published_at: 2026-06-26
+    accessed_at: 2026-09-15
+    supports:
+      - Most common outputs on Claude are explanations (17% of conversations), documents and reports (15%), and guidance (11%) — i.e. file and text work
+      - Claude Code sessions run at materially higher autonomy (about 0.37 points on a 1–5 scale) than chat or Cowork
+      - Tasks in higher-wage occupations consume more tokens (marketing managers ~2.5x editors)
+    locator: Data sampled 2026-04-10 to 2026-06-10
+    limitations: One vendor's platform and users; conversation counts, not spend; Anthropic has an interest in the framing.
+  - id: source-029
+    title: "The State of AI: Global Survey 2026"
+    author_or_organization: McKinsey (QuantumBlack)
+    url: https://www.mckinsey.com/capabilities/quantumblack/our-insights/the-state-of-ai
+    published_at: 2026-03-01
+    accessed_at: 2026-09-15
+    supports:
+      - Chatbots are the most widely scaled AI tool (47% scaling across the enterprise); about two in ten are scaling AI agents and a similar share software coding agents
+      - 88% use AI in at least one function; 72% use gen AI
+    locator: null
+    limitations: Figures taken from search-engine summaries, not the report itself; publication date approximate. TODO verify against the report.
+  - id: source-030
+    title: "2025: The State of Generative AI in the Enterprise"
+    author_or_organization: Menlo Ventures
+    url: https://menlovc.com/perspective/2025-the-state-of-generative-ai-in-the-enterprise/
+    published_at: 2025-12-09
+    accessed_at: 2026-09-15
+    supports:
+      - Enterprise GenAI spend $37 billion in 2025, 3.2x the $11.5 billion of 2024; applications $19B, infrastructure $18B, of which foundation models $12.5B
+    locator: Survey of 495 US enterprise AI decision-makers, 2025-11-07 to 2025-11-25
+    limitations: Venture firm with portfolio interests; nine months old; US only.
+  # --- Cost engineering ---------------------------------------------------------------------
+  - id: source-031
+    title: "RouteLLM: Learning to Route LLMs with Preference Data"
+    author_or_organization: Ong, Almahairi, Wu, Chiang, Wu, Gonzalez, Kadous, Stoica (LMSYS / UC Berkeley), arXiv 2406.18665
+    url: https://arxiv.org/abs/2406.18665
+    published_at: 2024-06-26
+    accessed_at: 2026-09-15
+    supports:
+      - Learned routers between a strong and a weak model cut cost by over 85% on MT Bench while keeping 95% of GPT-4 quality (figure as stated in the LMSYS launch post; the paper reports cost reductions of over 2x on MT Bench, 5x on MMLU, 1.5x on GSM8K)
+    locator: Abstract and LMSYS blog post, July 2024
+    limitations: Two-year-old academic result on public benchmarks; savings depend entirely on router accuracy on the enterprise's own traffic. Not fetched during this session; cited from prior knowledge — TODO verify the exact figures.
+  - id: source-032
+    title: GitHub Copilot is moving to usage-based billing
+    author_or_organization: GitHub
+    url: https://github.blog/news-insights/company-news/github-copilot-is-moving-to-usage-based-billing/
+    published_at: 2026-06-01
+    accessed_at: 2026-09-15
+    supports:
+      - Copilot Business ($19) and Enterprise ($39) seats now include a matching monthly AI-credit allowance, with usage beyond it billed on token consumption at listed model rates (per-seat pricing converting to consumption pricing)
+    locator: null
+    limitations: Not fetched directly; details from search summaries. Publication date approximate. TODO verify.
+  # --- Disconfirming ------------------------------------------------------------------------
+  - id: source-033
+    title: "The GenAI Divide: State of AI in Business 2025"
+    author_or_organization: MIT NANDA
+    url: https://finance.yahoo.com/news/mit-report-95-generative-ai-105412686.html
+    published_at: 2025-08-18
+    accessed_at: 2026-09-15
+    supports:
+      - 95% of organizations saw no measurable P&L return from generative AI pilots within about six months (disconfirming — spend may be cut rather than scaled)
+    locator: 52 executive interviews, 153 survey responses, 300+ public deployments
+    limitations: Preliminary, not peer-reviewed, small sample, short measurement window; widely misquoted. Linked via press coverage because the original PDF location changed.
+  # --- Baseline still needed -----------------------------------------------------------------
+  - id: source-034
+    title: "IT Spending and Staffing Benchmarks 2026/2027: Chapter 1: Executive Summary"
+    author_or_organization: Avasant / Computer Economics
+    url: https://avasant.com/report/it-spending-and-staffing-benchmarks-2026-2027-chapter-1-executive-summary/
+    published_at: 2026-08-01
+    accessed_at: 2026-09-15
+    supports:
+      - Would supply the IT operational spending per user baseline the 40% claim needs (figure not yet obtained — paywalled)
+    locator: Chapter 1 lists "IT operational spending per user" and "Total IT spending as percentage of revenue"
+    limitations: Paywalled; no figure was read. Recorded so the author knows where the baseline lives.
+  # --- First-hand evidence (author, 2026-09-15) --------------------------------------------
+  - id: source-035
+    title: Author's own model usage, August–September 2026 (Claude Code stats and subscription plans)
+    author_or_organization: John Carpenter (author) — first-hand observation
+    url: null
+    published_at: null
+    accessed_at: 2026-09-15
+    supports:
+      - Claude Code stats, last 30 days to 2026-09-15 — total 673.9M tokens on Opus 5 (favourite model), split as input 16.9k, output 4.4M, cache read 653.0M, cache write 16.5M; 41 sessions, 19 of 30 days active, longest session 20h 4m
+      - An earlier read of the same view for the prior month showed 657M tokens
+      - Cache reads are about 97% of all tokens; fresh input is negligible (16.9k)
+      - A similar volume on OpenAI models over the same period (author's estimate, not measured)
+      - Both consumed on flat-rate subscriptions (Claude Max 5x at about $100/month; the OpenAI equivalent), with the author typically using about 95% of each allowance
+      - Usage pattern is a heavy single user working one or two flows at a time, not parallel agent fleets
+    locator: "Claude Code `/stats` view, 'Last 30 days', captured by the author 2026-09-15 and pasted to the research agent; subscription details from the author's statement the same day"
+    limitations: One person, one month; a 30-day window that does not align exactly with a calendar month. Stats show tokens, not dollars; the API-equivalent cost is computed in research/notes.md from list prices and depends on whether cache writes were 5-minute or 1-hour. The OpenAI figure is an estimate. Subscription pricing bounds the bill; the same usage on the API would not be bounded.
+  - id: source-036
+    title: IT cost per employee observed across the author's client workspaces, excluding AI
+    author_or_organization: John Carpenter (author) — first-hand observation as fractional CTO
+    url: null
+    published_at: null
+    accessed_at: 2026-09-15
+    supports:
+      - Roughly $200–300 per employee per month at startups, rising to $1,000–2,000 per employee per month at enterprises, before any AI spend
+      - The figure rises with company size
+    locator: "Author's statement to the research agent, 2026-09-15"
+    limitations: Practitioner range from a small number of clients, not a survey; the article should say so. Composition (licences, devices, support, cloud) not itemized. Anonymized client figures need permission before publication.
+  - id: source-037
+    title: Claude API pricing (model pricing table)
+    author_or_organization: Anthropic
+    url: https://platform.claude.com/docs/en/about-claude/pricing
+    published_at: null
+    accessed_at: 2026-09-15
+    supports:
+      - Claude Opus 5 — $5 per million input tokens, $25 per million output tokens, $0.50 per million cache-read tokens; Sonnet 5 $2 / $10 / $0.20; Haiku 4.5 $1 / $5 / $0.10
+      - Batch API halves input and output prices; cache reads are 0.1x base input
+      - Note on the page — Claude 4.7 and later use a tokenizer that produces roughly 30% more tokens for the same text
+    locator: Model pricing table and Prompt caching section
+    limitations: List prices; enterprise volume discounts are negotiated. Page carries no date.
+  - id: source-038
+    title: Claude plans and pricing (Pro and Max tiers)
+    author_or_organization: Anthropic (claude.com/pricing)
+    url: https://claude.com/pricing
+    published_at: null
+    accessed_at: 2026-09-15
+    supports:
+      - Claude Max 5x is listed from $100 per month with "5x more usage than Pro"; a Max 20x tier is also listed
+      - Claude Pro is $20 per month billed monthly ($17 with annual billing)
+    locator: Plans section
+    limitations: Marketing page; the usage multiple is relative to Pro and not stated in tokens. The page extraction showed "From $100" for both Max tiers, which looks like an extraction artefact — TODO verify the 20x price.

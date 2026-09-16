@@ -10,9 +10,8 @@ said are marked as proposals; unmarked text is the author's substance restated.
 
 Confirmed by the author 2026-09-15: a technology leader, or a CEO or CFO, deciding how to deploy AI
 across an organization — not what to build with it or how to operate it. In this repository's
-personas that is the AI-Curious Leader; the Builder is secondary at most. Filed under The On-Ramp
-(`background/topic-clusters.md` lists "What AI Adoption Actually Costs (And Saves)" as an On-Ramp
-example) or The Shift; the author decides.
+personas that is the AI-Curious Leader; the Builder is secondary at most. Pillar: **The Shift**
+(author's decision, 2026-09-15).
 
 The problem they arrive with: they have a per-employee IT cost they understand (licences, devices,
 support, cloud) and an AI line that started as a few per-seat subscriptions. They are now being
@@ -120,7 +119,8 @@ Desk research is done (see `research/`). Remaining effort is small and first-han
 
 ## Tracker
 
-TODO: tracker URL. Also set `tracker_url` in `article.yaml`.
+No tracker entry exists yet (author, 2026-09-15). `tracker_url` in `article.yaml` stays empty
+until one is created; the check warns on it and will keep warning until it is set.
 
 ---
 

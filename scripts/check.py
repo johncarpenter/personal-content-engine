@@ -10,11 +10,18 @@ Usage:
     scripts/check.py                                  # all articles, brief-safe checks
     scripts/check.py <article-id> [<article-id>...]
     scripts/check.py --mode publication <article-id>
+    scripts/check.py --distribution <article-id>      # also check distribution/ assets
 
 Modes:
     brief        (default) incomplete scaffolds and brief PRs stay valid; completeness
                  problems are reported as warnings
     publication  completeness is required; warnings above become errors
+
+    `--distribution` is orthogonal to both. It opts `articles/<id>/distribution/*.md` into
+    the same completeness findings, so they are warnings in brief mode and errors under
+    `--mode publication`. Without the flag that folder is not examined at all, which is the
+    point: optional distribution work can never block an otherwise complete article.
+    Strategy documents are never scanned; `To decide` there is a valid, permanent state.
 
 Exit status: 0 = no errors, 1 = errors found, 2 = bad invocation or missing dependency.
 """
@@ -215,6 +222,23 @@ def image_refs(text: str) -> list[tuple[int, str, str]]:
     ]
 
 
+def check_declared_image(article: Path, entry: dict, ref: str, alt: str, where: str,
+                         report: Report) -> None:
+    """Completeness of the manifest entry backing one image reference."""
+    asset_id = entry.get("id")
+    manifest = rel(article / "assets" / "manifest.yaml")
+    if blank(entry.get("purpose")):
+        report.incomplete(manifest, f"{asset_id}: `purpose` is empty")
+    if blank(entry.get("alt")):
+        report.incomplete(manifest, f"{asset_id}: `alt` text is required for accessibility")
+    if blank(entry.get("creator_or_source")):
+        report.incomplete(manifest, f"{asset_id}: `creator_or_source` is empty")
+    if blank(entry.get("rights_or_permission")):
+        report.warn(manifest, f"{asset_id}: `rights_or_permission` is empty")
+    if not alt.strip() and blank(entry.get("alt")):
+        report.incomplete(where, f"image {ref!r} has no alt text in the Markdown")
+
+
 def check_article(article: Path, sources: dict[str, dict], declared: dict[str, dict],
                   report: Report) -> None:
     path = article / "article.md"
@@ -255,18 +279,47 @@ def check_article(article: Path, sources: dict[str, dict], declared: dict[str, d
         if entry is None:
             report.incomplete(where, f"image {ref!r} is not listed in assets/manifest.yaml")
             continue
-        asset_id = entry.get("id")
-        manifest = rel(article / "assets" / "manifest.yaml")
-        if blank(entry.get("purpose")):
-            report.incomplete(manifest, f"{asset_id}: `purpose` is empty")
-        if blank(entry.get("alt")):
-            report.incomplete(manifest, f"{asset_id}: `alt` text is required for accessibility")
-        if blank(entry.get("creator_or_source")):
-            report.incomplete(manifest, f"{asset_id}: `creator_or_source` is empty")
-        if blank(entry.get("rights_or_permission")):
-            report.warn(manifest, f"{asset_id}: `rights_or_permission` is empty")
-        if not alt.strip() and blank(entry.get("alt")):
-            report.incomplete(where, f"image {ref!r} has no alt text in the Markdown")
+        check_declared_image(article, entry, ref, alt, where, report)
+
+
+def check_distribution(article: Path, declared: dict[str, dict], report: Report) -> None:
+    """Optional per-channel distribution copy, examined only under `--distribution`.
+
+    Assets carry no front matter, no status field, no article id and no release date by
+    design; the tracking project owns all of that. Copy reuses the article's imagery through
+    a relative path such as `../assets/hero.png`, so references resolve against the asset
+    file's own folder. An unresolved link destination is marked with the template's `TODO:`
+    prompt, which `PLACEHOLDER` already catches — there is no second marker syntax.
+    """
+    folder = article / "distribution"
+    if not folder.is_dir():
+        return
+    for path in sorted(folder.glob("*.md")):
+        if not path.is_file():
+            continue
+        raw = path.read_text(encoding="utf-8")
+        if not raw.strip():
+            report.incomplete(rel(path), "is empty; write the asset or remove the file")
+            continue
+        text = strip_code(raw)
+
+        for number, line in enumerate(text.splitlines(), start=1):
+            match = PLACEHOLDER.search(line)
+            if match:
+                report.incomplete(
+                    f"{rel(path)}:{number}", f"unresolved placeholder {match.group(0)!r}"
+                )
+
+        for number, alt, ref in image_refs(text):
+            where = f"{rel(path)}:{number}"
+            target = (path.parent / ref).resolve()
+            if not target.is_file():
+                report.incomplete(where, f"image {ref!r} does not exist")
+            entry = declared.get(str(target))
+            if entry is None:
+                report.incomplete(where, f"image {ref!r} is not listed in assets/manifest.yaml")
+                continue
+            check_declared_image(article, entry, ref, alt, where, report)
 
 
 def check_brief(article: Path, report: Report) -> None:
@@ -297,6 +350,8 @@ def main() -> int:
     parser.add_argument("articles", nargs="*", help="article ids or paths (default: all)")
     parser.add_argument("--mode", choices=("brief", "publication"), default="brief",
                         help="publication mode requires completeness (default: brief)")
+    parser.add_argument("--distribution", action="store_true",
+                        help="also check articles/<id>/distribution assets (default: skipped)")
     args = parser.parse_args()
 
     report = Report(strict=args.mode == "publication")
@@ -312,9 +367,12 @@ def main() -> int:
         sources = check_sources(article, report)
         declared = check_assets(article, report)
         check_article(article, sources, declared, report)
+        if args.distribution:
+            check_distribution(article, declared, report)
 
     label = f"{len(targets)} article(s)" if targets else "no articles"
-    print(f"checked {label} in {args.mode} mode")
+    scope = ", including distribution assets" if args.distribution else ""
+    print(f"checked {label} in {args.mode} mode{scope}")
 
     for warning in report.warnings:
         print(f"  warning  {warning}")

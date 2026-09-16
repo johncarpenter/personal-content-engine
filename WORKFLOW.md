@@ -29,10 +29,12 @@ plainly in the PR rather than implying review that did not happen.
 | Concern | Authoritative home |
 |---|---|
 | Ideas, priorities, themes, campaigns | Tracking project |
-| Editorial calendar and target publication dates | Tracking project |
+| Live editorial calendar, release dates, target publication dates | Tracking project |
 | Assignments, production status, performance, refresh reminders | Tracking project |
 | Article brief, research, outline, copy, imagery | This repository |
 | Brand, voice, visual standards, shared background | This repository |
+| Durable content strategy, channel guidance, distribution practice, intended cadence | This repository (`strategy/`) |
+| Supporting distribution assets | This repository; approval evidence in pull requests |
 | Approval evidence | GitHub pull requests |
 | Published URL and released revision | `article.yaml`, linked from the tracker |
 
@@ -54,10 +56,15 @@ Fill `brief.md`:
 - Original contribution, and why the author is equipped to make it.
 - Scope and exclusions.
 - Desired reader takeaway or action; a commercial call to action is optional.
+- Strategic fit: the pillar and reader it serves, per `strategy/content-strategy.md`.
+- Intended publication and distribution, per `strategy/channels.md`. Supporting assets stay optional.
 - Expected research effort and known dependencies.
 - Tracker link.
 
 Set `id`, `title`, `author`, and `tracker_url` in `article.yaml`.
+
+An unresolved strategic question is surfaced at Gate 1 rather than answered inside the brief: record
+it as an open question and let the approver decide. There is no separate strategy gate.
 
 **Gate 1 — brief approval.** Open the Brief PR (approval type: brief). Merge approves purpose,
 scope, and effort before substantial production begins. The brief does not need to predict the final
@@ -107,6 +114,17 @@ Preview copy and imagery together:
 scripts/preview.py <article-id>
 ```
 
+### Supporting distribution assets (optional)
+
+Distribution copy is per-article and optional. When an asset is actually needed, copy
+`templates/distribution-asset.md` to `articles/<id>/distribution/<channel>-<asset>.md` — for example
+`distribution/linkedin-launch-post.md` — and choose the set per `strategy/distribution-playbook.md`.
+Reuse the article's own imagery from `assets/` by relative path (`../assets/hero.png`) instead of
+duplicating files. The folder is never created empty.
+
+Optional distribution work never blocks an otherwise complete article: the checks ignore the folder
+unless `--distribution` is passed.
+
 ## 4. Edit, verify, and approve
 
 Review in this order:
@@ -120,6 +138,8 @@ Review in this order:
 4. **Voice** — Preserve the author's meaning while applying `brand/voice.md`.
 5. **Presentation** — Review the rendered article with images, captions, links, and publishing
    metadata.
+6. **Supporting assets in scope** — Review each distribution asset for accuracy, voice, context, and
+   consistency with the article. Supporting copy must not overstate the article's evidence.
 
 `/skill:review-article` produces a prioritized review; it does not rewrite the article or grant
 approval.
@@ -130,10 +150,25 @@ Before requesting approval:
 scripts/check.py --mode publication <article-id>
 ```
 
+Add `--distribution` when the PR's scope includes distribution assets; the `distribution` PR label
+makes CI do the same.
+
 **Gate 2 — publication approval.** The Publication PR (approval type: publication, label
 `publication`) approves the actual article and imagery with all blocking issues resolved. AI can
 assist with review but does not replace the author's factual and editorial accountability. Passing
 checks establish mechanical properties only.
+
+A PR has exactly one scope: **brief**, **article publication package**, or **distribution assets**.
+Approval rules:
+
+- Gate 2 covers supporting assets only when the PR's scope explicitly lists them.
+- Distribution assets may be approved later, in a follow-up PR that references the source article and
+  names the assets being approved.
+- An asset that is essential to the intended release must be identified explicitly and reviewed
+  before that release proceeds.
+- Asset approval is neither scheduling nor publication.
+
+Gate 1 and Gate 2 remain the only two routine gates; strategy and distribution work adds none.
 
 ## 5. Release and hand back
 
@@ -148,5 +183,14 @@ After publication:
    records it.
 3. Update the tracking project with the URL and revision.
 
+A follow-up distribution PR references the source article and names the assets being approved.
+Approved assets are handed to the tracking project for scheduling — approval is neither scheduling
+nor publication.
+
 Planning, performance review, and refresh scheduling stay in the tracker. Future substantive
 revisions open another PR against the same article folder.
+
+## Cadence
+
+`strategy/cadence.md` holds the intended publishing rhythm and the evidence behind it. It is a
+target for commissioning decisions, not a commitment: committed dates live in the tracking project.

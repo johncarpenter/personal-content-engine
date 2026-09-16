@@ -2,17 +2,21 @@
 
 **Article:** `articles/<article-id>` · **Tracker:** <tracker URL>
 
-**Approval type** (delete the other, and the checklist that does not apply):
+**PR scope** (tick one; delete the others, and the checklists that do not apply):
 
 - [ ] **Brief (Gate 1)** — approves purpose, scope, and effort. Merging a brief publishes nothing.
-- [ ] **Publication (Gate 2)** — approves the actual article and imagery. Add the `publication`
-      label so CI runs publication-mode checks.
+- [ ] **Article publication package (Gate 2)** — approves the actual article and imagery. Add the
+      `publication` label so CI runs publication-mode checks.
+- [ ] **Distribution assets** — approves per-channel copy derived from an already-approved article.
+      Add the `distribution` label so CI checks those assets too.
 
 ## Summary
 
 <!-- Brief PR: the reader, the problem, the provisional angle, expected effort.
      Publication PR: what the article argues, what changed since the brief, anything the
-     approver should look at closely. -->
+     approver should look at closely.
+     Distribution PR: the source article these assets derive from, and the assets being
+     approved. -->
 
 ---
 
@@ -48,6 +52,27 @@ Mechanics
 
 - [ ] `scripts/check.py --mode publication <article-id>` passes
 - [ ] Publication metadata fields are still empty; release is a separate manual step
+- [ ] Approval scope: supporting assets are covered by this approval only when listed in this PR;
+      any asset essential to the intended release is listed and reviewed before that release
+      proceeds
+
+## Distribution assets checklist
+
+Assets in scope — list each file, or this checklist does not apply:
+
+- `articles/<article-id>/distribution/<channel>-<asset>.md` — channel, purpose, angle
+
+- [ ] Source article named above; its publication package is already approved, or this PR is the
+      follow-up that references that article and names the assets being approved
+- [ ] Each asset states its channel, its purpose, and the angle it takes
+- [ ] Copy is accurate against the article's evidence and does not overstate it
+- [ ] Voice applied per `brand/voice.md`, including its guidance for the channel in question
+- [ ] Links are present and correct, or explicitly marked unresolved
+- [ ] Imagery is reused from the article's `assets/` by relative path and registered in
+      `assets/manifest.yaml` with purpose, alt text, and a rights basis
+- [ ] Any relative release dependency is stated (for example, "goes out after the article is
+      live"); exact dates stay in the tracker
+- [ ] `scripts/check.py --distribution <article-id>` passes
 
 ## Review
 
@@ -57,4 +82,6 @@ Mechanics
 <!-- Checks establish mechanical properties only. A green run says nothing about whether the
      argument is true, persuasive, or approved. Approval is this merge. Publication is separate:
      after release, record published_url / published_at / published_revision in article.yaml and
-     update the tracker. -->
+     update the tracker. Approving an asset is neither scheduling nor publication; the tracker
+     owns release dates. Distribution work is optional and does not block an otherwise complete
+     article. -->

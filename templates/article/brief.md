@@ -2,6 +2,8 @@
 
 Approved at Gate 1. A topic alone is not a brief: this document commits to a reader, a reason to
 publish, and an effort budget. It does not have to predict the final conclusion.
+An unresolved strategic question is surfaced, not invented: it is acceptable to bring one to Gate 1
+unanswered.
 
 Delete prompts as you replace them. Keep it short — one page is plenty.
 
@@ -39,6 +41,19 @@ optional.
 
 TODO: expected effort (e.g. "half a day, desk research only" or "two practitioner interviews"), plus
 known dependencies — data access, interviewees, legal or product review.
+
+## Strategic fit
+
+TODO: the audience need this serves, the objective it advances, and the topic pillar it belongs to.
+See `strategy/content-strategy.md` and `background/topic-clusters.md`. "Does not fit an existing
+pillar, and here is why it is worth publishing anyway" is a valid answer.
+
+## Publication and distribution
+
+TODO: intended publication channel, if one is selected — see `strategy/channels.md`. Then the
+supporting distribution this piece is likely to need, and any channel-specific asset that must exist
+for the intended release. Optional distribution is planned in `strategy/distribution-playbook.md`
+and does not have to be resolved at Gate 1.
 
 ## Tracker
 

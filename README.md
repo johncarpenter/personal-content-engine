@@ -4,8 +4,9 @@ Git-backed workspace for producing long-form research and thought leadership art
 Prose is written in Markdown by the author; AI assistance is optional at every step.
 
 Planning lives elsewhere. This repository owns article work products (brief, research, outline, copy,
-imagery) and the brand/background guidance behind them. The **tracking project** owns ideas,
-calendar, assignments, production status, performance, and refresh reminders.
+imagery), the brand/background guidance behind them, and the durable content strategy: channel
+guidance, distribution practice, and intended cadence. The **tracking project** owns ideas, the live
+calendar, release dates, assignments, production status, performance, and refresh reminders.
 
 ## Quickstart
 
@@ -36,7 +37,9 @@ AGENTS.md                     rules for AI agents working in this repository
 CLAUDE.md                     symlink to AGENTS.md (Claude Code's conventional filename)
 brand/                        positioning, voice, visual standards (author-owned, fill in)
 background/                   reusable context shared across articles
+strategy/                     content strategy, channels, distribution practice, intended cadence
 templates/article/            the article scaffold copied per article
+templates/distribution-asset.md  template for optional per-article channel copy
 articles/<stable-article-id>/ one folder per article, same shape as the template
 skills/                       prepare-article and review-article agent skills
 scripts/                      new-article, preview, check
@@ -55,6 +58,10 @@ scripts/                      new-article, preview, check
 | `research/notes.md` | Research plan, questions, assumptions, disconfirming evidence, gaps | Optional, lightweight |
 | `research/sources.yaml` | Sources, what each one supports, locator, limitations | Yes when the article makes sourced claims |
 | `assets/` | Final images plus `manifest.yaml` (purpose, alt, caption, provenance, rights) | Yes when the article ships imagery |
+| `distribution/` | Optional supporting channel copy, created only when needed | No |
+
+`distribution/` is never scaffolded empty. `scripts/new-article.py` does not create it; the folder
+appears only when a channel asset is actually written. See `strategy/distribution-playbook.md`.
 
 Article IDs are stable. Do not rename or move the folder when the title or the workflow stage
 changes.
@@ -65,6 +72,22 @@ While drafting, reference sources inline with their stable ID: `[src:source-001]
 verifies every referenced ID exists in `research/sources.yaml`, so claims can be traced back to the
 research at any stage. Before publication approval these working references must be converted to
 reader-facing citations or links; publication-mode checks fail while any `[src:...]` marker remains.
+
+## Strategy
+
+Durable strategy lives in `strategy/` and guides commissioning, writing, and distribution:
+
+| Document | Purpose |
+|---|---|
+| `strategy/content-strategy.md` | What this publication is for: audience, topic pillars, success measures |
+| `strategy/channels.md` | Which channels are in use, which are only proposed, and what each is for |
+| `strategy/distribution-playbook.md` | How an article is adapted per channel and what that copy must not do |
+| `strategy/cadence.md` | The intended publishing rhythm and what makes it sustainable |
+
+Open decisions in these documents read `To decide` — a valid permanent state, not a placeholder to
+clear. They are guidance, not gates: there is no strategy approval step, and brief approval (Gate 1)
+and publication approval (Gate 2) remain the only two routine gates. The tracking project stays
+authoritative for the live calendar and the release schedule.
 
 ## Checks
 
@@ -88,6 +111,21 @@ incomplete scaffolds and brief PRs stay valid:
   `assets/manifest.yaml` with `purpose`, `alt`, and `creator_or_source`; alt text is present
 - declared manifest files exist on disk
 - source entries have a `title`, a non-empty `supports` list, and a `url` or `locator`
+
+Distribution assets are only checked when `--distribution` is passed:
+
+```sh
+scripts/check.py --mode publication --distribution <article-id>
+```
+
+Without the flag, `articles/<id>/distribution/` is not examined at all, so optional distribution work
+can never block an otherwise complete article. With it, each `*.md` in that folder joins the same
+completeness findings: non-empty, no unresolved placeholders, and local images that exist on disk and
+are listed in `assets/manifest.yaml` with `purpose`, `alt`, and `creator_or_source`. Image paths
+resolve relative to the distribution file, so reused article imagery is referenced as
+`../assets/hero.png`. `--distribution` and `--mode` are independent and combine.
+
+Documents in `strategy/` are never scanned for placeholders; `To decide` is a valid permanent state.
 
 Requires Python 3 and PyYAML (`pip install pyyaml`). CI runs the same script; see
 `.github/workflows/checks.yml`.
@@ -122,8 +160,21 @@ PR** (merge records editorial acceptance). `.github/PULL_REQUEST_TEMPLATE.md` ca
 checklists behind an approval-type selector. Merging a brief never publishes anything; there is no
 publishing automation in this repository.
 
-Label the Publication PR `publication` so CI runs publication-mode checks; unlabeled PRs run the
-lenient checks.
+A PR has exactly one scope: **brief**, **article publication package**, or **distribution assets**.
+Name the scope in the PR, and for distribution assets name the assets it covers.
+
+Label the Publication PR `publication` so CI runs publication-mode checks. Label a PR
+`distribution` so CI includes distribution assets in the completeness checks; both labels may apply
+to the same PR. Unlabeled PRs run the lenient checks.
+
+Approval rules for supporting assets:
+
+- Gate 2 covers supporting assets only when the PR's scope explicitly lists them.
+- Distribution assets may be approved later, in a follow-up PR that references the source article and
+  names the assets being approved.
+- An asset that is essential to the intended release must be identified explicitly and reviewed
+  before that release proceeds.
+- Asset approval is neither scheduling nor publication.
 
 For a solo author, no second GitHub approval is required: record completion of the editorial
 checklist before merging. A self-check is not an independent review — if a reviewer is available,
@@ -146,3 +197,19 @@ Not blocking local use of this scaffold; some block creating or configuring the 
 - Publishing destination and its formatting requirements
 - Whether release happens on final approval or as a separate scheduled/manual action
 - Whether an independent reviewer will sometimes participate
+
+Open strategic decisions, carried from the author's own source documents and deliberately not
+resolved here:
+
+- Which audience the publication prioritises, among the personas in `brand/positioning.md`
+- Whether the intended weekly cadence still stands: the author's channel strategy (updated
+  2026-04-11) states weekly, but nothing has been published since 2026-04-10
+  (`background/published-work.md`)
+- The conflicting LinkedIn link guidance — the channel strategy (updated 2026-04-11) treats LinkedIn
+  as traffic to Substack, while the growth strategy (updated 2026-03-13) says not to post links;
+  both are attributed in `strategy/channels.md`
+- Whether Twitter/X and the other proposed channels (Substack Notes, a LinkedIn native newsletter,
+  Hacker News, podcast guesting, Dev.to, AI Tinkerers Calgary talks) are adopted or dropped
+- Which of the two open-rate targets (>50% vs 40%+) and which of the two subscriber-growth targets
+  (10%/month vs 5%+ month-over-month) stands; the two source documents disagree, and both pairs are
+  recorded in `strategy/content-strategy.md`

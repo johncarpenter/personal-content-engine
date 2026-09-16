@@ -23,7 +23,9 @@ jobs:
       - run: pip install pyyaml
 
       # Publication PRs are labeled `publication`; everything else runs the lenient checks so
-      # incomplete scaffolds and brief PRs stay valid.
+      # incomplete scaffolds and brief PRs stay valid. A `distribution` label additionally opts
+      # the optional per-article distribution assets into the checks. The two labels are
+      # independent and may both be present.
       - name: Select mode
         id: mode
         env:
@@ -34,6 +36,11 @@ jobs:
           else
             echo "mode=brief" >> "$GITHUB_OUTPUT"
           fi
+          if [ "${LABELS#*distribution}" != "$LABELS" ]; then
+            echo "distribution=--distribution" >> "$GITHUB_OUTPUT"
+          else
+            echo "distribution=" >> "$GITHUB_OUTPUT"
+          fi
 
       - name: Check articles
-        run: scripts/check.py --mode ${{ steps.mode.outputs.mode }}
+        run: scripts/check.py --mode ${{ steps.mode.outputs.mode }} ${{ steps.mode.outputs.distribution }}

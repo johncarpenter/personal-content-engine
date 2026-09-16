@@ -35,9 +35,11 @@ Alternative angles the evidence would also support (author's choice):
   `[src:source-019]` (AI 14.2% of IT budgets). Point: today's AI line is small and per-seat for
   most companies — which is why the next two sections matter.
 - **Factor one: unbounded tokens** — per-seat pricing is converting to consumption
-  `[src:source-032]`; what happened at Uber and Microsoft `[src:source-021]`, `[src:source-022]`,
-  `[src:source-023]`; the forecasts `[src:source-004]`, `[src:source-005]`. Point: once the price
-  is per token, the spend follows usage, and usage only goes up.
+  `[src:source-032]`, including Anthropic metering agent tools at API rates from June 2026
+  `[src:source-021]`; what happened at Uber and Microsoft `[src:source-021]`, `[src:source-022]`,
+  `[src:source-023]`; the forecasts `[src:source-004]`, `[src:source-005]`; Gartner's own word
+  for the default outcome is "unbounded costs" `[src:source-003]`. Point: once the price is per
+  token, the spend follows usage, and usage only goes up.
 - **Factor two: from files to compute** — what AI is used for today `[src:source-028]`,
   `[src:source-029]`; what changes when agents do the work `[src:source-027]`; what that costs per
   task `[src:source-007]`, `[src:source-006]`, `[src:source-003]`. Point: the token multiplier per
@@ -53,7 +55,10 @@ Alternative angles the evidence would also support (author's choice):
   `[src:source-015]`; visibility and guardrail gaps `[src:source-014]`, `[src:source-016]`,
   `[src:source-025]`, `[src:source-017]`. Point: most organizations found out from the invoice.
 - **What to build now** — the author's practitioner section. Workload-to-model matching (the
-  cheapest model that solves the problem) `[src:source-031]`; per-team token budgets that are
+  cheapest model that solves the problem) `[src:source-031]`, backed by Gartner's "no reliable,
+  economical one-size-fits-all model on the horizon" and Emme's "the right model runs the right
+  task" `[src:source-003]`, `[src:source-023]`; incentives — Uber's and Amazon's usage
+  leaderboards as the anti-pattern `[src:source-021]`, `[src:source-023]`; per-team token budgets that are
   checked and adjusted `[src:source-014]`; cost per result rather than cost per token
   `[src:source-003]`; measurement over estimation `[src:source-006]`. Show the actual setup: the
   routing rule, the budget, the dashboard. Evidence: TODO(author) what the author has actually
@@ -62,9 +67,9 @@ Alternative angles the evidence would also support (author's choice):
 - **The per-employee model** — a fill-in table: baseline IT cost, per-seat AI, token spend under
   file-work and compute-first scenarios, resulting per-employee cost and percentage change. Worked
   with the author's inputs (`research/notes.md`, "The 40% against the author's own baseline"):
-  at a $250/month startup baseline one $100 subscription is +40%, and metered usage at the
-  author's volume is several hundred percent; at a $1,500 enterprise baseline one subscription is
-  +7% and one Uber-style engineer is +33% to +133%. Evidence: `[src:source-035]`,
+  at a $250/month startup baseline one $100 subscription is +40% and an average Uber engineer on
+  metered pricing is +60% to +100%; at a $1,500 enterprise baseline one subscription is +7%, an
+  average metered engineer +10% to +17%, and a power user +33% to +133%. Evidence: `[src:source-035]`,
   `[src:source-036]`, `[src:source-021]`, `[src:source-037]`. Visual: the table itself, inline
   Markdown.
 - **Close** — what the reader does this budget cycle. No commercial call to action planned.

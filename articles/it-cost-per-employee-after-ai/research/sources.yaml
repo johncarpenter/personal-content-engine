@@ -33,27 +33,36 @@ sources:
     limitations: Primary returned 403; figures from CIO Dive coverage. More than 45% of the total is vendor-driven infrastructure, so the headline overstates enterprise operating spend.
   - id: source-003
     title: Gartner Predicts AI Inference Costs Per Agentic Workflow Will Increase More Than Fivefold Through 2028
-    author_or_organization: Gartner
+    author_or_organization: Gartner (Will Sommer, Sr. Director Analyst)
     url: https://www.gartner.com/en/newsroom/press-releases/2026-08-17-gartner-predicts-ai-inference-costs-per-agentic-workflow-will-increase-more-than-fivefold-through-2028
     published_at: 2026-08-17
     accessed_at: 2026-09-15
     supports:
-      - Inference cost per agentic workflow rises more than fivefold through 2028 despite token prices falling roughly 95% by 2030
-      - Routing a task to an agentic reasoning model costs at least five times a basic chatbot interaction, often much more
-      - Quote — product leaders "cannot rely on more efficient token economics to rationalize AI costs"
-    locator: null
-    limitations: Primary and AIwire mirror returned 403; wording taken from search-engine excerpts and National CIO Review / Back End News coverage. It is a prediction, and Gartner sells the underlying research. TODO verify exact quotes against the release.
+      - "AI inference costs per agentic workflow will increase more than fivefold through 2028"
+      - "Compared to a basic chatbot interaction, routing a task to an agentic reasoning model increases provider inference costs by at least five times, and often much more as task complexity grows"
+      - Three trends named — foundational model costs are rapidly improving; that efficiency unlocks deployment of more powerful, more expensive models; sophisticated workflows use far more tokens than chatbot interactions
+      - As written — "tokens are becoming more cost-efficient, but not as quickly as AI capabilities and the costs associated with those capabilities are increasing" — "The rate of innovation is outpacing the cost curve"
+      - The Inference Paradox, defined as "better unit economics escalating the overall cost of AI without providing a clear pathway to commensurate and predictable value"
+      - Sommer — "Product leaders cannot rely on more efficient token economics to rationalize AI costs. Each successive generation of AI capability will necessitate more, and often more expensive, tokens. There is no reliable, economical one-size-fits-all model on the horizon. Producing competitive AI products will require developing and maintaining complex multimodel ecosystems."
+      - Sommer — "Defaulting to generic autonomous intelligence will result in unbounded costs orders of magnitude higher than those of optimized product ecosystems."
+      - ROI from reasoning agents demands "exponentially higher returns relative to basic models, or highly optimized inference-tiering, routing and orchestration"
+    locator: Press release, Stamford, 2026-08-17; author holds a PDF print (research/, 2026-09-15). Figure 1 "AI Complexity Outpaces Falling Token Costs". Underlying Gartner document "The Inference Paradox — Inference Tiering Is Critical to Protect Margins" is client-only.
+    limitations: Prediction, no method shown in the release; aimed at product leaders building AI products, so "provider inference costs" is the vendor's cost, not the enterprise buyer's bill. The "token prices fall ~95% by 2030" figure repeated in secondary coverage is NOT in this release — do not attribute it to Gartner from here.
   - id: source-004
     title: AI Agents Forecast to Boost Tech Cash Flow as Usage Soars
-    author_or_organization: Goldman Sachs Research (Jim Schneider)
+    author_or_organization: Goldman Sachs Research (interview with Jim Schneider, senior equity analyst, US semiconductors and IT services)
     url: https://www.goldmansachs.com/insights/articles/ai-agents-forecast-to-boost-tech-cash-flow-as-usage-soars
     published_at: 2026-05-20
     accessed_at: 2026-09-15
     supports:
-      - Token consumption could rise 24-fold between 2026 and 2030, to 120 quadrillion tokens per month, driven by agentic AI
-      - Enterprise-grade agents projected to account for over 70% of token usage by 2040
-    locator: null
-    limitations: Primary returned 403; figures from Goldman Sachs' own social post and secondary coverage. Sell-side equity research with a stated investment thesis; the horizon is speculative.
+      - As written — "token consumption is expected to multiply 24 times, to 120 quadrillion tokens per month, between 2026 and 2030"; consumer agents alone 12x
+      - Schneider — agentic AI "is like taking a simple chatbot request and blowing it up 10-fold, 20-fold, 50-fold" because "many queries are repeated in sequence"
+      - "Semiconductor providers are delivering lower cost per token of 60%-70% per year for inference"
+      - Enterprise adoption lags and is uneven — "In 2030, we forecast that 12% of knowledge workers will be using agentic AI yet by 2040 that figure will be 37%"
+      - Coding agents are "very efficient"; one real-time voice agent case "where the human cost was actually less than the LLM cost today"
+      - Daily LLM queries modelled at 40% CAGR to 11 billion by 2030; "always-on" background agents
+    locator: Interview article, estimates as of May 2026; author holds a PDF print (research/, 2026-09-15). Chart "Token use by AI agents is expected to multiply 24 times by 2030".
+    limitations: Sell-side research framed around hyperscaler margins; use cases modelled by simulation (online travel, call centre), method not published. The ">70% of tokens from enterprise agents by 2040" figure in secondary coverage is NOT in this article. Article carries a no-advice disclaimer.
   - id: source-005
     title: "Agent Adoption: The IT Industry's Next Great Inflection Point (IDC FutureScape 2026, Worldwide IT Industry, Prediction 2)"
     author_or_organization: IDC (Rick Villars)
@@ -244,17 +253,22 @@ sources:
   # --- Reported incidents --------------------------------------------------------------------
   - id: source-021
     title: Uber Burns Its 2026 AI Budget In Four Months On Claude Code
-    author_or_organization: Forbes (Janakiram MSV); original reporting by The Information
+    author_or_organization: Forbes (Janakiram MSV, senior contributor); overrun originally confirmed to The Information
     url: https://www.forbes.com/sites/janakirammsv/2026/05/17/uber-burns-its-2026-ai-budget-in-four-months-on-claude-code/
     published_at: 2026-05-17
     accessed_at: 2026-09-15
     supports:
-      - Uber exhausted its planned 2026 AI coding budget by April after Claude Code adoption rose from 32% to 84% of roughly 5,000 engineers
-      - Per-engineer spend reported at $500–2,000 per month
-      - CTO Praveen Neppalli Naga confirmed the overrun and said Uber had to revisit its AI spending assumptions
-      - About 70% of committed code originated from AI tools
-    locator: null
-    limitations: Forbes page returned 403; details taken from multiple secondary summaries of the Forbes and The Information reporting. The Information is paywalled. TODO verify each figure against the Forbes piece.
+      - Uber "exhausted its entire 2026 artificial intelligence budget by April" after Claude Code spread across roughly 5,000 engineers; CTO Praveen Neppalli Naga confirmed the overrun to The Information, "saying the company was back to the drawing board on its assumptions"
+      - Rolled out December 2025; adoption "climbed from 32% of engineers in February to 84% classified as agentic coding users by March"; 95% used AI tools monthly; "roughly 70% of committed code originated from those tools"; "About 11% of live backend updates were written by agents with no human in the loop"
+      - As written — "Monthly cost per engineer ranged from $150 to $250 on average, with power users running between $500 and $2,000." Naga "reported spending $1,200 in a two-hour session"
+      - Internal leaderboards ranked engineers on Claude Code usage — "a cultural incentive to consume more tokens"; "The teams driving adoption were not the same teams managing the spend"
+      - Anthropic announced on May 13 that subscribers would face "a separate monthly credit meter for agent tools and third-party harnesses, billed at full application programming interface rates starting June 15"; GitHub moving Copilot to credits June 1
+      - "Five-to-twenty-fold increases in per-developer consumption are now documented in agentic mode, and no public benchmark shows a matching multiplier on output value"
+      - Survey data cited in coverage — 43% of organizations have formal AI governance policies, 21% mature agentic governance
+      - Microsoft 365 Copilot Enterprise at $30 per user per month as the per-seat contrast
+      - Uber R&D spend $3.4 billion in 2025, up 9%
+    locator: Forbes, published 2026-05-17, updated 2026-05-27; author holds a PDF print (research/, 2026-09-15). Sections "How A Coding Tool Outran A Budget", "Why Token Billing Breaks Traditional Budgeting", "The Limits Of The Productivity Defense".
+    limitations: Contributor piece built on The Information's reporting (paywalled) and Uber's own disclosures; the 43% / 21% governance figures are unattributed survey data. The average per-engineer cost is $150–250; the $500–2,000 range is power users only — earlier secondary coverage (and this repository's first notes) overstated it.
   - id: source-022
     title: Microsoft cut its engineers off from AI because the bill got too big
     author_or_organization: Fortune (2026-05-22), syndicated via Yahoo Finance; earlier reporting by The Information
@@ -268,14 +282,23 @@ sources:
     limitations: The commonly repeated "$2,000 per engineer per month" for Microsoft comes from secondary coverage, not this article; only Uber's figure appears here. Microsoft has an obvious interest in favouring its own tool.
   - id: source-023
     title: AI Costs More Than The People It Replaced
-    author_or_organization: Forbes (Jemma Green)
+    author_or_organization: Forbes (Dr Jemma Green, contributor)
     url: https://www.forbes.com/sites/jemmagreen/2026/07/02/ai-costs-more-than-the-people-it-replaced/
     published_at: 2026-07-02
     accessed_at: 2026-09-15
     supports:
-      - Uber's COO and president Andrew Macdonald said publicly that token usage did not correlate directly with useful features shipped
-    locator: null
-    limitations: Page returned 403; quote paraphrased from search-engine excerpt. Opinion column. TODO verify the Macdonald statement and its original venue.
+      - As written — "Uber's COO and president, Andrew Macdonald, said publicly that token usage didn't correlate directly with useful features shipped to users" (venue of the statement not given)
+      - Microsoft "instructed engineers in a major division to stop using an AI coding assistant because the bills became untenable"
+      - Per Axios (as cited) — "One unnamed company ... ran up a $500 million Claude bill in a single month after management forgot to set a usage cap"
+      - Bryan Catanzaro (Nvidia VP applied deep learning) — compute cost for his team "now far exceeds what the company spends on the employees using it"; Jensen Huang — "a $500,000 engineer should consume at least $250,000 worth of AI tokens annually", Nvidia "working toward a $2 billion annual token budget"
+      - Amazon's KiroRank usage leaderboard "quietly taken down after employees began gaming it — burning tokens on meaningless tasks solely to climb the rankings"; Meta's "Claudeonomics"; "tokenmaxxing"
+      - As written — "Roughly 95% of enterprise AI usage still runs on the costliest frontier models, even for work that doesn't demand that sophistication" (unattributed)
+      - Gartner (as cited) — "running the largest models could be nearly 90% cheaper by 2030"; AI agent software spending "$207 billion in 2026, up 139%"
+      - GitHub shifted Copilot to usage-based billing "after years of quietly absorbing up to eight times the subscription value for heavy users"; unnamed analysts project enterprise AI bills "rise another 30% to 50% above current levels" when pricing normalizes; Anthropic moved enterprise customers to usage-based billing in April 2026
+      - Lisa Emme (Inversion AI) — "once you do, you stop paying frontier prices for work a specialised model does better and cheaper. That's not cost-cutting; it's architecture. The winners this decade won't run the biggest model. They'll have built systems where the right model runs the right task"
+      - MIT study (as cited) — AI automation economically viable in about 23% of roles
+    locator: Forbes, published 2026-07-02, updated 2026-07-24; author holds a PDF print (research/, 2026-09-15). Sections "When AI Adoption Outruns Its Payoff", "The Culture Of Tokenmaxxing", "The Subsidy Unwinds", "The Bills Get Real".
+    limitations: Opinion column by a crypto-industry cofounder; nearly every figure is second-hand (Axios, Gartner, MIT, unnamed analysts) and several are unattributed (the 95% frontier-model share, the 8x subsidy). Use it for the Macdonald statement, the leaderboard anecdotes and the Emme quote; trace anything numeric to its origin before citing. The Axios piece it cites for the $500M bill was unavailable to the author.
   # --- Governance and cost-control practice -------------------------------------------------
   - id: source-024
     title: The inference bill nobody budgeted for

@@ -87,8 +87,8 @@ What would show the thesis is wrong, and what was found:
   `[src:source-018]`). If headcount falls, cost *per employee* rises even when total cost does not
   — the metric itself can mislead. Against this: RBC's 91% net-new `[src:source-020]`.
 - **Most firms are not spending much.** Over half plan ≤$200 per employee `[src:source-010]`; 89%
-  of tech leaders allocate ≤25% of tech budget to AI `[src:source-011]`. A 40% jump is a
-  top-decile story.
+  of tech leaders allocate ≤25% of tech budget to AI `[src:source-011]`; Goldman forecasts only 12%
+  of knowledge workers on agentic AI by 2030 `[src:source-004]`. A 40% jump is a top-decile story.
 - **Agentic spend may not scale.** Gartner: over 40% of agentic projects cancelled by end 2027
   `[src:source-026]`; MIT NANDA: 95% of pilots show no P&L return in six months
   `[src:source-033]`; Deloitte: 42% report low or no AI ROI `[src:source-011]`. Microsoft's
@@ -134,41 +134,68 @@ collapses to one number. Two things follow for the article:
 - The author's usage is "one or two flows at a time". A fleet of parallel agents, or a team of
   ten people working this way on metered pricing, is the enterprise case.
 
-**The 40% against the author's own baseline** (per employee, per month, before AI):
+**The 40% against the author's own baseline** (per employee, per month, before AI). Uber figures
+corrected 2026-09-15 from the Forbes primary: average $150–250 per engineer per month, power users
+$500–2,000 `[src:source-021]`.
 
-| Baseline `[src:source-036]` | Add one $100 Max plan | Add two ($200) | Add author's API-equivalent (~$1,400, illustrative mix) | Add Uber-style $500–2,000 `[src:source-021]` |
-|---|---|---|---|---|
-| Startup, $250 | +40% | +80% | about +560% | +200% to +800% |
-| Enterprise, $1,500 | +7% | +13% | about +93% | +33% to +133% |
+| Baseline `[src:source-036]` | One $100 Max plan | Two ($200) | Uber average engineer, $150–250 | Uber power user, $500–2,000 | Author's API-equivalent (~$1,400, illustrative mix) |
+|---|---|---|---|---|---|
+| Startup, $250 | +40% | +80% | +60% to +100% | +200% to +800% | about +560% |
+| Enterprise, $1,500 | +7% | +13% | +10% to +17% | +33% to +133% | about +93% |
 
-Reading: at a startup, the 40% is literally one subscription per employee. At an enterprise, the
-40% is the low end of what one engineer on a metered coding agent cost Uber. In both cases the
-subscription number is the floor and the metered number is where the trend points. This is the
-article's per-employee model with the author's inputs filled in; the reader substitutes theirs.
+Reading: at a startup, the 40% is one subscription per employee, and an average Uber engineer on
+metered pricing already exceeds it. At an enterprise, the average metered engineer is 10–17% and
+the 40% sits at the low end of the power-user band. Two corroborating data points from the
+primaries: Forbes reports GitHub had been absorbing "up to eight times the subscription value for
+heavy users" before moving to usage billing, and unnamed analysts expect bills to rise "30% to 50%"
+when subsidized pricing normalizes `[src:source-023]` — the author's 3–30x subscription-to-list
+ratio is in the same range as GitHub's 8x. This is the article's per-employee model with the
+author's inputs filled in; the reader substitutes theirs.
 
 **Caveats to state in the piece.** One person, one month; the OpenAI volume is an estimate; the
 baseline is a practitioner range from a handful of clients, not a survey; list prices ignore
 enterprise discounts; the tokenizer change in Claude 4.7+ inflates token counts by roughly 30%
 `[src:source-037]`, so cross-model token comparisons are loose.
 
-### Primary pages for the author to pull
+### Primary pages pulled by the author (2026-09-15)
 
-The research agent was blocked (HTTP 403) on these. Open each, confirm the quoted figure, and
-either paste the exact sentence into the matching `sources.yaml` entry's `locator` or correct the
-entry. Keep it to the sentence or two the article will cite, not the page.
+Four PDF prints are in `research/` (Gartner 2026-08-17, Goldman Sachs 2026-05-20, Forbes/Janakiram
+2026-05-17, Forbes/Green 2026-07-02). Axios 2026-04-26 was unavailable. Entries `source-003`,
+`source-004`, `source-021`, `source-023` now carry verified quotes. What changed on reading the
+primaries:
 
-| Source | URL | Check |
-|---|---|---|
-| Gartner, 2026-08-17 `[src:source-003]` | https://www.gartner.com/en/newsroom/press-releases/2026-08-17-gartner-predicts-ai-inference-costs-per-agentic-workflow-will-increase-more-than-fivefold-through-2028 | "more than fivefold through 2028"; "~95% by 2030" token price fall; "at least five times" a basic chatbot; the "cannot rely on more efficient token economics" quote and the analyst's name |
-| Goldman Sachs Research, 2026-05-20 `[src:source-004]` | https://www.goldmansachs.com/insights/articles/ai-agents-forecast-to-boost-tech-cash-flow-as-usage-soars | 24x between 2026 and 2030; 120 quadrillion tokens/month; >70% enterprise agents by 2040; author Jim Schneider |
-| Forbes, Janakiram MSV, 2026-05-17 `[src:source-021]` | https://www.forbes.com/sites/janakirammsv/2026/05/17/uber-burns-its-2026-ai-budget-in-four-months-on-claude-code/ | CTO name and quote; 32% → 84% adoption; $500–2,000 per engineer per month; ~70% of committed code; that The Information broke it |
-| Forbes, Jemma Green, 2026-07-02 `[src:source-023]` | https://www.forbes.com/sites/jemmagreen/2026/07/02/ai-costs-more-than-the-people-it-replaced/ | The Andrew Macdonald statement on token usage vs features shipped, and where he said it |
-| Axios, 2026-04-26 (not yet in sources) | https://www.axios.com/2026/04/26/ai-cost-human-workers | What data it cites; add as a source only if it carries a figure the others do not |
+- **Gartner.** The analyst is Will Sommer, not Lovelock. The "token prices fall ~95% by 2030"
+  claim is not in the release; it came from secondary coverage and is dropped. The release adds
+  two things the article can use directly: "There is no reliable, economical one-size-fits-all
+  model on the horizon" (the case for multimodel routing) and "Defaulting to generic autonomous
+  intelligence will result in unbounded costs orders of magnitude higher than those of optimized
+  product ecosystems" — the author's word "unbounded", from Gartner `[src:source-003]`.
+- **Goldman Sachs.** 24x and 120 quadrillion confirmed. The ">70% enterprise by 2040" figure is
+  not in the article and is dropped. New: chip cost per inference token falling 60–70% per year;
+  agentic requests are chatbot requests "blown up 10-fold, 20-fold, 50-fold"; and a disconfirming
+  forecast — only 12% of knowledge workers on agentic AI by 2030, 37% by 2040 `[src:source-004]`.
+- **Forbes / Uber.** Average was $150–250 per engineer per month; $500–2,000 was power users.
+  Notes and outline corrected. New: 11% of live backend updates by agents with no human; usage
+  leaderboards as the incentive flaw; Anthropic's May 13 move to meter agent tools at API rates
+  from June 15; "five-to-twenty-fold increases in per-developer consumption ... documented in
+  agentic mode" `[src:source-021]`.
+- **Forbes / Green.** Macdonald statement confirmed, venue unstated. New and useful: Amazon's
+  KiroRank leaderboard taken down after gaming; Huang's "$250,000 worth of AI tokens" per $500k
+  engineer; Lisa Emme's "the right model runs the right task" quote, which is the thesis in someone
+  else's mouth; the unattributed "95% of enterprise AI usage still runs on the costliest frontier
+  models". Almost everything numeric in it is second-hand `[src:source-023]`.
 
 Second-hand figures still to trace to their origin (or cut): RBC 91% `[src:source-020]`, KPMG
 `[src:source-016]`, Bain n=951 `[src:source-018]`, Gartner 44% guardrails `[src:source-025]`,
-McKinsey scaling shares `[src:source-029]`, RouteLLM 85% `[src:source-031]`, and the "73%"
-FinOps figure (not on `[src:source-013]`).
+McKinsey scaling shares `[src:source-029]`, RouteLLM 85% `[src:source-031]`, the "73%" FinOps
+figure (not on `[src:source-013]`), and from the Green column: Gartner's "nearly 90% cheaper by
+2030", the $207B agent software figure, the Axios $500M bill, and the "95% on frontier models"
+share `[src:source-023]`.
+
+**Housekeeping question for the author.** The PDFs are full copies of paywalled third-party
+articles. The repository rule is concise notes and permitted material, not bulk copies. They are
+useful as verification records but should probably stay untracked (a `research/*.pdf` gitignore
+rule) rather than be committed. Decision needed before the Brief PR.
 
 ### Desk research notes
 
@@ -200,7 +227,8 @@ FinOps figure (not on `[src:source-013]`).
 |---|---|
 | Per-employee IT baseline | **Resolved as a practitioner range** `[src:source-036]`; disclose that it is observed, not surveyed. Avasant cross-check optional |
 | First-hand token spend data | **Resolved in volume** `[src:source-035]`; **resolve the split** (input / output / cache read) so the API-equivalent cost is one number |
-| Gartner / Goldman / Forbes primaries unread | **Resolve** — author pulls them (list above) and confirms quotes |
+| Gartner / Goldman / Forbes primaries | **Resolved** — pulled and quoted 2026-09-15; Axios unavailable, its one figure stays second-hand via Green |
+| PDF copies of third-party articles in `research/` | **Decide** — keep untracked (gitignore) or remove; do not commit without deciding |
 | RBC, KPMG, Bain, Gartner-44%, McKinsey, RouteLLM figures second-hand | **Resolve or cut** — trace each or drop it |
 | Additive vs substitutive spend unresolved | **Disclose** — present both survey results and say the per-employee metric rises either way if headcount falls |
 | Timing of the file-to-compute shift | **Disclose** — forecast, with the Gartner cancellation prediction as the counter |

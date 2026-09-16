@@ -192,10 +192,9 @@ figure (not on `[src:source-013]`), and from the Green column: Gartner's "nearly
 2030", the $207B agent software figure, the Axios $500M bill, and the "95% on frontier models"
 share `[src:source-023]`.
 
-**Housekeeping question for the author.** The PDFs are full copies of paywalled third-party
-articles. The repository rule is concise notes and permitted material, not bulk copies. They are
-useful as verification records but should probably stay untracked (a `research/*.pdf` gitignore
-rule) rather than be committed. Decision needed before the Brief PR.
+**Housekeeping (resolved 2026-09-15).** The PDFs are full copies of paywalled third-party
+articles, so they stay local as the author's verification record: `articles/*/research/*.pdf` is
+gitignored. The cited sentences live in `sources.yaml`.
 
 ### Desk research notes
 
@@ -228,7 +227,7 @@ rule) rather than be committed. Decision needed before the Brief PR.
 | Per-employee IT baseline | **Resolved as a practitioner range** `[src:source-036]`; disclose that it is observed, not surveyed. Avasant cross-check optional |
 | First-hand token spend data | **Resolved in volume** `[src:source-035]`; **resolve the split** (input / output / cache read) so the API-equivalent cost is one number |
 | Gartner / Goldman / Forbes primaries | **Resolved** — pulled and quoted 2026-09-15; Axios unavailable, its one figure stays second-hand via Green |
-| PDF copies of third-party articles in `research/` | **Decide** — keep untracked (gitignore) or remove; do not commit without deciding |
+| PDF copies of third-party articles in `research/` | **Resolved** — gitignored, kept locally as verification copies |
 | RBC, KPMG, Bain, Gartner-44%, McKinsey, RouteLLM figures second-hand | **Resolve or cut** — trace each or drop it |
 | Additive vs substitutive spend unresolved | **Disclose** — present both survey results and say the per-employee metric rises either way if headcount falls |
 | Timing of the file-to-compute shift | **Disclose** — forecast, with the Gartner cancellation prediction as the counter |

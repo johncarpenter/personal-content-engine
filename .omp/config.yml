@@ -1,5 +1,6 @@
 # Project settings. Registers this repository's skills/ folder with skill discovery, so
-# `prepare-article` and `review-article` are available as `/skill:<name>` and to the model.
+# `prepare-article`, `draft-article` and `review-article` are available as `/skill:<name>` and to
+# the model.
 # Provider discovery only scans conventional roots (.omp/skills, .claude/skills, ...); a
 # custom directory keeps skills/ at the repository root as the single source of truth.
 skills:

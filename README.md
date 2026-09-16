@@ -38,7 +38,7 @@ brand/                        positioning, voice, visual standards (author-owned
 background/                   reusable context shared across articles
 templates/article/            the article scaffold copied per article
 articles/<stable-article-id>/ one folder per article, same shape as the template
-skills/                       prepare-article and review-article agent skills
+skills/                       prepare-article, draft-article, review-article agent skills
 scripts/                      new-article, preview, check
 .github/                      PR template and checks workflow
 .omp/config.yml               wires skills/ into agent skill discovery
@@ -104,14 +104,16 @@ Offline alternative: any editor Markdown preview rooted in the article folder �
 
 ## Skills
 
-Two skills assist the author without taking over authorship:
+Three skills assist the author without taking over authorship:
 
 - `prepare-article` — scaffold, brief, research questions, source notes, outline
+- `draft-article` — on request, after the brief is merged: a first draft of `article.md` from the
+  brief, outline and sources, every claim marked `[src:…]`, every gap left as a `TODO`
 - `review-article` — evaluate against brief, evidence, voice, and presentation checklists
 
 The canonical copies live in `skills/<name>/SKILL.md`. `.omp/config.yml` registers `skills/` as a
-project skill directory, so in this workspace invoke them with `/skill:prepare-article` and
-`/skill:review-article`, or just ask for them by name. Agents that only scan their own conventional
+project skill directory, so in this workspace invoke them with `/skill:prepare-article`,
+`/skill:draft-article` and `/skill:review-article`, or just ask for them by name. Agents that only scan their own conventional
 location (for example Claude Code's `.claude/skills/`) need a symlink or copy to that path; keep
 `skills/` the single source of truth.
 

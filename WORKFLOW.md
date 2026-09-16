@@ -89,6 +89,11 @@ changes the reader, purpose, scope, or effort, update `brief.md` and explicitly 
 
 Write the article in `article.md`. It is the single canonical copy; do not fork "v2" files.
 
+An AI-assisted first draft is available on request once the brief is merged: `/skill:draft-article`
+writes `article.md` from the brief, outline and sources, with every claim marked `[src:…]` and
+every gap left as a `TODO`. It runs only when asked, only after Gate 1, and never over prose the
+author has already written. The author owns the result and remains accountable for it.
+
 While drafting, cite sources by stable ID: `[src:source-001]`. Checks verify each ID exists in
 `research/sources.yaml`, and publication-mode checks fail while any working reference remains — so
 convert them to reader-facing citations or links before Gate 2.

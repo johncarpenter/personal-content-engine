@@ -44,7 +44,7 @@ background/     reusable cross-article context; each doc has owner + last-review
 templates/article/   the scaffold copied per article — edit only to change the scaffold itself
 articles/<id>/  one folder per article: article.yaml, brief.md, outline.md, article.md,
                 research/{notes.md,sources.yaml}, assets/{manifest.yaml,*.png}
-skills/         prepare-article, review-article (canonical location, wired via .omp/config.yml)
+skills/         prepare-article, draft-article, review-article (canonical location, wired via .omp/config.yml)
 scripts/        new-article.py, preview.py, check.py
 ```
 
@@ -88,9 +88,11 @@ than summarizing it as "passing".
 ## Skills
 
 - `/skill:prepare-article` — scaffold, brief, research plan, source notes, outline (stages 1–2)
+- `/skill:draft-article` — first draft of `article.md` from brief, outline and sources, on request
+  and only after Gate 1; never over author prose (stage 3)
 - `/skill:review-article` — prioritized review against brief, evidence, voice, presentation (stage 4)
 
-Both live in `skills/<name>/SKILL.md` and are discovered through `skills.customDirectories` in
+All three live in `skills/<name>/SKILL.md` and are discovered through `skills.customDirectories` in
 `.omp/config.yml`. Follow the skill's procedure when invoked; its boundaries repeat and extend the
 ones above.
 

@@ -58,12 +58,13 @@ found from what could not be verified.
 
 Confirmed sources are in `sources.yaml` (34 entries). Still to obtain:
 
-- **Author's first-hand data (highest value):** monthly Claude Code / API token spend by workload
-  type for the author and, with permission, anonymized per-workspace figures across fractional CTO
-  clients. The voice guide already records a 30-day session log; that is the seed.
-- **A real baseline:** one client's IT cost per employee, anonymized, or the Avasant chapter.
-- **Primary pages the agent could not open:** Gartner 2026-08-17 release, Goldman Sachs article,
-  Forbes (Uber; Green column), Axios 2026-04-26 "AI can cost more than human workers now".
+- **Author's first-hand data — obtained 2026-09-15** as `[src:source-035]` (657M Opus 5 tokens in
+  August; similar on OpenAI; two ~$100/month subscriptions at ~95% use) and `[src:source-036]`
+  (IT cost per employee $200–300/month startup, $1,000–2,000/month enterprise, before AI). Still
+  needed: the input / output / cache-read split from Claude Code stats.
+- **A real baseline:** now covered by the author's observed range `[src:source-036]`; the Avasant
+  chapter `[src:source-034]` would add an independent cross-check if the author has access.
+- **Primary pages the agent could not open** — see "Primary pages for the author to pull" below.
 - **Second-hand figures to trace to origin before use:** RBC 91% net-new `[src:source-020]`;
   KPMG Global AI Pulse figures `[src:source-016]`; Bain n=951 `[src:source-018]`; Gartner 44%
   guardrails `[src:source-025]`; McKinsey scaling percentages `[src:source-029]`; RouteLLM 85%
@@ -107,6 +108,70 @@ searching for a public per-employee baseline; it is paywalled or in the author's
 
 ## Notes
 
+### First-hand numbers and what they imply (added 2026-09-15)
+
+Arithmetic on the author's figures `[src:source-035]`, `[src:source-036]` at Opus 5 list prices
+`[src:source-037]`. Every line states its assumption; nothing here is a measurement beyond the two
+inputs.
+
+**The author's August on the API instead of a subscription.** 657M tokens on Opus 5:
+
+| Assumed mix of the 657M tokens | API cost at list price |
+|---|---|
+| All cache reads ($0.50/M) — the floor | about $330 |
+| All fresh input ($5/M) — the input ceiling, no output | about $3,300 |
+| Illustrative Claude Code shape: 85% cache read, 10% fresh input, 5% output ($25/M) | about $280 + $330 + $820 = about $1,430 |
+
+The subscription that actually carried this was about $100. So the author is consuming somewhere
+between roughly 3x and 30x the list-price value of the plan, most likely around 10–15x if the
+illustrative mix is close. TODO(author): pull the real split from Claude Code stats; the table
+collapses to one number. Two things follow for the article:
+
+- Subscriptions are the bounded world. They are priced for the median user and heavy users are
+  subsidized. The moment an organization moves to metered API or consumption credits — which is
+  what Uber and Microsoft were on, and what GitHub Copilot now is `[src:source-032]` — the
+  subsidy ends and the bill tracks usage.
+- The author's usage is "one or two flows at a time". A fleet of parallel agents, or a team of
+  ten people working this way on metered pricing, is the enterprise case.
+
+**The 40% against the author's own baseline** (per employee, per month, before AI):
+
+| Baseline `[src:source-036]` | Add one $100 Max plan | Add two ($200) | Add author's API-equivalent (~$1,400, illustrative mix) | Add Uber-style $500–2,000 `[src:source-021]` |
+|---|---|---|---|---|
+| Startup, $250 | +40% | +80% | about +560% | +200% to +800% |
+| Enterprise, $1,500 | +7% | +13% | about +93% | +33% to +133% |
+
+Reading: at a startup, the 40% is literally one subscription per employee. At an enterprise, the
+40% is the low end of what one engineer on a metered coding agent cost Uber. In both cases the
+subscription number is the floor and the metered number is where the trend points. This is the
+article's per-employee model with the author's inputs filled in; the reader substitutes theirs.
+
+**Caveats to state in the piece.** One person, one month; the OpenAI volume is an estimate; the
+baseline is a practitioner range from a handful of clients, not a survey; list prices ignore
+enterprise discounts; the tokenizer change in Claude 4.7+ inflates token counts by roughly 30%
+`[src:source-037]`, so cross-model token comparisons are loose.
+
+### Primary pages for the author to pull
+
+The research agent was blocked (HTTP 403) on these. Open each, confirm the quoted figure, and
+either paste the exact sentence into the matching `sources.yaml` entry's `locator` or correct the
+entry. Keep it to the sentence or two the article will cite, not the page.
+
+| Source | URL | Check |
+|---|---|---|
+| Gartner, 2026-08-17 `[src:source-003]` | https://www.gartner.com/en/newsroom/press-releases/2026-08-17-gartner-predicts-ai-inference-costs-per-agentic-workflow-will-increase-more-than-fivefold-through-2028 | "more than fivefold through 2028"; "~95% by 2030" token price fall; "at least five times" a basic chatbot; the "cannot rely on more efficient token economics" quote and the analyst's name |
+| Goldman Sachs Research, 2026-05-20 `[src:source-004]` | https://www.goldmansachs.com/insights/articles/ai-agents-forecast-to-boost-tech-cash-flow-as-usage-soars | 24x between 2026 and 2030; 120 quadrillion tokens/month; >70% enterprise agents by 2040; author Jim Schneider |
+| Forbes, Janakiram MSV, 2026-05-17 `[src:source-021]` | https://www.forbes.com/sites/janakirammsv/2026/05/17/uber-burns-its-2026-ai-budget-in-four-months-on-claude-code/ | CTO name and quote; 32% → 84% adoption; $500–2,000 per engineer per month; ~70% of committed code; that The Information broke it |
+| Forbes, Jemma Green, 2026-07-02 `[src:source-023]` | https://www.forbes.com/sites/jemmagreen/2026/07/02/ai-costs-more-than-the-people-it-replaced/ | The Andrew Macdonald statement on token usage vs features shipped, and where he said it |
+| Axios, 2026-04-26 (not yet in sources) | https://www.axios.com/2026/04/26/ai-cost-human-workers | What data it cites; add as a source only if it carries a figure the others do not |
+
+Second-hand figures still to trace to their origin (or cut): RBC 91% `[src:source-020]`, KPMG
+`[src:source-016]`, Bain n=951 `[src:source-018]`, Gartner 44% guardrails `[src:source-025]`,
+McKinsey scaling shares `[src:source-029]`, RouteLLM 85% `[src:source-031]`, and the "73%"
+FinOps figure (not on `[src:source-013]`).
+
+### Desk research notes
+
 - **The 40% intuition has a defensible form.** Take the Atlanta Fed top-decile AI spend
   ($2,800+/employee/year, 2026 planned) `[src:source-010]` against a knowledge-work IT baseline in
   the low five figures per employee and the AI line alone is 20–30% on top; add the token growth
@@ -133,9 +198,9 @@ searching for a public per-employee baseline; it is paywalled or in the author's
 
 | Gap | Decision proposed |
 |---|---|
-| No per-employee IT baseline | **Resolve** — author's client data or Avasant chapter; otherwise the 40% becomes a worked example with stated inputs |
-| No first-hand token spend data | **Resolve** — author's own logs; this is the original contribution |
-| Gartner / Goldman / Forbes primaries unread | **Resolve** — author opens them in a browser and confirms quotes |
+| Per-employee IT baseline | **Resolved as a practitioner range** `[src:source-036]`; disclose that it is observed, not surveyed. Avasant cross-check optional |
+| First-hand token spend data | **Resolved in volume** `[src:source-035]`; **resolve the split** (input / output / cache read) so the API-equivalent cost is one number |
+| Gartner / Goldman / Forbes primaries unread | **Resolve** — author pulls them (list above) and confirms quotes |
 | RBC, KPMG, Bain, Gartner-44%, McKinsey, RouteLLM figures second-hand | **Resolve or cut** — trace each or drop it |
 | Additive vs substitutive spend unresolved | **Disclose** — present both survey results and say the per-employee metric rises either way if headcount falls |
 | Timing of the file-to-compute shift | **Disclose** — forecast, with the Gartner cancellation prediction as the counter |

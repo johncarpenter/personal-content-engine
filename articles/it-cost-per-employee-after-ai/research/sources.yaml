@@ -396,3 +396,51 @@ sources:
       - Would supply the IT operational spending per user baseline the 40% claim needs (figure not yet obtained — paywalled)
     locator: Chapter 1 lists "IT operational spending per user" and "Total IT spending as percentage of revenue"
     limitations: Paywalled; no figure was read. Recorded so the author knows where the baseline lives.
+  # --- First-hand evidence (author, 2026-09-15) --------------------------------------------
+  - id: source-035
+    title: Author's own model usage, August 2026 (Claude Code stats and subscription plans)
+    author_or_organization: John Carpenter (author) — first-hand observation
+    url: null
+    published_at: null
+    accessed_at: 2026-09-15
+    supports:
+      - 657 million tokens consumed on Claude Opus 5 in one month (August 2026), per Claude Code's stats view
+      - A similar volume on OpenAI models over the same period (author's estimate, not measured)
+      - Both consumed on flat-rate subscriptions (Claude Max 5x at about $100/month; the OpenAI equivalent), with the author typically using about 95% of each allowance
+      - Usage pattern is a heavy single user working one or two flows at a time, not parallel agent fleets
+    locator: "Author's statement to the research agent, 2026-09-15; Claude Code `/stats` for the Opus 5 figure"
+    limitations: One person, one month. The 657M figure has no input / output / cache-read split yet, so its API-equivalent cost is a range until the author pulls the breakdown. The OpenAI figure is an estimate. Subscription pricing bounds the bill; the same usage on the API would not be bounded.
+  - id: source-036
+    title: IT cost per employee observed across the author's client workspaces, excluding AI
+    author_or_organization: John Carpenter (author) — first-hand observation as fractional CTO
+    url: null
+    published_at: null
+    accessed_at: 2026-09-15
+    supports:
+      - Roughly $200–300 per employee per month at startups, rising to $1,000–2,000 per employee per month at enterprises, before any AI spend
+      - The figure rises with company size
+    locator: "Author's statement to the research agent, 2026-09-15"
+    limitations: Practitioner range from a small number of clients, not a survey; the article should say so. Composition (licences, devices, support, cloud) not itemized. Anonymized client figures need permission before publication.
+  - id: source-037
+    title: Claude API pricing (model pricing table)
+    author_or_organization: Anthropic
+    url: https://platform.claude.com/docs/en/about-claude/pricing
+    published_at: null
+    accessed_at: 2026-09-15
+    supports:
+      - Claude Opus 5 — $5 per million input tokens, $25 per million output tokens, $0.50 per million cache-read tokens; Sonnet 5 $2 / $10 / $0.20; Haiku 4.5 $1 / $5 / $0.10
+      - Batch API halves input and output prices; cache reads are 0.1x base input
+      - Note on the page — Claude 4.7 and later use a tokenizer that produces roughly 30% more tokens for the same text
+    locator: Model pricing table and Prompt caching section
+    limitations: List prices; enterprise volume discounts are negotiated. Page carries no date.
+  - id: source-038
+    title: Claude plans and pricing (Pro and Max tiers)
+    author_or_organization: Anthropic (claude.com/pricing)
+    url: https://claude.com/pricing
+    published_at: null
+    accessed_at: 2026-09-15
+    supports:
+      - Claude Max 5x is listed from $100 per month with "5x more usage than Pro"; a Max 20x tier is also listed
+      - Claude Pro is $20 per month billed monthly ($17 with annual billing)
+    locator: Plans section
+    limitations: Marketing page; the usage multiple is relative to Pro and not stated in tokens. The page extraction showed "From $100" for both Max tiers, which looks like an extraction artefact — TODO verify the 20x price.

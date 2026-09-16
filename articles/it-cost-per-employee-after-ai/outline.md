@@ -23,12 +23,14 @@ Alternative angles the evidence would also support (author's choice):
 
 ## Sections
 
-- **Open on a real bill** — the author's own monthly token spend (or one anonymized client
-  workspace) set beside what that seat cost in IT terms a year earlier. Establishes the problem in
-  numbers before any forecast. Evidence: TODO(author) first-hand figures. Visual: none, or a
-  two-line table.
+- **Open on a real bill** — 657 million Opus 5 tokens in August on a ~$100 subscription, and
+  what that month would have cost at list price on the API (a range until the author pulls the
+  split; see `research/notes.md`). Establishes the problem in numbers before any forecast, and
+  introduces bounded versus unbounded pricing in one paragraph. Evidence: `[src:source-035]`,
+  `[src:source-037]`, `[src:source-038]`. Visual: none, or a two-line table.
 - **What IT cost per employee is made of, and where AI sits today** — the baseline and the
-  current AI line. Evidence: `[src:source-034]` or client baseline (TODO), `[src:source-010]`
+  current AI line. Evidence: `[src:source-036]` (author's observed $200–300 startup,
+  $1,000–2,000 enterprise per month, before AI), `[src:source-010]`
   (dispersion: half ≤$200, top decile ≥$2,800), `[src:source-011]` (89% allocate ≤25% to AI),
   `[src:source-019]` (AI 14.2% of IT budgets). Point: today's AI line is small and per-seat for
   most companies — which is why the next two sections matter.
@@ -58,9 +60,13 @@ Alternative angles the evidence would also support (author's choice):
   built. Visual: `figure-02` — the author's workload-to-model tiering, as a table or diagram
   (explain).
 - **The per-employee model** — a fill-in table: baseline IT cost, per-seat AI, token spend under
-  file-work and compute-first scenarios, resulting per-employee cost and percentage change. The
-  40% appears here as one worked example with stated inputs, not as a claim. Visual: the table
-  itself, inline Markdown.
+  file-work and compute-first scenarios, resulting per-employee cost and percentage change. Worked
+  with the author's inputs (`research/notes.md`, "The 40% against the author's own baseline"):
+  at a $250/month startup baseline one $100 subscription is +40%, and metered usage at the
+  author's volume is several hundred percent; at a $1,500 enterprise baseline one subscription is
+  +7% and one Uber-style engineer is +33% to +133%. Evidence: `[src:source-035]`,
+  `[src:source-036]`, `[src:source-021]`, `[src:source-037]`. Visual: the table itself, inline
+  Markdown.
 - **Close** — what the reader does this budget cycle. No commercial call to action planned.
 
 ## Objections to address
@@ -97,12 +103,13 @@ Alternative angles the evidence would also support (author's choice):
 
 ## Open gaps
 
-- No baseline IT cost per employee — resolve (author data or Avasant) or convert the 40% to a
-  worked example.
-- No first-hand token data — resolve; it is the contribution.
-- Primary Gartner, Goldman and Forbes pages unread by the agent — resolve before quoting.
-- Six second-hand figures to trace (listed in `research/notes.md`) — resolve or cut.
-- Reader not confirmed — blocks the section depth and examples.
+- Baseline is a practitioner range, not a survey — disclose as such.
+- Token split (input / output / cache read) behind the 657M figure — resolve; turns a range into
+  a number.
+- Primary Gartner, Goldman and Forbes pages unread by the agent — author pulling them.
+- Seven second-hand figures to trace (listed in `research/notes.md`) — resolve or cut.
+- Reader confirmed (tech leader, CEO, CFO deciding how to deploy AI); pillar still the author's
+  call.
 - The article's evidence supports "costs will rise and are unpredictable" more firmly than it
   supports any specific percentage. If the author wants the 40% in the title, the article has to
   own it as the author's estimate.

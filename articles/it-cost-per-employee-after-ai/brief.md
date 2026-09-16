@@ -8,19 +8,16 @@ said are marked as proposals; unmarked text is the author's substance restated.
 
 ## Reader and problem
 
-Proposed, not yet confirmed by the author: the AI-Curious Leader persona (CIO, CFO, VP, or
-founder who owns or approves an IT budget), with Builders as the secondary reader. Filed under The
-On-Ramp or The Shift; `background/topic-clusters.md` lists "What AI Adoption Actually Costs (And
-Saves)" as an On-Ramp example topic.
+Confirmed by the author 2026-09-15: a technology leader, or a CEO or CFO, deciding how to deploy AI
+across an organization — not what to build with it or how to operate it. In this repository's
+personas that is the AI-Curious Leader; the Builder is secondary at most. Filed under The On-Ramp
+(`background/topic-clusters.md` lists "What AI Adoption Actually Costs (And Saves)" as an On-Ramp
+example) or The Shift; the author decides.
 
 The problem they arrive with: they have a per-employee IT cost they understand (licences, devices,
 support, cloud) and an AI line that started as a few per-seat subscriptions. They are now being
 asked to fund tokens, and they have no model for what that line does over the next two to three
 years or how to keep it from becoming an uncontrolled overrun.
-
-TODO(author): confirm the reader. The two candidate readers want different articles: the budget
-owner wants the shape of the cost and what to put in place; the builder wants the routing and
-monitoring mechanics.
 
 ## Why now
 
@@ -62,19 +59,21 @@ Research status against this thesis (detail in `research/notes.md`):
 
 ## Original contribution
 
-TODO(author): confirm which of these you can actually bring; the article's credibility rests on the
-first-hand items.
+Confirmed by the author 2026-09-15 (items 1 and 2); items 3 and 4 remain proposals.
 
-1. **First-hand token economics.** The author works as a fractional CTO across several client
-   workspaces and has tracked personal Claude Code usage (per `brand/voice.md`, a 30-day session
-   log). Real monthly token bills per person, per workload type, would be the piece's strongest
-   evidence and is something no analyst report provides.
-2. **A worked model, not a forecast.** A simple per-employee cost model the reader can fill in:
-   baseline IT cost, per-seat AI, token spend by workload class, and the multiplier when work moves
-   from file tasks to agentic tasks.
+1. **First-hand token economics.** The author consumed 657 million tokens on Claude Opus 5 in
+   August 2026, and about the same on OpenAI models, on flat-rate subscriptions of roughly
+   $100/month each, typically using about 95% of each allowance. At Opus 5 list prices that one
+   month is somewhere between about $330 (if it were all cache reads) and $3,300 (if it were all
+   fresh input) before counting output tokens — a real number no analyst report provides, and
+   the difference between a bounded and an unbounded bill in one person's usage.
+2. **A real baseline.** From fractional CTO work: IT cost per employee of roughly $200–300 a month
+   at startups and $1,000–2,000 a month at enterprises, before AI. Against that baseline, one
+   $100 Max subscription per employee is a 33–50% jump at a startup; the 40% in the thesis is not
+   an abstraction, it is one subscription.
 3. **The "lowest cost that solves the problem" stance.** Model selection framed as a cost
    engineering decision (routing, tiering, caching, effort caps) rather than a capability
-   leaderboard, drawn from what the author has built.
+   leaderboard, drawn from what the author has built. TODO(author): confirm what you can show.
 4. **Continuity with the author's published work.** "The Economics of a Dying SaaS Market" argued
    that build cost collapsed; this piece is the counterweight: the run cost of AI-heavy work does
    not collapse with it.
@@ -110,14 +109,17 @@ monitoring, and a cost-per-result measure. A commercial call to action is option
 
 ## Research effort and dependencies
 
-Proposed: desk research is largely done (see `research/`); the remaining effort is first-hand.
+Desk research is done (see `research/`). Remaining effort is small and first-hand:
 
-- TODO(author): a month or more of the author's own token spend, by workload type, with permission
-  to publish anonymized client-workspace figures if used.
-- TODO(author): access to a real IT-cost-per-employee baseline (Avasant/Computer Economics
-  2026/2027 benchmarks are paywalled; a client's actual number, anonymized, would do).
+- Author pulls the input / output / cache-read split behind the 657M-token figure from Claude Code
+  stats, and the OpenAI usage figure if available, so the API-equivalent cost becomes a number
+  rather than a range.
+- Author opens the four primary pages that blocked the research agent (listed in
+  `research/notes.md`) and confirms the quotes.
+- Permission to publish anonymized client-workspace figures, if the baseline is stated as observed
+  rather than as a range.
 - Optional: one conversation with a CIO or FinOps lead who has lived through an AI budget overrun.
-- Effort limit proposal: one further day of research after the author's own numbers are in hand.
+- Effort limit: half a day after the above are in hand.
 
 ## Tracker
 

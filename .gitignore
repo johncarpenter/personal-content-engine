@@ -12,3 +12,6 @@ Thumbs.db
 # Python
 __pycache__/
 *.pyc
+
+# Local verification copies of third-party pages (author keeps them; not committed)
+articles/*/research/*.pdf

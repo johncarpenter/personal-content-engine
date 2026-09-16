@@ -58,10 +58,10 @@ found from what could not be verified.
 
 Confirmed sources are in `sources.yaml` (34 entries). Still to obtain:
 
-- **Author's first-hand data — obtained 2026-09-15** as `[src:source-035]` (657M Opus 5 tokens in
-  August; similar on OpenAI; two ~$100/month subscriptions at ~95% use) and `[src:source-036]`
-  (IT cost per employee $200–300/month startup, $1,000–2,000/month enterprise, before AI). Still
-  needed: the input / output / cache-read split from Claude Code stats.
+- **Author's first-hand data — obtained 2026-09-15** as `[src:source-035]` (673.9M Opus 5 tokens
+  in 30 days, 97% cache reads; similar on OpenAI; two ~$100/month subscriptions at ~95% use) and
+  `[src:source-036]` (IT cost per employee $200–300/month startup, $1,000–2,000/month enterprise,
+  before AI).
 - **A real baseline:** now covered by the author's observed range `[src:source-036]`; the Avasant
   chapter `[src:source-034]` would add an independent cross-check if the author has access.
 - **Primary pages the agent could not open** — see "Primary pages for the author to pull" below.
@@ -114,48 +114,58 @@ Arithmetic on the author's figures `[src:source-035]`, `[src:source-036]` at Opu
 `[src:source-037]`. Every line states its assumption; nothing here is a measurement beyond the two
 inputs.
 
-**The author's August on the API instead of a subscription.** 657M tokens on Opus 5:
+**The author's last 30 days on the API instead of a subscription.** Claude Code stats, captured
+2026-09-15 `[src:source-035]`, priced at Opus 5 list rates `[src:source-037]`:
 
-| Assumed mix of the 657M tokens | API cost at list price |
-|---|---|
-| All cache reads ($0.50/M) — the floor | about $330 |
-| All fresh input ($5/M) — the input ceiling, no output | about $3,300 |
-| Illustrative Claude Code shape: 85% cache read, 10% fresh input, 5% output ($25/M) | about $280 + $330 + $820 = about $1,430 |
+| Bucket | Tokens | List rate per MTok | Cost |
+|---|---|---|---|
+| Input | 16.9k | $5.00 | $0.08 |
+| Output | 4.4M | $25.00 | $110 |
+| Cache read | 653.0M | $0.50 | $327 |
+| Cache write | 16.5M | $6.25 (5-minute) or $10 (1-hour) | $103–165 |
+| **Total** | **673.9M** | | **about $540–600** |
 
-The subscription that actually carried this was about $100. So the author is consuming somewhere
-between roughly 3x and 30x the list-price value of the plan, most likely around 10–15x if the
-illustrative mix is close. TODO(author): pull the real split from Claude Code stats; the table
-collapses to one number. Two things follow for the article:
+The subscription that carried this was about $100, so the author consumed roughly 5.5–6x the
+list-price value of the plan. Forbes reports GitHub had been absorbing "up to eight times the
+subscription value for heavy users" before it moved Copilot to usage billing `[src:source-023]`;
+the author's ratio sits inside that. Three things follow for the article:
 
+- **97% of the tokens are cache reads.** The cost of agentic work is the agent re-reading its
+  own context, not what it writes. This is the Stanford/MIT finding — input dominates, output is
+  a rounding error — visible in one person's bill `[src:source-006]`. It also means the cost
+  lever is context management and caching, not shorter answers.
 - Subscriptions are the bounded world. They are priced for the median user and heavy users are
   subsidized. The moment an organization moves to metered API or consumption credits — which is
-  what Uber and Microsoft were on, and what GitHub Copilot now is `[src:source-032]` — the
-  subsidy ends and the bill tracks usage.
-- The author's usage is "one or two flows at a time". A fleet of parallel agents, or a team of
-  ten people working this way on metered pricing, is the enterprise case.
+  what Uber and Microsoft were on, and what GitHub Copilot and Anthropic's agent-tool metering now
+  are `[src:source-032]`, `[src:source-021]` — the subsidy ends and the bill tracks usage.
+- The author's usage is "one or two flows at a time", 41 sessions over 19 active days. A fleet of
+  parallel agents, or a team of ten people working this way on metered pricing, is the enterprise
+  case; at ~$550 a month per person it is already an Uber power-user figure.
 
 **The 40% against the author's own baseline** (per employee, per month, before AI). Uber figures
 corrected 2026-09-15 from the Forbes primary: average $150–250 per engineer per month, power users
 $500–2,000 `[src:source-021]`.
 
-| Baseline `[src:source-036]` | One $100 Max plan | Two ($200) | Uber average engineer, $150–250 | Uber power user, $500–2,000 | Author's API-equivalent (~$1,400, illustrative mix) |
+| Baseline `[src:source-036]` | One $100 Max plan | Two ($200) | Uber average engineer, $150–250 | Uber power user, $500–2,000 | Author's API-equivalent, ~$550 |
 |---|---|---|---|---|---|
-| Startup, $250 | +40% | +80% | +60% to +100% | +200% to +800% | about +560% |
-| Enterprise, $1,500 | +7% | +13% | +10% to +17% | +33% to +133% | about +93% |
+| Startup, $250 | +40% | +80% | +60% to +100% | +200% to +800% | about +220% |
+| Enterprise, $1,500 | +7% | +13% | +10% to +17% | +33% to +133% | about +37% |
 
 Reading: at a startup, the 40% is one subscription per employee, and an average Uber engineer on
 metered pricing already exceeds it. At an enterprise, the average metered engineer is 10–17% and
 the 40% sits at the low end of the power-user band. Two corroborating data points from the
 primaries: Forbes reports GitHub had been absorbing "up to eight times the subscription value for
 heavy users" before moving to usage billing, and unnamed analysts expect bills to rise "30% to 50%"
-when subsidized pricing normalizes `[src:source-023]` — the author's 3–30x subscription-to-list
-ratio is in the same range as GitHub's 8x. This is the article's per-employee model with the
+when subsidized pricing normalizes `[src:source-023]` — the author's ~6x subscription-to-list
+ratio is in the same range as GitHub's 8x. Note the enterprise column: one person working the way
+the author works, on metered pricing, adds about 37% to a $1,500 baseline. That is the 40%. This is the article's per-employee model with the
 author's inputs filled in; the reader substitutes theirs.
 
-**Caveats to state in the piece.** One person, one month; the OpenAI volume is an estimate; the
-baseline is a practitioner range from a handful of clients, not a survey; list prices ignore
-enterprise discounts; the tokenizer change in Claude 4.7+ inflates token counts by roughly 30%
-`[src:source-037]`, so cross-model token comparisons are loose.
+**Caveats to state in the piece.** One person, one 30-day window; the OpenAI volume is an
+estimate; the baseline is a practitioner range from a handful of clients, not a survey; list prices
+ignore enterprise discounts and the cache-write figure depends on the cache duration used; the
+tokenizer change in Claude 4.7+ inflates token counts by roughly 30% `[src:source-037]`, so
+cross-model token comparisons are loose.
 
 ### Primary pages pulled by the author (2026-09-15)
 
@@ -225,7 +235,7 @@ gitignored. The cited sentences live in `sources.yaml`.
 | Gap | Decision proposed |
 |---|---|
 | Per-employee IT baseline | **Resolved as a practitioner range** `[src:source-036]`; disclose that it is observed, not surveyed. Avasant cross-check optional |
-| First-hand token spend data | **Resolved in volume** `[src:source-035]`; **resolve the split** (input / output / cache read) so the API-equivalent cost is one number |
+| First-hand token spend data | **Resolved** `[src:source-035]` — full split captured 2026-09-15; API-equivalent about $540–600 for the month |
 | Gartner / Goldman / Forbes primaries | **Resolved** — pulled and quoted 2026-09-15; Axios unavailable, its one figure stays second-hand via Green |
 | PDF copies of third-party articles in `research/` | **Resolved** — gitignored, kept locally as verification copies |
 | RBC, KPMG, Bain, Gartner-44%, McKinsey, RouteLLM figures second-hand | **Resolve or cut** — trace each or drop it |

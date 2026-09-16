@@ -421,18 +421,20 @@ sources:
     limitations: Paywalled; no figure was read. Recorded so the author knows where the baseline lives.
   # --- First-hand evidence (author, 2026-09-15) --------------------------------------------
   - id: source-035
-    title: Author's own model usage, August 2026 (Claude Code stats and subscription plans)
+    title: Author's own model usage, August–September 2026 (Claude Code stats and subscription plans)
     author_or_organization: John Carpenter (author) — first-hand observation
     url: null
     published_at: null
     accessed_at: 2026-09-15
     supports:
-      - 657 million tokens consumed on Claude Opus 5 in one month (August 2026), per Claude Code's stats view
+      - Claude Code stats, last 30 days to 2026-09-15 — total 673.9M tokens on Opus 5 (favourite model), split as input 16.9k, output 4.4M, cache read 653.0M, cache write 16.5M; 41 sessions, 19 of 30 days active, longest session 20h 4m
+      - An earlier read of the same view for the prior month showed 657M tokens
+      - Cache reads are about 97% of all tokens; fresh input is negligible (16.9k)
       - A similar volume on OpenAI models over the same period (author's estimate, not measured)
       - Both consumed on flat-rate subscriptions (Claude Max 5x at about $100/month; the OpenAI equivalent), with the author typically using about 95% of each allowance
       - Usage pattern is a heavy single user working one or two flows at a time, not parallel agent fleets
-    locator: "Author's statement to the research agent, 2026-09-15; Claude Code `/stats` for the Opus 5 figure"
-    limitations: One person, one month. The 657M figure has no input / output / cache-read split yet, so its API-equivalent cost is a range until the author pulls the breakdown. The OpenAI figure is an estimate. Subscription pricing bounds the bill; the same usage on the API would not be bounded.
+    locator: "Claude Code `/stats` view, 'Last 30 days', captured by the author 2026-09-15 and pasted to the research agent; subscription details from the author's statement the same day"
+    limitations: One person, one month; a 30-day window that does not align exactly with a calendar month. Stats show tokens, not dollars; the API-equivalent cost is computed in research/notes.md from list prices and depends on whether cache writes were 5-minute or 1-hour. The OpenAI figure is an estimate. Subscription pricing bounds the bill; the same usage on the API would not be bounded.
   - id: source-036
     title: IT cost per employee observed across the author's client workspaces, excluding AI
     author_or_organization: John Carpenter (author) — first-hand observation as fractional CTO

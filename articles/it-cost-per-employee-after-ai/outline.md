@@ -23,9 +23,9 @@ Alternative angles the evidence would also support (author's choice):
 
 ## Sections
 
-- **Open on a real bill** — 657 million Opus 5 tokens in August on a ~$100 subscription, and
-  what that month would have cost at list price on the API (a range until the author pulls the
-  split; see `research/notes.md`). Establishes the problem in numbers before any forecast, and
+- **Open on a real bill** — 673.9 million Opus 5 tokens in 30 days on a ~$100 subscription,
+  97% of them the agent re-reading its own context, and the same month at API list price: about
+  $540–600 (working in `research/notes.md`). Establishes the problem in numbers before any forecast, and
   introduces bounded versus unbounded pricing in one paragraph. Evidence: `[src:source-035]`,
   `[src:source-037]`, `[src:source-038]`. Visual: none, or a two-line table.
 - **What IT cost per employee is made of, and where AI sits today** — the baseline and the
@@ -69,7 +69,8 @@ Alternative angles the evidence would also support (author's choice):
   with the author's inputs (`research/notes.md`, "The 40% against the author's own baseline"):
   at a $250/month startup baseline one $100 subscription is +40% and an average Uber engineer on
   metered pricing is +60% to +100%; at a $1,500 enterprise baseline one subscription is +7%, an
-  average metered engineer +10% to +17%, and a power user +33% to +133%. Evidence: `[src:source-035]`,
+  average metered engineer +10% to +17%, a power user +33% to +133%, and the author's own usage
+  at list price about +37%. Evidence: `[src:source-035]`,
   `[src:source-036]`, `[src:source-021]`, `[src:source-037]`. Visual: the table itself, inline
   Markdown.
 - **Close** — what the reader does this budget cycle. No commercial call to action planned.
@@ -109,8 +110,6 @@ Alternative angles the evidence would also support (author's choice):
 ## Open gaps
 
 - Baseline is a practitioner range, not a survey — disclose as such.
-- Token split (input / output / cache read) behind the 657M figure — resolve; turns a range into
-  a number.
 - Primary Gartner, Goldman and Forbes pages unread by the agent — author pulling them.
 - Seven second-hand figures to trace (listed in `research/notes.md`) — resolve or cut.
 - Reader confirmed (tech leader, CEO, CFO deciding how to deploy AI); pillar still the author's

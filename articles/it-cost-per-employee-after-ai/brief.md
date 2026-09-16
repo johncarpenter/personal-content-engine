@@ -48,12 +48,13 @@ Research status against this thesis (detail in `research/notes.md`):
 
 - Both driving factors have supporting evidence from analyst, academic, and reported-incident
   sources.
-- The 40% figure is not supported by any single source found. No public, cross-industry IT cost
-  per employee baseline was found outside paywalled benchmarks, so the ratio cannot yet be
-  computed. The closest independent datapoints: Deloitte's tech spend rising from ~6% to ~8% of
-  revenue over two years (a one-third increase in the whole tech budget, not only AI); the Atlanta
-  Fed's $1,358 → $2,068 AI spend per employee (2025 → 2026); and per-engineer coding-agent spend of
-  $6,000–24,000 per year at Uber and Microsoft, which alone exceeds many per-employee IT budgets.
+- The 40% figure is not supported by any single external source, but it falls out of the
+  author's own numbers: one person working the author's way, priced at API list rates (~$550 a
+  month), adds about 37% to a $1,500-a-month enterprise IT baseline, and one $100 subscription
+  adds 40% to a $250 startup baseline. External datapoints point the same direction: Deloitte's
+  tech spend rising from ~6% to ~8% of revenue over two years; the Atlanta Fed's $1,358 → $2,068
+  AI spend per employee (2025 → 2026); Uber's $150–250 average and $500–2,000 power-user monthly
+  spend per engineer on one coding agent.
 - Dispersion is the dominant fact: more than half of surveyed firms plan to spend $200 or less per
   employee on AI in 2026, while the top decile plans $2,800 or more. A single "40%" hides this.
 
@@ -61,12 +62,12 @@ Research status against this thesis (detail in `research/notes.md`):
 
 Confirmed by the author 2026-09-15 (items 1 and 2); items 3 and 4 remain proposals.
 
-1. **First-hand token economics.** The author consumed 657 million tokens on Claude Opus 5 in
-   August 2026, and about the same on OpenAI models, on flat-rate subscriptions of roughly
-   $100/month each, typically using about 95% of each allowance. At Opus 5 list prices that one
-   month is somewhere between about $330 (if it were all cache reads) and $3,300 (if it were all
-   fresh input) before counting output tokens — a real number no analyst report provides, and
-   the difference between a bounded and an unbounded bill in one person's usage.
+1. **First-hand token economics.** The author consumed 673.9 million tokens on Claude Opus 5
+   in the 30 days to 2026-09-15 (97% of them cache reads), and about the same on OpenAI models, on
+   flat-rate subscriptions of roughly $100/month each, typically using about 95% of each
+   allowance. At Opus 5 list prices that month is about $540–600 — a real number no analyst
+   report provides, and the difference between a bounded and an unbounded bill in one person's
+   usage.
 2. **A real baseline.** From fractional CTO work: IT cost per employee of roughly $200–300 a month
    at startups and $1,000–2,000 a month at enterprises, before AI. Against that baseline, one
    $100 Max subscription per employee is a 33–50% jump at a startup; the 40% in the thesis is not
@@ -111,11 +112,7 @@ monitoring, and a cost-per-result measure. A commercial call to action is option
 
 Desk research is done (see `research/`). Remaining effort is small and first-hand:
 
-- Author pulls the input / output / cache-read split behind the 657M-token figure from Claude Code
-  stats, and the OpenAI usage figure if available, so the API-equivalent cost becomes a number
-  rather than a range.
-- Author opens the four primary pages that blocked the research agent (listed in
-  `research/notes.md`) and confirms the quotes.
+- Optional: the OpenAI usage figure from its dashboard, to replace the author's estimate.
 - Permission to publish anonymized client-workspace figures, if the baseline is stated as observed
   rather than as a range.
 - Optional: one conversation with a CIO or FinOps lead who has lived through an AI budget overrun.
